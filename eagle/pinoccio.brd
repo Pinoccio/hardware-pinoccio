@@ -8,7 +8,7 @@
 </settings>
 <grid distance="0.001" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -2374,43 +2374,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="17.526" y1="36.9632" x2="17.526" y2="34.5632" width="0.2032" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,1,158dc55d0668dab9"/>
-<approved hash="5,1,cc47912d7ed40630"/>
-<approved hash="19,1,27c77575a60524ba"/>
-<approved hash="5,1,f8121b4eeebdaa66"/>
-<approved hash="5,1,7fa0100e4e1b483f"/>
-<approved hash="5,1,8b81bf69c4e20b1f"/>
-<approved hash="19,1,c047bb7b7ab424e6"/>
-<approved hash="5,1,576b24f415486372"/>
-<approved hash="19,1,22ba164ea438574a"/>
-<approved hash="19,1,a3b49320e11595df"/>
-<approved hash="19,1,7d9b32f5c8e08160"/>
-<approved hash="19,1,4df49320e1157b9f"/>
-<approved hash="19,1,b9bbf083b9cca5d6"/>
-<approved hash="19,1,65d65ce9476bbb50"/>
-<approved hash="19,1,4bc685a01e2620bc"/>
-<approved hash="5,1,8cabdef618f52578"/>
-<approved hash="19,1,185f2e6f674112c2"/>
-<approved hash="5,1,88bc5c91edb9f70d"/>
-<approved hash="5,1,610c9927e0739ef2"/>
-<approved hash="19,1,0ac85af62c86bb3e"/>
-<approved hash="19,1,a0149a265e206412"/>
-<approved hash="19,1,dffd6ccb638dd567"/>
-<approved hash="5,1,dba5261b055a6a2f"/>
-<approved hash="19,1,8a9dc05bf668f8f0"/>
-<approved hash="6,1,2f58c7af29abcd86"/>
-<approved hash="19,1,9ce238d07e6029a2"/>
-<approved hash="19,1,ad9bd02024d0eb9d"/>
-<approved hash="19,1,cec2b840fc3e8abc"/>
-<approved hash="19,1,e9c8588ba73b662e"/>
-<approved hash="19,1,9073780f7fff9783"/>
-<approved hash="19,1,90a978d579299155"/>
-<approved hash="19,1,f7ee8d737b3c1fc6"/>
-<approved hash="19,1,c28d049076e374be"/>
-<approved hash="5,1,9dd6051701599a1b"/>
-<approved hash="5,1,00d5ba15925be91d"/>
-</errors>
 </board>
 </drawing>
 </eagle>
