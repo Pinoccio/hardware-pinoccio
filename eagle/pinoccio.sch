@@ -2700,22 +2700,6 @@ chip</description>
 <rectangle x1="-2.2" y1="-1.6" x2="-1.1" y2="1.6" layer="51"/>
 <rectangle x1="1.1" y1="-1.6" x2="2.2" y2="1.6" layer="51"/>
 </package>
-<package name="0603-CAP">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
-<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<wire x1="0" y1="0.0305" x2="0" y2="-0.0305" width="0.5588" layer="21"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-</package>
 <package name="CAP-PTH-5MM">
 <wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.2032" layer="21"/>
 <pad name="1" x="-2.5" y="0" drill="0.7" diameter="1.651"/>
@@ -2869,22 +2853,6 @@ chip</description>
 <text x="-2.54" y="-2.032" size="0.4064" layer="27">&gt;VALUE</text>
 <rectangle x1="-2.4892" y1="-1.3208" x2="-1.6393" y2="1.3292" layer="51"/>
 <rectangle x1="1.651" y1="-1.3208" x2="2.5009" y2="1.3292" layer="51"/>
-</package>
-<package name="0603-RES">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
-<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-<rectangle x1="-0.2286" y1="-0.381" x2="0.2286" y2="0.381" layer="21"/>
 </package>
 <package name="1/6W-RES">
 <description>1/6W Thru-hole Resistor - *UNPROVEN*</description>
@@ -4214,6 +4182,42 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <wire x1="0.0508" y1="0.0254" x2="-0.127" y2="0.2286" width="0.127" layer="21"/>
 <wire x1="0.0762" y1="0.0254" x2="-0.127" y2="-0.2286" width="0.127" layer="21"/>
 </package>
+<package name="0603-CAP">
+<wire x1="-1.523" y1="0.733" x2="1.523" y2="0.733" width="0.0508" layer="39"/>
+<wire x1="1.523" y1="0.733" x2="1.523" y2="-0.733" width="0.0508" layer="39"/>
+<wire x1="1.523" y1="-0.733" x2="-1.523" y2="-0.733" width="0.0508" layer="39"/>
+<wire x1="-1.523" y1="-0.733" x2="-1.523" y2="0.733" width="0.0508" layer="39"/>
+<wire x1="0" y1="0.0305" x2="0" y2="-0.0305" width="0.5588" layer="21"/>
+<smd name="1" x="-0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
+<smd name="2" x="0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
+<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.127" layer="51"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.127" layer="51"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.127" layer="51"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.127" layer="51"/>
+<rectangle x1="-0.8" y1="-0.35" x2="-0.3" y2="0.4" layer="51"/>
+<rectangle x1="0.3" y1="-0.35" x2="0.8" y2="0.35" layer="51"/>
+</package>
+<package name="0603-RES">
+<wire x1="-1.523" y1="0.733" x2="1.473" y2="0.733" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.733" x2="1.473" y2="-0.733" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.733" x2="-1.523" y2="-0.733" width="0.0508" layer="39"/>
+<wire x1="-1.523" y1="-0.733" x2="-1.523" y2="0.733" width="0.0508" layer="39"/>
+<smd name="1" x="-0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
+<smd name="2" x="0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
+<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<rectangle x1="-0.2286" y1="-0.381" x2="0.2286" y2="0.381" layer="21"/>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.127" layer="51"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.127" layer="51"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.127" layer="51"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.127" layer="51"/>
+<rectangle x1="-0.75" y1="-0.35" x2="-0.3" y2="0.35" layer="51"/>
+<rectangle x1="0.3" y1="-0.35" x2="0.75" y2="0.4" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="JUMPER-2">
@@ -4236,7 +4240,7 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <wire x1="25.4" y1="43.18" x2="25.4" y2="-53.34" width="0.254" layer="94"/>
 <wire x1="25.4" y1="-53.34" x2="-25.4" y2="-53.34" width="0.254" layer="94"/>
 <text x="-25.4" y="-55.88" size="1.27" layer="96">&gt;Value</text>
-<text x="-25.4" y="43.18" size="1.27" layer="96">&gt;Name</text>
+<text x="-25.4" y="43.18" size="1.27" layer="95">&gt;Name</text>
 <pin name="EVDD" x="-27.94" y="40.64" length="short"/>
 <pin name="DEVDD@23" x="-27.94" y="38.1" length="short"/>
 <pin name="AVDD" x="-27.94" y="27.94" length="short"/>
@@ -4247,14 +4251,14 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <pin name="PB1/SCK" x="27.94" y="38.1" length="short" rot="R180"/>
 <pin name="PB2/PDI" x="27.94" y="35.56" length="short" rot="R180"/>
 <pin name="PB3/PDO" x="27.94" y="33.02" length="short" rot="R180"/>
-<pin name="PB4" x="27.94" y="30.48" length="short" rot="R180"/>
-<pin name="PB5" x="27.94" y="27.94" length="short" rot="R180"/>
-<pin name="PB6" x="27.94" y="25.4" length="short" rot="R180"/>
-<pin name="PB7" x="27.94" y="22.86" length="short" rot="R180"/>
-<pin name="PD0" x="27.94" y="17.78" length="short" rot="R180"/>
-<pin name="PD1" x="27.94" y="15.24" length="short" rot="R180"/>
-<pin name="PD2" x="27.94" y="12.7" length="short" rot="R180"/>
-<pin name="PD3" x="27.94" y="10.16" length="short" rot="R180"/>
+<pin name="~PB4" x="27.94" y="30.48" length="short" rot="R180"/>
+<pin name="~PB5" x="27.94" y="27.94" length="short" rot="R180"/>
+<pin name="~PB6" x="27.94" y="25.4" length="short" rot="R180"/>
+<pin name="~PB7" x="27.94" y="22.86" length="short" rot="R180"/>
+<pin name="*PD0" x="27.94" y="17.78" length="short" rot="R180"/>
+<pin name="*PD1" x="27.94" y="15.24" length="short" rot="R180"/>
+<pin name="*PD2" x="27.94" y="12.7" length="short" rot="R180"/>
+<pin name="*PD3" x="27.94" y="10.16" length="short" rot="R180"/>
 <pin name="PD4" x="27.94" y="7.62" length="short" rot="R180"/>
 <pin name="PD5" x="27.94" y="5.08" length="short" rot="R180"/>
 <pin name="PD6" x="27.94" y="2.54" length="short" rot="R180"/>
@@ -4262,11 +4266,11 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <pin name="PE0" x="27.94" y="-5.08" length="short" rot="R180"/>
 <pin name="PE1" x="27.94" y="-7.62" length="short" rot="R180"/>
 <pin name="PE2" x="27.94" y="-10.16" length="short" rot="R180"/>
-<pin name="PE3" x="27.94" y="-12.7" length="short" rot="R180"/>
-<pin name="PE4" x="27.94" y="-15.24" length="short" rot="R180"/>
-<pin name="PE5" x="27.94" y="-17.78" length="short" rot="R180"/>
-<pin name="PE6" x="27.94" y="-20.32" length="short" rot="R180"/>
-<pin name="PE7" x="27.94" y="-22.86" length="short" rot="R180"/>
+<pin name="~PE3" x="27.94" y="-12.7" length="short" rot="R180"/>
+<pin name="~*PE4" x="27.94" y="-15.24" length="short" rot="R180"/>
+<pin name="~*PE5" x="27.94" y="-17.78" length="short" rot="R180"/>
+<pin name="*PE6" x="27.94" y="-20.32" length="short" rot="R180"/>
+<pin name="*PE7" x="27.94" y="-22.86" length="short" rot="R180"/>
 <pin name="PF7" x="27.94" y="-45.72" length="short" rot="R180"/>
 <pin name="PF6" x="27.94" y="-43.18" length="short" rot="R180"/>
 <pin name="PF5" x="27.94" y="-40.64" length="short" rot="R180"/>
@@ -4280,7 +4284,7 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <pin name="PG2" x="-27.94" y="-15.24" length="short"/>
 <pin name="PG3" x="-27.94" y="-17.78" length="short"/>
 <pin name="PG4" x="-27.94" y="-20.32" length="short"/>
-<pin name="PG5" x="-27.94" y="-22.86" length="short"/>
+<pin name="PG5~" x="-27.94" y="-22.86" length="short"/>
 <pin name="AVSS_RFN" x="-27.94" y="-33.02" length="short"/>
 <pin name="AVSS_RFP" x="-27.94" y="-30.48" length="short"/>
 <pin name="RFP" x="-27.94" y="7.62" length="short"/>
@@ -4786,6 +4790,12 @@ Basic 0.1" spaced jumper. Use with breakaway headers.</description>
 <devices>
 <device name="" package="QFN-64">
 <connects>
+<connect gate="G$1" pin="*PD0" pad="25"/>
+<connect gate="G$1" pin="*PD1" pad="26"/>
+<connect gate="G$1" pin="*PD2" pad="27"/>
+<connect gate="G$1" pin="*PD3" pad="28"/>
+<connect gate="G$1" pin="*PE6" pad="52"/>
+<connect gate="G$1" pin="*PE7" pad="53"/>
 <connect gate="G$1" pin="AREF" pad="62"/>
 <connect gate="G$1" pin="AVDD" pad="60"/>
 <connect gate="G$1" pin="AVSS@58" pad="58"/>
@@ -4810,14 +4820,6 @@ Basic 0.1" spaced jumper. Use with breakaway headers.</description>
 <connect gate="G$1" pin="PB1/SCK" pad="37"/>
 <connect gate="G$1" pin="PB2/PDI" pad="38"/>
 <connect gate="G$1" pin="PB3/PDO" pad="39"/>
-<connect gate="G$1" pin="PB4" pad="40"/>
-<connect gate="G$1" pin="PB5" pad="41"/>
-<connect gate="G$1" pin="PB6" pad="42"/>
-<connect gate="G$1" pin="PB7" pad="43"/>
-<connect gate="G$1" pin="PD0" pad="25"/>
-<connect gate="G$1" pin="PD1" pad="26"/>
-<connect gate="G$1" pin="PD2" pad="27"/>
-<connect gate="G$1" pin="PD3" pad="28"/>
 <connect gate="G$1" pin="PD4" pad="29"/>
 <connect gate="G$1" pin="PD5" pad="30"/>
 <connect gate="G$1" pin="PD6" pad="31"/>
@@ -4825,11 +4827,6 @@ Basic 0.1" spaced jumper. Use with breakaway headers.</description>
 <connect gate="G$1" pin="PE0" pad="46"/>
 <connect gate="G$1" pin="PE1" pad="47"/>
 <connect gate="G$1" pin="PE2" pad="48"/>
-<connect gate="G$1" pin="PE3" pad="49"/>
-<connect gate="G$1" pin="PE4" pad="50"/>
-<connect gate="G$1" pin="PE5" pad="51"/>
-<connect gate="G$1" pin="PE6" pad="52"/>
-<connect gate="G$1" pin="PE7" pad="53"/>
 <connect gate="G$1" pin="PF0" pad="63"/>
 <connect gate="G$1" pin="PF1" pad="64"/>
 <connect gate="G$1" pin="PF2" pad="1"/>
@@ -4843,7 +4840,7 @@ Basic 0.1" spaced jumper. Use with breakaway headers.</description>
 <connect gate="G$1" pin="PG2" pad="16"/>
 <connect gate="G$1" pin="PG3" pad="17"/>
 <connect gate="G$1" pin="PG4" pad="18"/>
-<connect gate="G$1" pin="PG5" pad="19"/>
+<connect gate="G$1" pin="PG5~" pad="19"/>
 <connect gate="G$1" pin="RFN" pad="9"/>
 <connect gate="G$1" pin="RFP" pad="8"/>
 <connect gate="G$1" pin="RSTN" pad="12"/>
@@ -4851,6 +4848,13 @@ Basic 0.1" spaced jumper. Use with breakaway headers.</description>
 <connect gate="G$1" pin="TST" pad="11"/>
 <connect gate="G$1" pin="XTAL1" pad="57"/>
 <connect gate="G$1" pin="XTAL2" pad="56"/>
+<connect gate="G$1" pin="~*PE4" pad="50"/>
+<connect gate="G$1" pin="~*PE5" pad="51"/>
+<connect gate="G$1" pin="~PB4" pad="40"/>
+<connect gate="G$1" pin="~PB5" pad="41"/>
+<connect gate="G$1" pin="~PB6" pad="42"/>
+<connect gate="G$1" pin="~PB7" pad="43"/>
+<connect gate="G$1" pin="~PE3" pad="49"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -9074,13 +9078,6 @@ Various fiducial points for machine vision alignment.</description>
 <text x="2.54" y="172.72" size="1.778" layer="95">This documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY,</text>
 <text x="2.54" y="170.18" size="1.778" layer="95">INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A</text>
 <text x="2.54" y="167.64" size="1.778" layer="95">PARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable conditions</text>
-<text x="189.23" y="122.936" size="1.778" layer="91">~</text>
-<text x="189.23" y="120.142" size="1.778" layer="91">~</text>
-<text x="189.23" y="117.602" size="1.778" layer="91">~</text>
-<text x="189.23" y="165.862" size="1.778" layer="91">~</text>
-<text x="189.23" y="163.322" size="1.778" layer="91">~</text>
-<text x="189.23" y="160.782" size="1.778" layer="91">~</text>
-<text x="189.23" y="158.242" size="1.778" layer="91">~</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -9539,7 +9536,7 @@ Various fiducial points for machine vision alignment.</description>
 <segment>
 <wire x1="213.36" y1="149.86" x2="200.66" y2="149.86" width="0.1524" layer="91"/>
 <label x="203.2" y="149.86" size="1.778" layer="95"/>
-<pinref part="U4" gate="G$1" pin="PD2"/>
+<pinref part="U4" gate="G$1" pin="*PD2"/>
 </segment>
 <segment>
 <pinref part="JP-R" gate="G$1" pin="5"/>
@@ -9551,7 +9548,7 @@ Various fiducial points for machine vision alignment.</description>
 <segment>
 <wire x1="213.36" y1="147.32" x2="200.66" y2="147.32" width="0.1524" layer="91"/>
 <label x="203.2" y="147.32" size="1.778" layer="95"/>
-<pinref part="U4" gate="G$1" pin="PD3"/>
+<pinref part="U4" gate="G$1" pin="*PD3"/>
 </segment>
 <segment>
 <pinref part="JP-R" gate="G$1" pin="6"/>
@@ -9566,7 +9563,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="154.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PB7"/>
+<pinref part="U4" gate="G$1" pin="~PB7"/>
 <wire x1="200.66" y1="160.02" x2="213.36" y2="160.02" width="0.1524" layer="91"/>
 <label x="203.2" y="160.02" size="1.778" layer="95"/>
 </segment>
@@ -9590,7 +9587,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="149.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PE3"/>
+<pinref part="U4" gate="G$1" pin="~PE3"/>
 <wire x1="200.66" y1="124.46" x2="213.36" y2="124.46" width="0.1524" layer="91"/>
 <label x="203.2" y="124.46" size="1.778" layer="95"/>
 </segment>
@@ -9602,7 +9599,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="147.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PE4"/>
+<pinref part="U4" gate="G$1" pin="~*PE4"/>
 <wire x1="200.66" y1="121.92" x2="213.36" y2="121.92" width="0.1524" layer="91"/>
 <label x="203.2" y="121.92" size="1.778" layer="95"/>
 </segment>
@@ -9614,7 +9611,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PE5"/>
+<pinref part="U4" gate="G$1" pin="~*PE5"/>
 <wire x1="200.66" y1="119.38" x2="213.36" y2="119.38" width="0.1524" layer="91"/>
 <label x="203.2" y="119.38" size="1.778" layer="95"/>
 </segment>
@@ -9626,7 +9623,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="139.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PE7"/>
+<pinref part="U4" gate="G$1" pin="*PE7"/>
 <wire x1="200.66" y1="114.3" x2="213.36" y2="114.3" width="0.1524" layer="91"/>
 <label x="203.2" y="114.3" size="1.778" layer="95"/>
 </segment>
@@ -9638,7 +9635,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PE6"/>
+<pinref part="U4" gate="G$1" pin="*PE6"/>
 <wire x1="200.66" y1="116.84" x2="213.36" y2="116.84" width="0.1524" layer="91"/>
 <label x="203.2" y="116.84" size="1.778" layer="95"/>
 </segment>
@@ -9835,7 +9832,7 @@ Various fiducial points for machine vision alignment.</description>
 <net name="SCL" class="0">
 <segment>
 <wire x1="213.36" y1="154.94" x2="200.66" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="U4" gate="G$1" pin="PD0"/>
+<pinref part="U4" gate="G$1" pin="*PD0"/>
 <label x="203.2" y="154.94" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -9847,7 +9844,7 @@ Various fiducial points for machine vision alignment.</description>
 <net name="SDA" class="0">
 <segment>
 <wire x1="213.36" y1="152.4" x2="200.66" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="U4" gate="G$1" pin="PD1"/>
+<pinref part="U4" gate="G$1" pin="*PD1"/>
 <label x="203.2" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -10123,7 +10120,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="96.52" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PB5"/>
+<pinref part="U4" gate="G$1" pin="~PB5"/>
 <wire x1="200.66" y1="165.1" x2="213.36" y2="165.1" width="0.1524" layer="91"/>
 <label x="203.2" y="165.1" size="1.778" layer="95"/>
 </segment>
@@ -10135,7 +10132,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="96.52" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PB6"/>
+<pinref part="U4" gate="G$1" pin="~PB6"/>
 <wire x1="200.66" y1="162.56" x2="213.36" y2="162.56" width="0.1524" layer="91"/>
 <label x="203.2" y="162.56" size="1.778" layer="95"/>
 </segment>
@@ -10309,7 +10306,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="96.52" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="PB4"/>
+<pinref part="U4" gate="G$1" pin="~PB4"/>
 <wire x1="200.66" y1="167.64" x2="213.36" y2="167.64" width="0.1524" layer="91"/>
 <label x="203.2" y="167.64" size="1.778" layer="95"/>
 </segment>
