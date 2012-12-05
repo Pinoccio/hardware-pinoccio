@@ -6281,7 +6281,7 @@ Various fiducial points for machine vision alignment.</description>
 <parts>
 <part name="FRAME1" library="Pinoccio" deviceset="FRAME-LETTER" device=""/>
 <part name="C2" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="4.7uF"/>
-<part name="JP4" library="Pinoccio" deviceset="AVR_SPI_PRG_6" device="PTH" value="AVR_SPI"/>
+<part name="JP4" library="Pinoccio" deviceset="AVR_SPI_PRG_6" device="" value="AVR_SPI"/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+4" library="SparkFun" deviceset="VCC" device=""/>
@@ -6367,7 +6367,7 @@ Various fiducial points for machine vision alignment.</description>
 <sheets>
 <sheet>
 <plain>
-<text x="238.76" y="1.27" size="2.54" layer="94" font="vector">0.6</text>
+<text x="238.76" y="1.27" size="2.54" layer="94" font="vector">0.7</text>
 <rectangle x1="0.38735" y1="0.29845" x2="0.41275" y2="0.31115" layer="21"/>
 <rectangle x1="0.36195" y1="0.31115" x2="0.45085" y2="0.32385" layer="21"/>
 <rectangle x1="0.33655" y1="0.32385" x2="0.47625" y2="0.33655" layer="21"/>
