@@ -1,8 +1,35 @@
-----------------
-- v0.6
-- Pinoccio Team
-- 2012-10-03
-----------------
-Initial release
-----------------
+
+------------------------------------------------------------------------
+- v0.9 - 2012-12-14
+- Contributors
+  - Pinoccio Team
+  - Daniel Allemann
+------------------------------------------------------------------------
+- Replace the CAT6219 LDO regulator with the TPS78233 one, for much lower
+  quiescent current (55µA vs 0.5µA)
+- Replace the dual MOSFET package with a TPS22960 dual load switch
+- Swap header pins RESET and AREF for better layout
+- Swap the battery check and charge status pins for better layout
+- Move RGB LED down a few mils for better layou
+- Add ability to switch off header pin 3V3 via MCU pin PD5
+- Change ISP pads on bottom to be full 0.1" pitch, for easy pogopin use
+
+------------------------------------------------------------------------
+- v0.7 - 2012-11-17
+- Contributors
+  - Pinoccio Team
+------------------------------------------------------------------------
+- Add ATmega16u2 for full Arduino support
+- Add MOSFET-based battery voltage check
+- Update header legends to reflect pinout changes
+- Add RGB LED to board
+- Migrate all 0402 landing patterns to smaller, round-cornered ones to
+  minimize tombstoning during production
+
+------------------------------------------------------------------------
+- v0.6 - 2012-10-03
+- Contributors
+  - Pinoccio Team
+------------------------------------------------------------------------
+- Initial release
 

@@ -987,7 +987,7 @@ Please make sure your boards conform to these design rules.</description>
 <elements>
 <element name="C2" library="Pinoccio" package="0402-CAP" value="4.7uF" x="18.2626" y="37.1348" smashed="yes" rot="R180"/>
 <element name="JP4" library="Pinoccio" package="2X3-PAD" value="AVR_SPI" x="10.1854" y="29.99231875" smashed="yes" rot="MR180"/>
-<element name="U2" library="SparkFun" package="SOT23-5" value="3.3V" x="17.8562" y="39.5986" smashed="yes" rot="R180"/>
+<element name="U2" library="SparkFun" package="SOT23-5" value="TPS78233" x="17.8562" y="39.5986" smashed="yes" rot="R180"/>
 <element name="C4" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="42.7736" smashed="yes" rot="R90"/>
 <element name="C5" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="44.704" smashed="yes" rot="R270"/>
 <element name="D2" library="Pinoccio" package="LED-0603" value="Yellow" x="7.112" y="49.0982" smashed="yes" rot="R180"/>
@@ -2600,16 +2600,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="22.7584" y1="39.9796" x2="23.368" y2="39.37" width="0.3048" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,1,158dc55d0668dab9"/>
-<approved hash="19,1,882268166e738e47"/>
-<approved hash="19,1,886068546f348f00"/>
-<approved hash="19,1,8b0c6b386b888bbc"/>
-<approved hash="19,1,041fec2beb48037c"/>
-<approved hash="19,1,045dec69ea0f023b"/>
-<approved hash="19,1,b86038543f3cbf08"/>
-<approved hash="19,1,b82238163e7bbe4f"/>
-</errors>
 </board>
 </drawing>
 </eagle>

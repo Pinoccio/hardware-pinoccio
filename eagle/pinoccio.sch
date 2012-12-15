@@ -6223,7 +6223,7 @@ Various fiducial points for machine vision alignment.</description>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+4" library="SparkFun" deviceset="VCC" device=""/>
-<part name="U2" library="SparkFun" deviceset="V_REG_LDO" device="SMD" value="3.3V"/>
+<part name="U2" library="SparkFun" deviceset="V_REG_LDO" device="SMD" value="TPS78233"/>
 <part name="C4" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="4.7uF"/>
 <part name="C5" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="4.7uF"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
