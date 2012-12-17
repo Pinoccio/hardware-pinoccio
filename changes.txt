@@ -7,8 +7,7 @@
 - Replace the CAT6219 LDO regulator with the TPS78233 one, for much lower
   quiescent current (55µA vs 0.5µA)
 - Replace the dual MOSFET package with a TPS22960 dual load switch
-- Swap header pins RESET and AREF for better layout
-- Swap the battery check and charge status pins for better layout
+- Swap several header pins for better layout
 - Move RGB LED down a few mils for better layout
 - Add ability to switch off header pin 3V3 via MCU pin PD5
 - Change ISP pads on bottom to be full 0.1" pitch, for easier pogopin use

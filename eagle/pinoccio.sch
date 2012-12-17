@@ -9478,9 +9478,9 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="U4" gate="G$1" pin="*PD2"/>
 </segment>
 <segment>
-<pinref part="JP-R" gate="G$1" pin="5"/>
-<wire x1="233.68" y1="114.3" x2="223.52" y2="114.3" width="0.1524" layer="91"/>
-<label x="223.52" y="114.3" size="1.778" layer="95"/>
+<pinref part="JP-R" gate="G$1" pin="4"/>
+<wire x1="233.68" y1="116.84" x2="223.52" y2="116.84" width="0.1524" layer="91"/>
+<label x="223.52" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX1" class="0">
@@ -9490,12 +9490,12 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="U4" gate="G$1" pin="*PD3"/>
 </segment>
 <segment>
-<pinref part="JP-R" gate="G$1" pin="6"/>
-<wire x1="233.68" y1="111.76" x2="223.52" y2="111.76" width="0.1524" layer="91"/>
-<label x="223.52" y="111.76" size="1.778" layer="95"/>
+<pinref part="JP-R" gate="G$1" pin="5"/>
+<wire x1="233.68" y1="114.3" x2="223.52" y2="114.3" width="0.1524" layer="91"/>
+<label x="223.52" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D2" class="0">
+<net name="D0" class="0">
 <segment>
 <pinref part="JP-L" gate="G$1" pin="10"/>
 <wire x1="233.68" y1="154.94" x2="223.52" y2="154.94" width="0.1524" layer="91"/>
@@ -9507,7 +9507,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D3" class="0">
+<net name="D1" class="0">
 <segment>
 <pinref part="JP-L" gate="G$1" pin="11"/>
 <wire x1="233.68" y1="152.4" x2="223.52" y2="152.4" width="0.1524" layer="91"/>
@@ -9519,7 +9519,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="127" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D4" class="0">
+<net name="D2" class="0">
 <segment>
 <pinref part="JP-L" gate="G$1" pin="12"/>
 <wire x1="233.68" y1="149.86" x2="223.52" y2="149.86" width="0.1524" layer="91"/>
@@ -9531,7 +9531,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="124.46" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D5" class="0">
+<net name="D3" class="0">
 <segment>
 <pinref part="JP-L" gate="G$1" pin="13"/>
 <wire x1="233.68" y1="147.32" x2="223.52" y2="147.32" width="0.1524" layer="91"/>
@@ -9543,7 +9543,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D6" class="0">
+<net name="D4" class="0">
 <segment>
 <pinref part="JP-L" gate="G$1" pin="14"/>
 <wire x1="233.68" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
@@ -9555,7 +9555,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D8" class="0">
+<net name="D6" class="0">
 <segment>
 <pinref part="JP-L" gate="G$1" pin="16"/>
 <wire x1="233.68" y1="139.7" x2="223.52" y2="139.7" width="0.1524" layer="91"/>
@@ -9567,7 +9567,7 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D7" class="0">
+<net name="D5" class="0">
 <segment>
 <pinref part="JP-L" gate="G$1" pin="15"/>
 <wire x1="233.68" y1="142.24" x2="223.52" y2="142.24" width="0.1524" layer="91"/>
@@ -9586,9 +9586,9 @@ Various fiducial points for machine vision alignment.</description>
 <label x="132.08" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP-R" gate="G$1" pin="4"/>
-<wire x1="233.68" y1="116.84" x2="223.52" y2="116.84" width="0.1524" layer="91"/>
-<label x="223.52" y="116.84" size="1.778" layer="95"/>
+<pinref part="JP-R" gate="G$1" pin="8"/>
+<wire x1="233.68" y1="106.68" x2="223.52" y2="106.68" width="0.1524" layer="91"/>
+<label x="223.52" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="USB_VIN" class="0">
@@ -9679,14 +9679,14 @@ Various fiducial points for machine vision alignment.</description>
 <junction x="27.94" y="63.5"/>
 </segment>
 <segment>
-<pinref part="JP-L" gate="G$1" pin="3"/>
-<wire x1="233.68" y1="172.72" x2="223.52" y2="172.72" width="0.1524" layer="91"/>
-<label x="223.52" y="172.72" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="P4-VIN2"/>
 <label x="195.58" y="50.8" size="1.778" layer="95"/>
 <wire x1="210.82" y1="50.8" x2="195.58" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP-R" gate="G$1" pin="3"/>
+<wire x1="233.68" y1="119.38" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
+<label x="223.52" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -9771,9 +9771,9 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="154.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP-R" gate="G$1" pin="7"/>
-<wire x1="233.68" y1="109.22" x2="223.52" y2="109.22" width="0.1524" layer="91"/>
-<label x="223.52" y="109.22" size="1.778" layer="95"/>
+<pinref part="JP-R" gate="G$1" pin="6"/>
+<wire x1="233.68" y1="111.76" x2="223.52" y2="111.76" width="0.1524" layer="91"/>
+<label x="223.52" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -9783,9 +9783,9 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP-R" gate="G$1" pin="8"/>
-<wire x1="233.68" y1="106.68" x2="223.52" y2="106.68" width="0.1524" layer="91"/>
-<label x="223.52" y="106.68" size="1.778" layer="95"/>
+<pinref part="JP-R" gate="G$1" pin="7"/>
+<wire x1="233.68" y1="109.22" x2="223.52" y2="109.22" width="0.1524" layer="91"/>
+<label x="223.52" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RX0" class="0">
@@ -9839,9 +9839,9 @@ Various fiducial points for machine vision alignment.</description>
 <label x="96.52" y="132.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP-R" gate="G$1" pin="3"/>
-<wire x1="233.68" y1="119.38" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
-<label x="223.52" y="119.38" size="1.778" layer="95"/>
+<pinref part="JP-L" gate="G$1" pin="3"/>
+<wire x1="233.68" y1="172.72" x2="223.52" y2="172.72" width="0.1524" layer="91"/>
+<label x="223.52" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$20" class="0">
