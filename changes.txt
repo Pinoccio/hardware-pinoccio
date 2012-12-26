@@ -1,23 +1,24 @@
 ------------------------------------------------------------------------
-- v0.9 - 2012-12-14
+- v0.9 - 2012-12-26
 - Contributors
   - Pinoccio Team
   - Daniel Allemann
 ------------------------------------------------------------------------
-- Replace the CAT6219 LDO regulator with the TPS78233 one, for much lower
+- Replace the CAT6219 LDO regulator with a TPS78233, for much lower
   quiescent current (55µA vs 0.5µA)
 - Replace the dual MOSFET package with a TPS22960 dual load switch
 - Swap several header pins for better layout
 - Move RGB LED down a few mils for better layout
 - Add ability to switch off header pin 3V3 via MCU pin PD5
 - Change ISP pads on bottom to be full 0.1" pitch, for easier pogopin use
+- Add ATmega16U2 10k pullup resistor on reset line
 
 ------------------------------------------------------------------------
 - v0.7 - 2012-11-17
 - Contributors
   - Pinoccio Team
 ------------------------------------------------------------------------
-- Add ATmega16u2 for full Arduino support
+- Add ATmega16U2 for full Arduino support
 - Add MOSFET-based battery voltage check
 - Update header legends to reflect pinout changes
 - Add RGB LED to board
