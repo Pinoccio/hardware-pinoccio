@@ -6218,7 +6218,7 @@ Various fiducial points for machine vision alignment.</description>
 </classes>
 <parts>
 <part name="FRAME1" library="Pinoccio" deviceset="FRAME-LETTER" device=""/>
-<part name="C2" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="4.7uF"/>
+<part name="C2" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF"/>
 <part name="JP4" library="Pinoccio" deviceset="AVR_SPI_PRG_6" device="" value="AVR_SPI"/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
@@ -6228,7 +6228,7 @@ Various fiducial points for machine vision alignment.</description>
 <part name="C5" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="4.7uF"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="D2" library="Pinoccio" deviceset="LED" device="0603" value="Yellow"/>
-<part name="R3" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1k"/>
+<part name="R3" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="470"/>
 <part name="X1" library="Pinoccio" deviceset="USB" device="-MICROB"/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
 <part name="F1" library="SparkFun" deviceset="PTC" device="SMD"/>
@@ -6287,7 +6287,7 @@ Various fiducial points for machine vision alignment.</description>
 <part name="C19" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="100nF"/>
 <part name="J1" library="Pinoccio" deviceset="AVR_SPI_PRG_6" device=""/>
 <part name="D1" library="Pinoccio" deviceset="LED" device="0603" value="Green"/>
-<part name="R14" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1k"/>
+<part name="R14" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="470"/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+2" library="SparkFun" deviceset="VCC" device=""/>
 <part name="R18" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="470"/>

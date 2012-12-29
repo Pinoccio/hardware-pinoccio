@@ -985,13 +985,13 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C2" library="Pinoccio" package="0402-CAP" value="4.7uF" x="18.4658" y="37.0078" smashed="yes" rot="R180"/>
+<element name="C2" library="Pinoccio" package="0402-CAP" value="1.0uF" x="18.4658" y="37.0078" smashed="yes" rot="R180"/>
 <element name="JP4" library="Pinoccio" package="2X3-PAD" value="AVR_SPI" x="10.1854" y="29.99231875" smashed="yes" rot="MR180"/>
 <element name="U2" library="SparkFun" package="SOT23-5" value="TPS78233" x="18.034" y="39.497" smashed="yes" rot="R180"/>
 <element name="C4" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="42.7736" smashed="yes" rot="R90"/>
 <element name="C5" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="44.704" smashed="yes" rot="R270"/>
 <element name="D2" library="Pinoccio" package="LED-0603" value="Yellow" x="7.112" y="49.0982" smashed="yes" rot="R180"/>
-<element name="R3" library="Pinoccio" package="0402-RES" value="1k" x="8.0772" y="47.2694" smashed="yes" rot="R90"/>
+<element name="R3" library="Pinoccio" package="0402-RES" value="470" x="8.0772" y="47.2694" smashed="yes" rot="R90"/>
 <element name="X1" library="Pinoccio" package="USB-MICROB" value="USB-MICROB" x="12.7" y="49.3522" locked="yes" smashed="yes" rot="R180"/>
 <element name="F1" library="SparkFun" package="PTC-1206" value="PTCSMD" x="18.6436" y="44.5516" smashed="yes" rot="R270"/>
 <element name="S2" library="Pinoccio" package="SWITCH-SPDT-SMD" value="SPST" x="23.0505" y="46.5074" locked="yes" smashed="yes" rot="R270"/>
@@ -1036,7 +1036,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C19" library="Pinoccio" package="0402-CAP" value="100nF" x="7.9248" y="31.5214" smashed="yes" rot="R180"/>
 <element name="J1" library="Pinoccio" package="2X3-PAD" value="AVR_SPI_PRG_6" x="10.1854" y="39.8526" rot="MR180"/>
 <element name="D1" library="Pinoccio" package="LED-0603" value="Green" x="18.288" y="49.0982" smashed="yes"/>
-<element name="R14" library="Pinoccio" package="0402-RES" value="1k" x="17.272" y="46.9392" smashed="yes" rot="R90"/>
+<element name="R14" library="Pinoccio" package="0402-RES" value="470" x="17.272" y="46.9392" smashed="yes" rot="R90"/>
 <element name="R18" library="Pinoccio" package="0402-RES" value="470" x="9.3726" y="27.6606" smashed="yes" rot="R90"/>
 <element name="JP3" library="Pinoccio" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="23.368" y="7.4676"/>
 <element name="JP5" library="Pinoccio" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="3.1496" y="48.9204"/>
@@ -2569,16 +2569,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="10.95" y1="40.5156" x2="10.95" y2="41.108" width="0.2032" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="4,1,43765a8cb42da1d6"/>
-<approved hash="19,1,882268166e738e47"/>
-<approved hash="19,1,8b0c6b386b888bbc"/>
-<approved hash="19,1,886068546f348f00"/>
-<approved hash="19,1,041fec2beb48037c"/>
-<approved hash="19,1,045dec69ea0f023b"/>
-<approved hash="19,1,b86038543f3cbf08"/>
-<approved hash="19,1,b82238163e7bbe4f"/>
-</errors>
 </board>
 </drawing>
 </eagle>
