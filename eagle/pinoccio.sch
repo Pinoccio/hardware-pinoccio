@@ -134,14 +134,6 @@
 <libraries>
 <library name="SparkFun">
 <packages>
-<package name="PTC">
-<wire x1="-3.81" y1="1.524" x2="3.81" y2="1.524" width="0.127" layer="21"/>
-<wire x1="3.81" y1="1.524" x2="3.81" y2="-1.524" width="0.127" layer="21"/>
-<wire x1="3.81" y1="-1.524" x2="-3.81" y2="-1.524" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="-1.524" x2="-3.81" y2="1.524" width="0.127" layer="21"/>
-<pad name="P$1" x="-2.54" y="0" drill="0.8"/>
-<pad name="P$2" x="2.54" y="0" drill="0.8"/>
-</package>
 <package name="0603">
 <wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
 <wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
@@ -268,6 +260,16 @@
 <smd name="1" x="-3.4" y="0" dx="2" dy="0.75" layer="1" rot="R90"/>
 <text x="-3.81" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.7" y="-1.3" size="0.4064" layer="27" rot="R180">&gt;VALUE</text>
+</package>
+<package name="PTC">
+<wire x1="-3.81" y1="1.524" x2="3.81" y2="1.524" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="1.524" x2="3.81" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="-1.524" x2="-3.81" y2="-1.524" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-1.524" x2="-3.81" y2="1.524" width="0.2032" layer="21"/>
+<pad name="P$1" x="-2.54" y="0" drill="0.8" diameter="1.8796"/>
+<pad name="P$2" x="2.54" y="0" drill="0.8" diameter="1.8796"/>
+<text x="-3.81" y="1.705" size="0.4318" layer="25">&gt;Name</text>
+<text x="-3.81" y="-2.14" size="0.4318" layer="27">&gt;Value</text>
 </package>
 </packages>
 <symbols>
@@ -3296,12 +3298,12 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
 </package>
 <package name="2X3-PAD">
-<smd name="5" x="5.016" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180"/>
-<smd name="3" x="2.508" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180"/>
-<smd name="1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180"/>
-<smd name="6" x="5.016" y="2.508" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180"/>
-<smd name="4" x="2.508" y="2.508" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180"/>
-<smd name="2" x="0" y="2.508" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180"/>
+<smd name="5" x="5.016" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180" cream="no"/>
+<smd name="3" x="2.508" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180" cream="no"/>
+<smd name="1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180" cream="no"/>
+<smd name="6" x="5.016" y="2.508" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180" cream="no"/>
+<smd name="4" x="2.508" y="2.508" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180" cream="no"/>
+<smd name="2" x="0" y="2.508" dx="1.27" dy="1.27" layer="1" roundness="100" rot="R180" cream="no"/>
 <wire x1="-0.508" y1="-1.143" x2="0.508" y2="-1.143" width="0.127" layer="21"/>
 </package>
 <package name="USB-MICROB">
@@ -4163,24 +4165,6 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <wire x1="0.0508" y1="0.0254" x2="-0.127" y2="0.2286" width="0.127" layer="21"/>
 <wire x1="0.0762" y1="0.0254" x2="-0.127" y2="-0.2286" width="0.127" layer="21"/>
 </package>
-<package name="0603-CAP">
-<wire x1="-1.523" y1="0.733" x2="1.523" y2="0.733" width="0.0508" layer="39"/>
-<wire x1="1.523" y1="0.733" x2="1.523" y2="-0.733" width="0.0508" layer="39"/>
-<wire x1="1.523" y1="-0.733" x2="-1.523" y2="-0.733" width="0.0508" layer="39"/>
-<wire x1="-1.523" y1="-0.733" x2="-1.523" y2="0.733" width="0.0508" layer="39"/>
-<wire x1="0" y1="0.0305" x2="0" y2="-0.0305" width="0.5588" layer="21"/>
-<smd name="1" x="-0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
-<smd name="2" x="0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.127" layer="51"/>
-<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.127" layer="51"/>
-<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.127" layer="51"/>
-<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.127" layer="51"/>
-<rectangle x1="-0.8" y1="-0.35" x2="-0.3" y2="0.4" layer="51"/>
-<rectangle x1="0.3" y1="-0.35" x2="0.8" y2="0.35" layer="51"/>
-</package>
 <package name="0603-RES">
 <wire x1="-1.523" y1="0.733" x2="1.473" y2="0.733" width="0.0508" layer="39"/>
 <wire x1="1.473" y1="0.733" x2="1.473" y2="-0.733" width="0.0508" layer="39"/>
@@ -4214,6 +4198,27 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <wire x1="2.7" y1="0.9" x2="2.7" y2="2.65" width="0.2032" layer="51"/>
 <wire x1="-0.3" y1="2.65" x2="-0.3" y2="0.9" width="0.2032" layer="21"/>
 <circle x="0.25" y="1.3" radius="0.111803125" width="0.2032" layer="21"/>
+</package>
+<package name="0603-DIODE">
+<wire x1="-1.523" y1="0.733" x2="1.523" y2="0.733" width="0.0508" layer="39"/>
+<wire x1="1.523" y1="0.733" x2="1.523" y2="-0.733" width="0.0508" layer="39"/>
+<wire x1="1.523" y1="-0.733" x2="-1.523" y2="-0.733" width="0.0508" layer="39"/>
+<wire x1="-1.523" y1="-0.733" x2="-1.523" y2="0.733" width="0.0508" layer="39"/>
+<smd name="A" x="-0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
+<smd name="C" x="0.8" y="0" dx="0.8" dy="0.95" layer="1" roundness="25"/>
+<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.127" layer="51"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.127" layer="51"/>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.127" layer="51"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.127" layer="51"/>
+<rectangle x1="-0.8" y1="-0.35" x2="-0.3" y2="0.4" layer="51"/>
+<rectangle x1="0.3" y1="-0.35" x2="0.8" y2="0.35" layer="51"/>
+<wire x1="0.254" y1="-0.4826" x2="0.254" y2="0" width="0.127" layer="21"/>
+<wire x1="0.254" y1="0" x2="0.254" y2="0.4572" width="0.127" layer="21"/>
+<wire x1="0.2286" y1="0" x2="-0.254" y2="0.4572" width="0.127" layer="21"/>
+<wire x1="0.254" y1="0" x2="-0.2286" y2="-0.4826" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -4647,9 +4652,9 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <circle x="2.54" y="0" radius="0.3592" width="0.2032" layer="94"/>
 <circle x="2.54" y="-5.08" radius="0.3592" width="0.2032" layer="94"/>
 <circle x="0" y="0" radius="0.3592" width="0.2032" layer="94"/>
-<text x="-12.7" y="-8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-12.7" y="-13.97" size="1.778" layer="95">&gt;NAME</text>
 <text x="-12.7" y="3.81" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="P1-VIN1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="VIN1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="P5-VOUT2" x="5.08" y="-5.08" visible="off" length="short" direction="pas" rot="R180"/>
 <pin name="P8-VOUT1" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <wire x1="0" y1="-5.08" x2="2.54" y2="-6.35" width="0.254" layer="94"/>
@@ -5362,10 +5367,10 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="0603-CAP" package="0603-CAP">
+<device name="0603-CAP" package="0603-DIODE">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="1" pad="A"/>
+<connect gate="G$1" pin="2" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6180,7 +6185,6 @@ Various fiducial points for machine vision alignment.</description>
 <devices>
 <device name="SOT23-8" package="SOT23-8">
 <connects>
-<connect gate="G$1" pin="P1-VIN1" pad="P$1"/>
 <connect gate="G$1" pin="P2-ON1" pad="P$2"/>
 <connect gate="G$1" pin="P3-ON2" pad="P$3"/>
 <connect gate="G$1" pin="P4-VIN2" pad="P$4"/>
@@ -6188,6 +6192,7 @@ Various fiducial points for machine vision alignment.</description>
 <connect gate="G$1" pin="P6-GND" pad="P$6"/>
 <connect gate="G$1" pin="P7-SR" pad="P$7"/>
 <connect gate="G$1" pin="P8-VOUT1" pad="P$8"/>
+<connect gate="G$1" pin="VIN1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6218,7 +6223,7 @@ Various fiducial points for machine vision alignment.</description>
 </classes>
 <parts>
 <part name="FRAME1" library="Pinoccio" deviceset="FRAME-LETTER" device=""/>
-<part name="C2" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF"/>
+<part name="C2" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="2.2uF"/>
 <part name="JP4" library="Pinoccio" deviceset="AVR_SPI_PRG_6" device="" value="AVR_SPI"/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
@@ -9417,7 +9422,7 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="P+2" gate="1" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="P1-VIN1"/>
+<pinref part="U$3" gate="G$1" pin="VIN1"/>
 <wire x1="210.82" y1="55.88" x2="208.28" y2="55.88" width="0.1524" layer="91"/>
 <label x="195.58" y="55.88" size="1.778" layer="95"/>
 <pinref part="U$3" gate="G$1" pin="P7-SR"/>
