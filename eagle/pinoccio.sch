@@ -163,46 +163,6 @@
 <text x="-1.524" y="1.27" size="0.4064" layer="25">&gt;Name</text>
 <text x="-1.524" y="-1.651" size="0.4064" layer="27">&gt;Value</text>
 </package>
-<package name="SOT23-5">
-<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
-<wire x1="1.4224" y1="0.4294" x2="1.4224" y2="-0.4294" width="0.2032" layer="21"/>
-<wire x1="1.4" y1="-0.8" x2="-1.4" y2="-0.8" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.4294" x2="-1.4224" y2="0.4294" width="0.2032" layer="21"/>
-<wire x1="-1.4" y1="0.8" x2="1.4" y2="0.8" width="0.1524" layer="51"/>
-<wire x1="-0.2684" y1="0.8104" x2="0.2684" y2="0.8104" width="0.2032" layer="21"/>
-<wire x1="1.4" y1="0.8" x2="1.4" y2="-0.8" width="0.1524" layer="51"/>
-<wire x1="-1.4" y1="0.8" x2="-1.4" y2="-0.8" width="0.1524" layer="51"/>
-<smd name="1" x="-0.95" y="-1.3001" dx="0.55" dy="1.2" layer="1"/>
-<smd name="2" x="0" y="-1.3001" dx="0.55" dy="1.2" layer="1"/>
-<smd name="3" x="0.95" y="-1.3001" dx="0.55" dy="1.2" layer="1"/>
-<smd name="4" x="0.95" y="1.3001" dx="0.55" dy="1.2" layer="1"/>
-<smd name="5" x="-0.95" y="1.3001" dx="0.55" dy="1.2" layer="1"/>
-<text x="-0.889" y="2.159" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-0.9525" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.2" y1="-1.5" x2="-0.7" y2="-0.85" layer="51"/>
-<rectangle x1="-0.25" y1="-1.5" x2="0.25" y2="-0.85" layer="51"/>
-<rectangle x1="0.7" y1="-1.5" x2="1.2" y2="-0.85" layer="51"/>
-<rectangle x1="0.7" y1="0.85" x2="1.2" y2="1.5" layer="51"/>
-<rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
-</package>
-<package name="SC70">
-<wire x1="1" y1="0.625" x2="1" y2="-0.625" width="0.127" layer="51"/>
-<wire x1="-1" y1="-0.625" x2="-1" y2="0.625" width="0.127" layer="51"/>
-<wire x1="-1" y1="-0.625" x2="1" y2="-0.625" width="0.127" layer="51"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.127" layer="51"/>
-<smd name="1" x="-0.65" y="-0.825" dx="0.4" dy="0.75" layer="1" cream="no"/>
-<smd name="2" x="0" y="-0.825" dx="0.4" dy="0.75" layer="1" cream="no"/>
-<smd name="3" x="0.65" y="-0.825" dx="0.4" dy="0.75" layer="1" cream="no"/>
-<smd name="4" x="0.65" y="0.825" dx="0.4" dy="0.75" layer="1" cream="no"/>
-<smd name="5" x="-0.65" y="0.825" dx="0.4" dy="0.75" layer="1" cream="no"/>
-<text x="-0.889" y="1.524" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-0.762" y="-0.254" size="0.4064" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.85" y1="0.45" x2="-0.45" y2="1.2" layer="31"/>
-<rectangle x1="0.45" y1="0.45" x2="0.85" y2="1.2" layer="31"/>
-<rectangle x1="-0.8382" y1="-1.1684" x2="-0.508" y2="-0.4826" layer="31"/>
-<rectangle x1="-0.1651" y1="-1.1684" x2="0.1651" y2="-0.4826" layer="31"/>
-<rectangle x1="0.508" y1="-1.1684" x2="0.8382" y2="-0.4826" layer="31"/>
-</package>
 <package name="ANTENNA-CHIP2">
 <wire x1="-0.889" y1="0.508" x2="-0.889" y2="-0.508" width="0.2032" layer="21"/>
 <wire x1="0.889" y1="0.508" x2="0.889" y2="-0.508" width="0.2032" layer="21"/>
@@ -277,19 +237,6 @@
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
-<symbol name="V-REG-LDO">
-<wire x1="-7.62" y1="-7.62" x2="5.08" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="-7.62" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.4064" layer="94"/>
-<text x="-7.62" y="9.144" size="1.778" layer="95">&gt;NAME</text>
-<text x="-7.62" y="-11.43" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="IN" x="-10.16" y="5.08" visible="pin" length="short" direction="in"/>
-<pin name="GND" x="-10.16" y="0" visible="pin" length="short" direction="in"/>
-<pin name="OUT" x="7.62" y="5.08" visible="pin" length="short" direction="pas" rot="R180"/>
-<pin name="EN" x="-10.16" y="-5.08" visible="pin" length="short" direction="in"/>
-<pin name="BP" x="7.62" y="-5.08" visible="pin" length="short" direction="in" rot="R180"/>
 </symbol>
 <symbol name="PTC">
 <wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.254" layer="94"/>
@@ -375,39 +322,6 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="V_REG_LDO" prefix="U">
-<description>&lt;b&gt;Voltage Regulator LDO&lt;/b&gt;
-Standard 150mA LDO voltage regulator in SOT-23 layout. Micrel part MIC5205. BP (by-pass) pin is used to lower output noise with 470pF cap.</description>
-<gates>
-<gate name="G$1" symbol="V-REG-LDO" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="SMD" package="SOT23-5">
-<connects>
-<connect gate="G$1" pin="BP" pad="4"/>
-<connect gate="G$1" pin="EN" pad="3"/>
-<connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="OUT" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SMD2" package="SC70">
-<connects>
-<connect gate="G$1" pin="BP" pad="4"/>
-<connect gate="G$1" pin="EN" pad="3"/>
-<connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="OUT" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3672,11 +3586,11 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 </package>
 <package name="SOT23-5">
 <description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
-<wire x1="1.4224" y1="0.4294" x2="1.4224" y2="-0.4294" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="0.4294" x2="1.27" y2="-0.4294" width="0.2032" layer="21"/>
 <wire x1="1.4" y1="-0.8" x2="-1.4" y2="-0.8" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.4294" x2="-1.4224" y2="0.4294" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.4294" x2="-1.27" y2="0.4294" width="0.2032" layer="21"/>
 <wire x1="-1.4" y1="0.8" x2="1.4" y2="0.8" width="0.1524" layer="51"/>
-<wire x1="-0.2684" y1="0.8104" x2="0.2684" y2="0.8104" width="0.2032" layer="21"/>
+<wire x1="-0.2684" y1="0.7088" x2="0.2684" y2="0.7088" width="0.2032" layer="21"/>
 <wire x1="1.4" y1="0.8" x2="1.4" y2="-0.8" width="0.1524" layer="51"/>
 <wire x1="-1.4" y1="0.8" x2="-1.4" y2="-0.8" width="0.1524" layer="51"/>
 <smd name="1" x="-0.95" y="-1.3001" dx="0.55" dy="1.2" layer="1"/>
@@ -4220,6 +4134,22 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <wire x1="0.2286" y1="0" x2="-0.254" y2="0.4572" width="0.127" layer="21"/>
 <wire x1="0.254" y1="0" x2="-0.2286" y2="-0.4826" width="0.127" layer="21"/>
 </package>
+<package name="SON-6-DRV">
+<wire x1="0" y1="0" x2="0" y2="2.1" width="0.127" layer="51"/>
+<wire x1="0" y1="2.1" x2="2.1" y2="2.1" width="0.127" layer="51"/>
+<wire x1="2.1" y1="2.1" x2="2.1" y2="0" width="0.127" layer="51"/>
+<wire x1="2.1" y1="0" x2="0" y2="0" width="0.127" layer="51"/>
+<smd name="1" x="0.4" y="0" dx="0.7" dy="0.3" layer="1" rot="R90"/>
+<smd name="2" x="1.05" y="0" dx="0.7" dy="0.3" layer="1" rot="R90"/>
+<smd name="3" x="1.7" y="0" dx="0.7" dy="0.3" layer="1" rot="R90"/>
+<smd name="6" x="0.4" y="2.1" dx="0.7" dy="0.3" layer="1" rot="R90"/>
+<smd name="5" x="1.05" y="2.1" dx="0.7" dy="0.3" layer="1" rot="R90"/>
+<smd name="4" x="1.7" y="2.1" dx="0.7" dy="0.3" layer="1" rot="R90"/>
+<smd name="PAD" x="1.05" y="1.05" dx="1.6" dy="1" layer="1"/>
+<circle x="0.65" y="1.05" radius="0.180275" width="0.127" layer="51"/>
+<circle x="1.45" y="1.05" radius="0.180275" width="0.127" layer="51"/>
+<circle x="-0.05" y="0.05" radius="0.1" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="JUMPER-2">
@@ -4575,17 +4505,17 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <text x="15.494" y="7.62" size="2.7432" layer="94" font="vector">&gt;DRAWING_NAME</text>
 </symbol>
 <symbol name="MCP73831">
-<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
 <text x="-7.62" y="5.588" size="1.778" layer="95">&gt;Name</text>
 <text x="-7.62" y="-7.62" size="1.778" layer="96">&gt;Value</text>
-<pin name="VIN" x="-10.16" y="2.54" length="short" direction="pwr"/>
+<pin name="VUSB" x="-10.16" y="2.54" length="short" direction="pwr"/>
 <pin name="STAT" x="-10.16" y="-2.54" length="short" direction="out"/>
-<pin name="VBAT" x="10.16" y="2.54" length="short" direction="pwr" rot="R180"/>
-<pin name="PROG" x="10.16" y="0" length="short" direction="in" rot="R180"/>
-<pin name="GND" x="10.16" y="-2.54" length="short" direction="pwr" rot="R180"/>
+<pin name="VBAT" x="12.7" y="2.54" length="short" direction="pwr" rot="R180"/>
+<pin name="PROG" x="12.7" y="0" length="short" direction="in" rot="R180"/>
+<pin name="GND" x="12.7" y="-2.54" length="short" direction="pwr" rot="R180"/>
 </symbol>
 <symbol name="FIDUCIAL">
 <wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
@@ -4668,6 +4598,18 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <wire x1="4.064" y1="2.286" x2="4.064" y2="-7.366" width="0.2032" layer="94"/>
 <wire x1="4.064" y1="-7.366" x2="-1.27" y2="-7.366" width="0.2032" layer="94"/>
 <wire x1="-1.27" y1="-7.366" x2="-1.27" y2="2.286" width="0.2032" layer="94"/>
+</symbol>
+<symbol name="LDO-TPS78233">
+<wire x1="-7.62" y1="-7.62" x2="5.08" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="-7.62" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.4064" layer="94"/>
+<text x="-5.08" y="9.144" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-11.43" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="IN" x="-10.16" y="5.08" length="short" direction="in"/>
+<pin name="GND" x="-10.16" y="0" length="short" direction="in"/>
+<pin name="VCC" x="7.62" y="5.08" length="short" direction="sup" rot="R180"/>
+<pin name="EN" x="-10.16" y="-5.08" length="short" direction="in"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5971,7 +5913,7 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/21984a.pdf</description>
 <connect gate="G$1" pin="PROG" pad="5"/>
 <connect gate="G$1" pin="STAT" pad="1"/>
 <connect gate="G$1" pin="VBAT" pad="3"/>
-<connect gate="G$1" pin="VIN" pad="4"/>
+<connect gate="G$1" pin="VUSB" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6167,7 +6109,16 @@ Various fiducial points for machine vision alignment.</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="" package="0402-DIODE">
+<device name="0402" package="0402-DIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="0603-DIODE">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
@@ -6193,6 +6144,37 @@ Various fiducial points for machine vision alignment.</description>
 <connect gate="G$1" pin="P7-SR" pad="P$7"/>
 <connect gate="G$1" pin="P8-VOUT1" pad="P$8"/>
 <connect gate="G$1" pin="VIN1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LDO-TPS78233" prefix="U">
+<description>&lt;b&gt;Voltage Regulator LDO&lt;/b&gt;
+500nA Ground Current, 150mA, Ultra-Low Quiescent Current Low-Dropout Linear Regulator.</description>
+<gates>
+<gate name="G$1" symbol="LDO-TPS78233" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SON-6" package="SON-6-DRV">
+<connects>
+<connect gate="G$1" pin="EN" pad="4"/>
+<connect gate="G$1" pin="GND" pad="3 5 PAD"/>
+<connect gate="G$1" pin="IN" pad="6"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="SOT23-5">
+<connects>
+<connect gate="G$1" pin="EN" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2 4"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="VCC" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6228,7 +6210,7 @@ Various fiducial points for machine vision alignment.</description>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+4" library="SparkFun" deviceset="VCC" device=""/>
-<part name="U2" library="SparkFun" deviceset="V_REG_LDO" device="SMD" value="TPS78233"/>
+<part name="U2" library="Pinoccio" deviceset="LDO-TPS78233" device="" value="TPS78233"/>
 <part name="C4" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="4.7uF"/>
 <part name="C5" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="4.7uF"/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
@@ -6300,7 +6282,7 @@ Various fiducial points for machine vision alignment.</description>
 <part name="JP5" library="Pinoccio" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="R8" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1k"/>
 <part name="R15" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1k"/>
-<part name="D3" library="Pinoccio" deviceset="DIODE-SCHOTTKY" device=""/>
+<part name="D3" library="Pinoccio" deviceset="DIODE-SCHOTTKY" device="0402"/>
 <part name="U$3" library="Pinoccio" deviceset="SWITCH-DUAL-MOSFET" device="SOT23-8"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="R1" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="10k"/>
@@ -9185,7 +9167,6 @@ Various fiducial points for machine vision alignment.</description>
 <wire x1="20.32" y1="7.62" x2="50.8" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="7.62" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="7.62" x2="63.5" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="17.78" x2="50.8" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="17.78" x2="50.8" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <junction x="50.8" y="7.62"/>
@@ -9319,8 +9300,6 @@ Various fiducial points for machine vision alignment.</description>
 <wire x1="38.1" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="58.42" x2="35.56" y2="45.72" width="0.1524" layer="91"/>
 <junction x="35.56" y="45.72"/>
-<pinref part="U2" gate="G$1" pin="BP"/>
-<wire x1="55.88" y1="53.34" x2="55.88" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP-R" gate="G$1" pin="2"/>
@@ -9383,15 +9362,6 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="P+1" gate="1" pin="VCC"/>
 </segment>
 <segment>
-<wire x1="55.88" y1="63.5" x2="60.96" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="66.04" x2="60.96" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="63.5" x2="60.96" y2="60.96" width="0.1524" layer="91"/>
-<junction x="60.96" y="63.5"/>
-<pinref part="U2" gate="G$1" pin="OUT"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<pinref part="P+4" gate="1" pin="VCC"/>
-</segment>
-<segment>
 <pinref part="P+3" gate="1" pin="VCC"/>
 <wire x1="139.7" y1="177.8" x2="132.08" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="167.64" x2="139.7" y2="167.64" width="0.1524" layer="91"/>
@@ -9440,6 +9410,15 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="96.52" y1="101.6" x2="106.68" y2="101.6" width="0.1524" layer="91"/>
 <label x="101.6" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="VCC"/>
+<wire x1="55.88" y1="63.5" x2="60.96" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="P+4" gate="1" pin="VCC"/>
+<wire x1="60.96" y1="63.5" x2="60.96" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="60.96" x2="60.96" y2="63.5" width="0.1524" layer="91"/>
+<junction x="60.96" y="63.5"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -9613,24 +9592,24 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="USB_VIN" class="0">
+<net name="VUSB" class="0">
 <segment>
 <wire x1="119.38" y1="50.8" x2="111.76" y2="50.8" width="0.1524" layer="91"/>
-<label x="104.14" y="51.054" size="1.778" layer="95"/>
+<label x="109.22" y="51.054" size="1.778" layer="95"/>
 <pinref part="X1" gate="G$1" pin="VBUS"/>
 </segment>
 <segment>
 <wire x1="7.62" y1="22.86" x2="20.32" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="22.86" x2="27.94" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="17.78" x2="20.32" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="7.62" y1="30.48" x2="7.62" y2="22.86" width="0.1524" layer="91"/>
-<junction x="20.32" y="22.86"/>
 <label x="2.54" y="20.32" size="1.778" layer="95"/>
-<pinref part="U1" gate="G$1" pin="VIN"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <pinref part="D2" gate="G$1" pin="A"/>
 <wire x1="7.62" y1="22.86" x2="5.08" y2="22.86" width="0.1524" layer="91"/>
 <junction x="7.62" y="22.86"/>
+<pinref part="U1" gate="G$1" pin="VUSB"/>
+<wire x1="20.32" y1="22.86" x2="27.94" y2="22.86" width="0.1524" layer="91"/>
+<junction x="20.32" y="22.86"/>
 </segment>
 <segment>
 <pinref part="JP-L" gate="G$1" pin="1"/>
@@ -9652,7 +9631,7 @@ Various fiducial points for machine vision alignment.</description>
 <segment>
 <wire x1="63.5" y1="22.86" x2="73.66" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="17.78" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="22.86" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="22.86" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
 <junction x="63.5" y="22.86"/>
 <label x="65.532" y="23.114" size="1.778" layer="95"/>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -9708,7 +9687,7 @@ Various fiducial points for machine vision alignment.</description>
 </net>
 <net name="N$11" class="0">
 <segment>
-<wire x1="48.26" y1="20.32" x2="55.88" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="20.32" x2="55.88" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="20.32" x2="55.88" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PROG"/>
 <pinref part="R4" gate="G$1" pin="1"/>
@@ -10345,9 +10324,6 @@ Various fiducial points for machine vision alignment.</description>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="104,1,27.94,22.86,U1,VIN,USB_VIN,,,"/>
-</errors>
 </schematic>
 </drawing>
 </eagle>
