@@ -9600,12 +9600,16 @@ Various fiducial points for machine vision alignment.</description>
 </segment>
 <segment>
 <wire x1="25.4" y1="17.78" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
-<label x="17.78" y="20.32" size="1.778" layer="95"/>
+<label x="7.62" y="20.32" size="1.778" layer="95"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="22.86" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="22.86" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VUSB"/>
+<wire x1="12.7" y1="22.86" x2="7.62" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="22.86" x2="33.02" y2="22.86" width="0.1524" layer="91"/>
 <junction x="25.4" y="22.86"/>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="12.7" y1="30.48" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
+<junction x="12.7" y="22.86"/>
 </segment>
 <segment>
 <pinref part="JP-L" gate="G$1" pin="1"/>
@@ -9647,11 +9651,6 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="BATT" gate="G$1" pin="2"/>
 <wire x1="137.16" y1="12.7" x2="142.24" y2="12.7" width="0.1524" layer="91"/>
 <label x="137.16" y="12.7" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="D2" gate="G$1" pin="A"/>
-<wire x1="12.7" y1="30.48" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
-<label x="5.08" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VBAT-AE" class="0">
