@@ -156,8 +156,8 @@
 <text x="-10.4394" y="-8.3312" size="1.27" layer="51" font="vector" ratio="15">http://pinocc.io</text>
 <text x="3.3112" y="36.8984" size="1.016" layer="21" font="vector" ratio="15">GND</text>
 <text x="3.1588" y="38.8476" size="1.016" layer="21" font="vector" ratio="15">VUSB</text>
-<text x="21.5138" y="46.1518" size="1.016" layer="21" font="vector" ratio="15" rot="R180">ON</text>
-<text x="21.6789" y="48.7045" size="1.016" layer="21" font="vector" ratio="15" rot="R180">OFF</text>
+<text x="21.5138" y="45.7454" size="1.016" layer="21" font="vector" ratio="15" rot="R180">ON</text>
+<text x="21.6789" y="48.2981" size="1.016" layer="21" font="vector" ratio="15" rot="R180">OFF</text>
 <text x="22.3174" y="39.9016" size="1.016" layer="21" font="vector" ratio="15" rot="R180">3V3</text>
 <text x="22.292" y="37.927" size="1.016" layer="21" font="vector" ratio="15" rot="R180">GND</text>
 <text x="22.292" y="33.9204" size="1.016" layer="21" font="vector" ratio="15" rot="R180">RX1</text>
@@ -215,7 +215,7 @@
 <rectangle x1="12.4206" y1="8.509" x2="12.9794" y2="11.7856" layer="41"/>
 <rectangle x1="13.4366" y1="9.6266" x2="14.8844" y2="10.6426" layer="41"/>
 <text x="18.2464" y="47.3566" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">http://pinocc.io</text>
-<text x="22.9108" y="43.4086" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">SW</text>
+<text x="22.987" y="43.0784" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">SW</text>
 <text x="6.731" y="46.6598" size="1.016" layer="21" font="vector" ratio="15">C</text>
 <text x="17.9324" y="46.6598" size="1.016" layer="21" font="vector" ratio="15">S</text>
 <text x="14.1478" y="41.5036" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">16U2</text>
@@ -1051,7 +1051,6 @@ Please make sure your boards conform to these design rules.</description>
 </polygon>
 <polygon width="0.2032" layer="16" isolate="0.254">
 <vertex x="2.9972" y="50.8"/>
-<vertex x="22.3266" y="50.8254"/>
 <vertex x="25.4254" y="50.8254"/>
 <vertex x="25.4254" y="50.7492"/>
 <vertex x="25.3492" y="50.7492"/>
@@ -2544,16 +2543,6 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="VIN">
 </signal>
 </signals>
-<errors>
-<approved hash="4,1,43765a8cb42da1d6"/>
-<approved hash="19,1,8b0c6b386b888bbc"/>
-<approved hash="19,1,886068546f348f00"/>
-<approved hash="19,1,882268166e738e47"/>
-<approved hash="19,1,041fec2beb48037c"/>
-<approved hash="19,1,045dec69ea0f023b"/>
-<approved hash="19,1,b82238163e7bbe4f"/>
-<approved hash="19,1,b86038543f3cbf08"/>
-</errors>
 </board>
 </drawing>
 </eagle>
