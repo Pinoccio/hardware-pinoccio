@@ -1022,7 +1022,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R15" library="Pinoccio" package="0402-RES" value="1k" x="6.7564" y="27.3558" smashed="yes" rot="R90"/>
 <element name="D3" library="Pinoccio" package="0402-DIODE" value="DIODE-SCHOTTKY0402" x="17.8562" y="30.8864" smashed="yes" rot="R90"/>
 <element name="U$3" library="Pinoccio" package="SOT23-8" value="SWITCH-DUAL-MOSFETSOT23-8" x="10.9728" y="33.4518" rot="R270"/>
-<element name="R1" library="Pinoccio" package="0402-RES" value="10k" x="16.1036" y="35.814" smashed="yes" rot="R90"/>
+<element name="R1" library="Pinoccio" package="0402-RES" value="2k" x="16.1036" y="35.814" smashed="yes" rot="R90"/>
 </elements>
 <signals>
 <signal name="GND" class="5">
@@ -1565,7 +1565,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U4" pad="53"/>
 <wire x1="8.2" y1="19.9618" x2="8.2" y2="19.994" width="0.2032" layer="1"/>
 <wire x1="8.2" y1="19.994" x2="8.1534" y2="20.0406" width="0.2032" layer="1"/>
-<wire x1="8.1534" y1="20.0406" x2="6.731" y2="20.0406" width="0.2032" layer="1"/>
 <wire x1="6.731" y1="20.0406" x2="6.1976" y2="20.574" width="0.2032" layer="1"/>
 <via x="6.1976" y="20.574" extent="1-16" drill="0.3302"/>
 <wire x1="6.1976" y1="20.574" x2="6.1214" y2="20.574" width="0.2032" layer="16"/>
@@ -1576,6 +1575,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="3.4036" y1="11.8364" x2="3.0734" y2="11.5062" width="0.2032" layer="16"/>
 <wire x1="3.0734" y1="11.5062" x2="3.0734" y2="10.4114" width="0.2032" layer="16"/>
 <wire x1="3.0734" y1="10.4114" x2="2.032" y2="9.37" width="0.2032" layer="16"/>
+<wire x1="8.1534" y1="20.0406" x2="6.731" y2="20.0406" width="0.2032" layer="1"/>
 </signal>
 <signal name="D5">
 <contactref element="JP-L" pad="P$15"/>
@@ -2543,6 +2543,16 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="VIN">
 </signal>
 </signals>
+<errors>
+<approved hash="4,1,43765a8cb42da1d6"/>
+<approved hash="19,1,8b0c6b386b888bbc"/>
+<approved hash="19,1,882268166e738e47"/>
+<approved hash="19,1,886068546f348f00"/>
+<approved hash="19,1,041fec2beb48037c"/>
+<approved hash="19,1,045dec69ea0f023b"/>
+<approved hash="19,1,b82238163e7bbe4f"/>
+<approved hash="19,1,b86038543f3cbf08"/>
+</errors>
 </board>
 </drawing>
 </eagle>
