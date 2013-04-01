@@ -6,7 +6,8 @@
 - Switch to MCP73832 charge controller for open-drain status pin
 - Change silkscreen to start GPIOs with D2 instead of D0, like Arduino 
 - Add 470Ω resistor to reset header pin, as direct can exceed voltage spec
-- Add 100k pull-down resistors to both ON pins of dual load switch
+- Moved to a single load switch for 3V3 header pin, leaving VBAT direct
+- Add a 100k pull-down resistor to the ON pin of the load switch
 - Tie pin 2 of 16U2 ICSP pin to UCAP, not VCC, for programming ability
   with switch off
 - Decouple AREF with a 100nF cap, per Atmel app note suggestion
