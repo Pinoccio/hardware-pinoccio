@@ -8,3 +8,8 @@ hello@pinocc.io
 Daniel Allemann
 daniel.allemann@thinlay.ch
 --------------------------
+
+--------------------------
+Francois De La Roche
+francois.dlr@gmail.com
+--------------------------

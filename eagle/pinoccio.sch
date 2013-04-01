@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="6" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="6" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="5" fill="1" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,16 +53,16 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -134,35 +134,6 @@
 <libraries>
 <library name="SparkFun">
 <packages>
-<package name="0603">
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
-<wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.889" y="0.762" size="0.4064" layer="25" font="vector">&gt;NAME</text>
-<text x="-1.016" y="-1.143" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-</package>
-<package name="PTC-1206">
-<wire x1="-1.5" y1="0.75" x2="1.5" y2="0.75" width="0.127" layer="51"/>
-<wire x1="1.5" y1="0.75" x2="1.5" y2="-0.75" width="0.127" layer="51"/>
-<wire x1="1.5" y1="-0.75" x2="-1.5" y2="-0.75" width="0.127" layer="51"/>
-<wire x1="-1.5" y1="-0.75" x2="-1.5" y2="0.75" width="0.127" layer="51"/>
-<wire x1="0.635" y1="-0.762" x2="-0.635" y2="-0.762" width="0.2032" layer="21"/>
-<wire x1="-0.635" y1="0.762" x2="0.635" y2="0.762" width="0.2032" layer="21"/>
-<wire x1="-1.143" y1="-1.016" x2="0.254" y2="1.016" width="0.127" layer="51"/>
-<wire x1="0.254" y1="1.016" x2="1.143" y2="1.016" width="0.127" layer="51"/>
-<smd name="1" x="-1.4" y="0" dx="1" dy="1.8" layer="1"/>
-<smd name="2" x="1.4" y="0" dx="1" dy="1.8" layer="1"/>
-<text x="-1.524" y="1.27" size="0.4064" layer="25">&gt;Name</text>
-<text x="-1.524" y="-1.651" size="0.4064" layer="27">&gt;Value</text>
-</package>
 <package name="ANTENNA-CHIP2">
 <wire x1="-0.889" y1="0.508" x2="-0.889" y2="-0.508" width="0.2032" layer="21"/>
 <wire x1="0.889" y1="0.508" x2="0.889" y2="-0.508" width="0.2032" layer="21"/>
@@ -221,34 +192,12 @@
 <text x="-3.81" y="1.27" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.7" y="-1.3" size="0.4064" layer="27" rot="R180">&gt;VALUE</text>
 </package>
-<package name="PTC">
-<wire x1="-3.81" y1="1.524" x2="3.81" y2="1.524" width="0.2032" layer="21"/>
-<wire x1="3.81" y1="1.524" x2="3.81" y2="-1.524" width="0.2032" layer="21"/>
-<wire x1="3.81" y1="-1.524" x2="-3.81" y2="-1.524" width="0.2032" layer="21"/>
-<wire x1="-3.81" y1="-1.524" x2="-3.81" y2="1.524" width="0.2032" layer="21"/>
-<pad name="P$1" x="-2.54" y="0" drill="0.8" diameter="1.8796"/>
-<pad name="P$2" x="2.54" y="0" drill="0.8" diameter="1.8796"/>
-<text x="-3.81" y="1.705" size="0.4318" layer="25">&gt;Name</text>
-<text x="-3.81" y="-2.14" size="0.4318" layer="27">&gt;Value</text>
-</package>
 </packages>
 <symbols>
 <symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
-<symbol name="PTC">
-<wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-1.27" x2="-2.54" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-1.524" y1="-2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
-<wire x1="3.81" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<text x="-2.54" y="3.048" size="1.778" layer="95">&gt;NAME</text>
-<text x="-3.302" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-5.08" y="0" visible="off" length="short"/>
-<pin name="2" x="7.62" y="0" visible="off" length="short" rot="R180"/>
 </symbol>
 <symbol name="VCC2">
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
@@ -287,42 +236,6 @@
 </gates>
 <devices>
 <device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="PTC" prefix="F">
-<description>&lt;b&gt;Resettable Fuse PTC&lt;/b&gt;
-Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
-<gates>
-<gate name="G$1" symbol="PTC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="PTH" package="PTC">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-<connect gate="G$1" pin="2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SMD" package="PTC-1206">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="0603" package="0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -4067,22 +3980,6 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <rectangle x1="-0.75" y1="-0.35" x2="-0.3" y2="0.35" layer="51"/>
 <rectangle x1="0.3" y1="-0.35" x2="0.75" y2="0.4" layer="51"/>
 </package>
-<package name="SOT23-8">
-<smd name="P$1" x="0.23" y="0.4" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<smd name="P$2" x="0.88" y="0.4" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<smd name="P$3" x="1.53" y="0.4" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<smd name="P$4" x="2.18" y="0.4" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<smd name="P$8" x="0.23" y="3.1" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<smd name="P$7" x="0.88" y="3.1" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<smd name="P$6" x="1.53" y="3.1" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<smd name="P$5" x="2.18" y="3.1" dx="0.45" dy="0.8" layer="1" rot="R180"/>
-<wire x1="-0.3" y1="0.9" x2="-0.3" y2="2.65" width="0.2032" layer="51"/>
-<wire x1="-0.3" y1="2.65" x2="2.7" y2="2.65" width="0.2032" layer="51"/>
-<wire x1="-0.3" y1="0.9" x2="2.7" y2="0.9" width="0.2032" layer="51"/>
-<wire x1="2.7" y1="0.9" x2="2.7" y2="2.65" width="0.2032" layer="51"/>
-<wire x1="-0.3" y1="2.65" x2="-0.3" y2="0.9" width="0.2032" layer="21"/>
-<circle x="0.25" y="1.3" radius="0.111803125" width="0.2032" layer="21"/>
-</package>
 <package name="SON-6-DRV">
 <wire x1="0" y1="0" x2="0" y2="2.1" width="0.127" layer="51"/>
 <wire x1="0" y1="2.1" x2="2.1" y2="2.1" width="0.127" layer="51"/>
@@ -4572,30 +4469,6 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 <pin name="14" x="10.16" y="12.7" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="15" x="10.16" y="15.24" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="16" x="10.16" y="17.78" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-</symbol>
-<symbol name="SWITCH-DUAL-MOSFET">
-<wire x1="0" y1="0" x2="2.54" y2="1.27" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="3.175" y2="-5.08" width="0.127" layer="94"/>
-<wire x1="2.54" y1="0" x2="3.175" y2="0" width="0.1524" layer="94"/>
-<circle x="2.54" y="0" radius="0.3592" width="0.2032" layer="94"/>
-<circle x="2.54" y="-5.08" radius="0.3592" width="0.2032" layer="94"/>
-<circle x="0" y="0" radius="0.3592" width="0.2032" layer="94"/>
-<text x="-12.7" y="-13.97" size="1.778" layer="95">&gt;NAME</text>
-<text x="-12.7" y="3.81" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="VIN1" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="P5-VOUT2" x="5.08" y="-5.08" visible="off" length="short" direction="pas" rot="R180"/>
-<pin name="P8-VOUT1" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-<wire x1="0" y1="-5.08" x2="2.54" y2="-6.35" width="0.254" layer="94"/>
-<circle x="0" y="-5.08" radius="0.3592" width="0.2032" layer="94"/>
-<pin name="P4-VIN2" x="-2.54" y="-5.08" visible="off" length="short" direction="pas"/>
-<pin name="P2-ON1" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="P3-ON2" x="2.54" y="-10.16" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="P7-SR" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="P6-GND" x="0" y="-10.16" visible="off" length="short" direction="pas" rot="R90"/>
-<wire x1="-1.27" y1="2.286" x2="4.064" y2="2.286" width="0.2032" layer="94"/>
-<wire x1="4.064" y1="2.286" x2="4.064" y2="-7.366" width="0.2032" layer="94"/>
-<wire x1="4.064" y1="-7.366" x2="-1.27" y2="-7.366" width="0.2032" layer="94"/>
-<wire x1="-1.27" y1="-7.366" x2="-1.27" y2="2.286" width="0.2032" layer="94"/>
 </symbol>
 <symbol name="LDO-TPS78233">
 <wire x1="-7.62" y1="-7.62" x2="5.08" y2="-7.62" width="0.4064" layer="94"/>
@@ -6165,28 +6038,6 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SWITCH-DUAL-MOSFET">
-<gates>
-<gate name="G$1" symbol="SWITCH-DUAL-MOSFET" x="0" y="2.54"/>
-</gates>
-<devices>
-<device name="SOT23-8" package="SOT23-8">
-<connects>
-<connect gate="G$1" pin="P2-ON1" pad="P$2"/>
-<connect gate="G$1" pin="P3-ON2" pad="P$3"/>
-<connect gate="G$1" pin="P4-VIN2" pad="P$4"/>
-<connect gate="G$1" pin="P5-VOUT2" pad="P$5"/>
-<connect gate="G$1" pin="P6-GND" pad="P$6"/>
-<connect gate="G$1" pin="P7-SR" pad="P$7"/>
-<connect gate="G$1" pin="P8-VOUT1" pad="P$8"/>
-<connect gate="G$1" pin="VIN1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="LDO-TPS78233" prefix="U">
 <description>&lt;b&gt;Voltage Regulator LDO&lt;/b&gt;
 500nA Ground Current, 150mA, Ultra-Low Quiescent Current Low-Dropout Linear Regulator.</description>
@@ -6311,10 +6162,9 @@ Various fiducial points for machine vision alignment.</description>
 <part name="R3" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="470"/>
 <part name="X1" library="Pinoccio" deviceset="USB" device="-MICROB"/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
-<part name="F1" library="SparkFun" deviceset="PTC" device="SMD"/>
 <part name="S2" library="Pinoccio" deviceset="SWITCH-SPST" device="SMD2" value="SPST"/>
 <part name="U1" library="Pinoccio" deviceset="MCP73832" device="" value="MCP73832"/>
-<part name="R4" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="3K"/>
+<part name="R4" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="2K"/>
 <part name="U4" library="Pinoccio" deviceset="ATMEGA128RFA1" device=""/>
 <part name="C7" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF"/>
 <part name="C8" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF"/>
@@ -6372,18 +6222,12 @@ Various fiducial points for machine vision alignment.</description>
 <part name="JP5" library="Pinoccio" deviceset="FIDUCIAL" device="1X2"/>
 <part name="R8" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1k"/>
 <part name="R15" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1k"/>
-<part name="U$3" library="Pinoccio" deviceset="SWITCH-DUAL-MOSFET" device="SOT23-8"/>
-<part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="R1" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="2k"/>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND8" library="SparkFun" deviceset="GND" device=""/>
 <part name="C1" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="100nF"/>
 <part name="GND13" library="SparkFun" deviceset="GND" device=""/>
 <part name="R6" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="470"/>
-<part name="R16" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="100k"/>
-<part name="R19" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="100k"/>
-<part name="GND14" library="SparkFun" deviceset="GND" device=""/>
-<part name="GND15" library="SparkFun" deviceset="GND" device=""/>
 <part name="R20" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="10k"/>
 <part name="GND17" library="SparkFun" deviceset="GND" device=""/>
 <part name="R21" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="DNI"/>
@@ -6395,6 +6239,12 @@ Various fiducial points for machine vision alignment.</description>
 <part name="U$4" library="Pinoccio" deviceset="MAX17048" device="DFN8"/>
 <part name="GND10" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND18" library="SparkFun" deviceset="GND" device=""/>
+<part name="U$5" library="Pinoccio" deviceset="SWITCH-MOSFET" device="TDFN4"/>
+<part name="R5" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="100k"/>
+<part name="GND19" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND23" library="SparkFun" deviceset="GND" device=""/>
+<part name="C3" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="100nF"/>
+<part name="R7" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1K"/>
 </parts>
 <sheets>
 <sheet>
@@ -9126,15 +8976,14 @@ Various fiducial points for machine vision alignment.</description>
 <instance part="U2" gate="G$1" x="53.34" y="63.5"/>
 <instance part="C4" gate="G$1" x="17.78" y="12.7"/>
 <instance part="C5" gate="G$1" x="71.12" y="12.7"/>
-<instance part="GND20" gate="1" x="71.12" y="5.08"/>
+<instance part="GND20" gate="1" x="71.12" y="2.54"/>
 <instance part="D2" gate="G$1" x="15.24" y="30.48" rot="R90"/>
 <instance part="R3" gate="G$1" x="25.4" y="30.48" rot="R180"/>
 <instance part="X1" gate="G$1" x="121.92" y="48.26"/>
 <instance part="GND21" gate="1" x="119.38" y="38.1"/>
-<instance part="F1" gate="G$1" x="33.02" y="43.18" rot="R180"/>
 <instance part="S2" gate="1" x="27.94" y="68.58" rot="MR0"/>
 <instance part="U1" gate="G$1" x="43.18" y="20.32"/>
-<instance part="R4" gate="G$1" x="60.96" y="12.7" rot="R270"/>
+<instance part="R4" gate="G$1" x="63.5" y="15.24"/>
 <instance part="U4" gate="G$1" x="172.72" y="137.16"/>
 <instance part="C7" gate="G$1" x="121.92" y="162.56" smashed="yes">
 <attribute name="NAME" x="123.444" y="165.481" size="1.778" layer="95"/>
@@ -9237,10 +9086,6 @@ Various fiducial points for machine vision alignment.</description>
 <instance part="JP5" gate="G$1" x="243.84" y="15.24"/>
 <instance part="R8" gate="G$1" x="81.28" y="154.94" rot="MR0"/>
 <instance part="R15" gate="G$1" x="91.44" y="149.86" rot="MR0"/>
-<instance part="U$3" gate="G$1" x="223.52" y="66.04" smashed="yes">
-<attribute name="NAME" x="228.6" y="69.85" size="1.778" layer="95"/>
-</instance>
-<instance part="GND7" gate="1" x="223.52" y="48.26"/>
 <instance part="R1" gate="G$1" x="78.74" y="88.9" rot="MR0"/>
 <instance part="GND6" gate="1" x="15.24" y="96.52"/>
 <instance part="GND8" gate="1" x="5.08" y="83.82"/>
@@ -9250,16 +9095,6 @@ Various fiducial points for machine vision alignment.</description>
 </instance>
 <instance part="GND13" gate="1" x="121.92" y="144.78"/>
 <instance part="R6" gate="G$1" x="96.52" y="124.46" rot="MR90"/>
-<instance part="R16" gate="G$1" x="210.82" y="48.26" smashed="yes" rot="MR0">
-<attribute name="NAME" x="212.09" y="49.7586" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="212.09" y="44.958" size="1.778" layer="96" rot="MR0"/>
-</instance>
-<instance part="R19" gate="G$1" x="210.82" y="81.28" smashed="yes" rot="MR0">
-<attribute name="NAME" x="212.09" y="82.7786" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="212.09" y="77.978" size="1.778" layer="96" rot="MR0"/>
-</instance>
-<instance part="GND14" gate="1" x="203.2" y="45.72"/>
-<instance part="GND15" gate="1" x="203.2" y="78.74"/>
 <instance part="R20" gate="G$1" x="10.16" y="48.26" rot="R270"/>
 <instance part="GND17" gate="1" x="10.16" y="40.64"/>
 <instance part="R21" gate="G$1" x="154.94" y="48.26" smashed="yes" rot="MR270">
@@ -9287,6 +9122,23 @@ Various fiducial points for machine vision alignment.</description>
 <instance part="U$4" gate="G$1" x="215.9" y="27.94"/>
 <instance part="GND10" gate="1" x="193.04" y="17.78"/>
 <instance part="GND18" gate="1" x="231.14" y="17.78"/>
+<instance part="U$5" gate="G$1" x="226.06" y="58.42" smashed="yes">
+<attribute name="NAME" x="218.44" y="57.15" size="1.778" layer="95"/>
+</instance>
+<instance part="R5" gate="G$1" x="208.28" y="58.42" smashed="yes" rot="MR270">
+<attribute name="NAME" x="206.7814" y="59.69" size="1.778" layer="95" rot="MR270"/>
+<attribute name="VALUE" x="211.582" y="59.69" size="1.778" layer="96" rot="MR270"/>
+</instance>
+<instance part="GND19" gate="1" x="208.28" y="50.8"/>
+<instance part="GND23" gate="1" x="226.06" y="48.26"/>
+<instance part="C3" gate="G$1" x="233.68" y="55.88" smashed="yes">
+<attribute name="NAME" x="235.204" y="58.801" size="1.778" layer="95"/>
+<attribute name="VALUE" x="235.204" y="53.721" size="1.778" layer="96"/>
+</instance>
+<instance part="R7" gate="G$1" x="63.5" y="10.16" smashed="yes">
+<attribute name="NAME" x="64.77" y="11.6586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="64.77" y="6.858" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9299,19 +9151,21 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="71.12" y1="7.62" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="GND20" gate="1" pin="GND"/>
 <pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="5.08" x2="71.12" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="GND20" gate="1" pin="GND"/>
 <pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="7.62" x2="71.12" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="7.62" x2="17.78" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="7.62" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="7.62" x2="60.96" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="7.62" x2="71.12" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="17.78" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="17.78" x2="55.88" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="55.88" y1="10.16" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="7.62" x2="71.12" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="10.16" x2="55.88" y2="10.16" width="0.1524" layer="91"/>
+<junction x="55.88" y="10.16"/>
 <junction x="55.88" y="7.62"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<junction x="60.96" y="7.62"/>
 <junction x="71.12" y="7.62"/>
 </segment>
 <segment>
@@ -9473,11 +9327,6 @@ Various fiducial points for machine vision alignment.</description>
 <wire x1="127" y1="177.8" x2="124.46" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="P6-GND"/>
-<wire x1="223.52" y1="55.88" x2="223.52" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="GND7" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="C17" gate="G$1" pin="2"/>
 <wire x1="15.24" y1="104.14" x2="15.24" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="C16" gate="G$1" pin="2"/>
@@ -9494,16 +9343,6 @@ Various fiducial points for machine vision alignment.</description>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R16" gate="G$1" pin="2"/>
-<pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="203.2" y1="48.26" x2="205.74" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R19" gate="G$1" pin="2"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="203.2" y1="81.28" x2="205.74" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R20" gate="G$1" pin="2"/>
@@ -9528,6 +9367,19 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="U$4" gate="G$1" pin="QSTRT"/>
 <wire x1="226.06" y1="20.32" x2="231.14" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="GND18" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="GND"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+<wire x1="226.06" y1="50.8" x2="226.06" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="226.06" y1="53.34" x2="226.06" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="53.34" x2="226.06" y2="53.34" width="0.1524" layer="91"/>
+<junction x="226.06" y="53.34"/>
 </segment>
 </net>
 <net name="VCC" class="1">
@@ -9567,16 +9419,6 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="P+2" gate="1" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="VIN1"/>
-<wire x1="220.98" y1="66.04" x2="218.44" y2="66.04" width="0.1524" layer="91"/>
-<label x="205.74" y="66.04" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="P7-SR"/>
-<wire x1="218.44" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="71.12" x2="223.52" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="71.12" x2="218.44" y2="66.04" width="0.1524" layer="91"/>
-<junction x="218.44" y="66.04"/>
-</segment>
-<segment>
 <pinref part="U2" gate="G$1" pin="VCC"/>
 <wire x1="60.96" y1="68.58" x2="66.04" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="VCC"/>
@@ -9584,6 +9426,11 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="66.04" x2="66.04" y2="68.58" width="0.1524" layer="91"/>
 <junction x="66.04" y="68.58"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="IN"/>
+<wire x1="215.9" y1="60.96" x2="220.98" y2="60.96" width="0.1524" layer="91"/>
+<label x="215.9" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -9837,9 +9684,10 @@ Various fiducial points for machine vision alignment.</description>
 <label x="137.16" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="F1" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="43.18" x2="45.72" y2="43.18" width="0.1524" layer="91"/>
-<label x="40.64" y="43.18" size="1.778" layer="95"/>
+<label x="25.4" y="43.18" size="1.778" layer="95"/>
+<wire x1="20.32" y1="48.26" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="Q4" gate="G$1" pin="D"/>
+<wire x1="20.32" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="CELL"/>
@@ -9874,20 +9722,20 @@ Various fiducial points for machine vision alignment.</description>
 <junction x="33.02" y="68.58"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="P4-VIN2"/>
-<label x="205.74" y="60.96" size="1.778" layer="95"/>
-<wire x1="220.98" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="JP-R" gate="G$1" pin="3"/>
+<wire x1="236.22" y1="119.38" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
+<label x="223.52" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PROG" class="0">
 <segment>
-<wire x1="55.88" y1="20.32" x2="60.96" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="20.32" x2="60.96" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="20.32" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="PROG"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="20.32" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
-<label x="63.5" y="17.78" size="1.778" layer="95"/>
-<junction x="60.96" y="20.32"/>
+<wire x1="58.42" y1="15.24" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="20.32" x2="68.58" y2="20.32" width="0.1524" layer="91"/>
+<label x="63.5" y="20.32" size="1.778" layer="95"/>
+<junction x="58.42" y="20.32"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="PD4(INT5/AIN3)"/>
@@ -10195,23 +10043,6 @@ Various fiducial points for machine vision alignment.</description>
 <label x="203.2" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SHIELDBAT-EN" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="P3-ON2"/>
-<wire x1="226.06" y1="55.88" x2="226.06" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="53.34" x2="215.9" y2="53.34" width="0.1524" layer="91"/>
-<label x="205.74" y="53.34" size="1.778" layer="95"/>
-<pinref part="R16" gate="G$1" pin="1"/>
-<wire x1="215.9" y1="53.34" x2="205.74" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="53.34" x2="215.9" y2="48.26" width="0.1524" layer="91"/>
-<junction x="215.9" y="53.34"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="PD5"/>
-<wire x1="200.66" y1="142.24" x2="213.36" y2="142.24" width="0.1524" layer="91"/>
-<label x="203.2" y="142.24" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="USBD-" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
@@ -10462,19 +10293,18 @@ Various fiducial points for machine vision alignment.</description>
 </net>
 <net name="SHIELDVCC-EN" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="P2-ON1"/>
-<wire x1="226.06" y1="71.12" x2="226.06" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="76.2" x2="215.9" y2="76.2" width="0.1524" layer="91"/>
-<label x="205.74" y="73.66" size="1.778" layer="95"/>
-<pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="215.9" y1="76.2" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="81.28" x2="215.9" y2="76.2" width="0.1524" layer="91"/>
-<junction x="215.9" y="76.2"/>
-</segment>
-<segment>
 <pinref part="U4" gate="G$1" pin="PD4"/>
 <wire x1="200.66" y1="144.78" x2="213.36" y2="144.78" width="0.1524" layer="91"/>
 <label x="203.2" y="144.78" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="ON"/>
+<wire x1="226.06" y1="66.04" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="63.5" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="66.04" x2="200.66" y2="66.04" width="0.1524" layer="91"/>
+<label x="200.66" y="66.04" size="1.778" layer="95"/>
+<junction x="208.28" y="66.04"/>
 </segment>
 </net>
 <net name="VCC-AE" class="0">
@@ -10484,9 +10314,12 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="124.46" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="P8-VOUT1"/>
-<wire x1="228.6" y1="66.04" x2="241.3" y2="66.04" width="0.1524" layer="91"/>
-<label x="231.14" y="66.04" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="OUT"/>
+<wire x1="228.6" y1="60.96" x2="233.68" y2="60.96" width="0.1524" layer="91"/>
+<label x="231.14" y="60.96" size="1.778" layer="95"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="233.68" y1="60.96" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
+<junction x="233.68" y="60.96"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -10537,14 +10370,6 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="U$2" gate="G$1" pin="OUT"/>
 </segment>
 </net>
-<net name="N$12" class="0">
-<segment>
-<wire x1="20.32" y1="48.26" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="F1" gate="G$1" pin="2"/>
-<wire x1="20.32" y1="43.18" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="Q4" gate="G$1" pin="D"/>
-</segment>
-</net>
 <net name="N$27" class="0">
 <segment>
 <pinref part="R22" gate="G$1" pin="2"/>
@@ -10586,28 +10411,23 @@ Various fiducial points for machine vision alignment.</description>
 <label x="223.52" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="VBAT-AE" class="0">
-<segment>
-<pinref part="JP-R" gate="G$1" pin="3"/>
-<wire x1="236.22" y1="119.38" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
-<label x="223.52" y="119.38" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="G$1" pin="P5-VOUT2"/>
-<wire x1="228.6" y1="60.96" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
-<label x="231.14" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="BATTALRT" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="PG5~"/>
-<wire x1="144.78" y1="114.3" x2="129.54" y2="114.3" width="0.1524" layer="91"/>
-<label x="129.54" y="111.76" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="~ALRT"/>
 <wire x1="226.06" y1="35.56" x2="241.3" y2="35.56" width="0.1524" layer="91"/>
 <label x="228.6" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="PD5"/>
+<wire x1="200.66" y1="142.24" x2="213.36" y2="142.24" width="0.1524" layer="91"/>
+<label x="203.2" y="142.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="68.58" y1="15.24" x2="68.58" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
