@@ -1,10 +1,16 @@
 ------------------------------------------------------------------------
+- v0.11 - 2013-04-08
+------------------------------------------------------------------------
+- Tie battery header pin to VBAT, not VBAT-AS
+- Remove AREF with a 100nF cap, turns out datasheet does not require it
+
+------------------------------------------------------------------------
 - v0.10 - 2013-03-29
 ------------------------------------------------------------------------
 - Add MOSFET/Load Switch pair to fix charge controller oscillation
 - 16U2 sometimes started in DFU mode, tied 16U2 reset pin to VUSB, not VCC
 - Switch to MCP73832 charge controller for open-drain status pin
-- Change silkscreen to start GPIOs with D2 instead of D0, like Arduino 
+- Change silkscreen to start GPIOs with D2 instead of D0, like Arduino
 - Add 470Ω resistor to reset header pin, as direct can exceed voltage spec
 - Moved to a single load switch for 3V3 header pin, leaving VBAT direct
 - Add a 100k pull-down resistor to the ON pin of the load switch
