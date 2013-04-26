@@ -9004,7 +9004,7 @@ Various fiducial points for machine vision alignment.</description>
 <instance part="GND11" gate="1" x="180.34" y="27.94"/>
 <instance part="GND16" gate="1" x="114.3" y="124.46"/>
 <instance part="GND22" gate="1" x="114.3" y="99.06"/>
-<instance part="GND25" gate="1" x="109.22" y="157.48"/>
+<instance part="GND25" gate="1" x="121.92" y="157.48"/>
 <instance part="GND28" gate="1" x="142.24" y="83.82"/>
 <instance part="JP-R" gate="G$1" x="246.38" y="104.14" rot="R180"/>
 <instance part="JP-L" gate="G$1" x="246.38" y="157.48" rot="R180"/>
@@ -9275,7 +9275,6 @@ Various fiducial points for machine vision alignment.</description>
 <pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="127" y1="160.02" x2="121.92" y2="160.02" width="0.1524" layer="91"/>
 <junction x="121.92" y="160.02"/>
-<wire x1="121.92" y1="160.02" x2="109.22" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
