@@ -6226,7 +6226,7 @@ Various fiducial points for machine vision alignment.</description>
 <part name="GND6" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND8" library="SparkFun" deviceset="GND" device=""/>
 <part name="R6" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="470"/>
-<part name="R20" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="10k"/>
+<part name="R20" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1k"/>
 <part name="GND17" library="SparkFun" deviceset="GND" device=""/>
 <part name="R21" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="DNI"/>
 <part name="R22" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="0"/>
