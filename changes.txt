@@ -1,8 +1,14 @@
 ------------------------------------------------------------------------
-- v0.11 - 2013-04-08
+- v0.11 - 2013-04-27
 ------------------------------------------------------------------------
 - Tie battery header pin to VBAT, not VBAT-AS
 - Remove AREF with a 100nF cap, turns out datasheet does not require it
+- Decrease pull-down resistor value for gate of P-channel MOSFET to 1k
+- Add voltage divider for charge enabled pin to the RFR2
+- Tie anode of serial LED to UCAP on 16U2, instead of VUSB
+- Add load switch to anode of RGB LED
+- Swap D8 and BATTALRT pins so BATTALRT can externally interrupt the
+  MCU from the deepest sleep states on low-battery
 
 ------------------------------------------------------------------------
 - v0.10 - 2013-03-29
