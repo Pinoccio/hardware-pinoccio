@@ -1,4 +1,12 @@
 ------------------------------------------------------------------------
+- v0.12 - 2013-06-27
+------------------------------------------------------------------------
+- Add schottky diode between power load switch input and VUSB--was causing
+  the P-channel MOSFET from fully enabling after plugging in USB then 
+  unplugging it.
+- Remove voltage divider circuit from Lipo charge status pin to CHGSTATUS
+
+------------------------------------------------------------------------
 - v0.11 - 2013-04-27
 ------------------------------------------------------------------------
 - Tie battery header pin to VBAT, not VBAT-AS
