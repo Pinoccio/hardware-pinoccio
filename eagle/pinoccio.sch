@@ -6348,7 +6348,7 @@ Various fiducial points for machine vision alignment.</description>
 <sheets>
 <sheet>
 <plain>
-<text x="238.76" y="1.27" size="2.54" layer="94" font="vector">0.12</text>
+<text x="238.76" y="1.27" size="2.54" layer="94" font="vector">0.13</text>
 <rectangle x1="0.38735" y1="0.29845" x2="0.41275" y2="0.31115" layer="21"/>
 <rectangle x1="0.36195" y1="0.31115" x2="0.45085" y2="0.32385" layer="21"/>
 <rectangle x1="0.33655" y1="0.32385" x2="0.47625" y2="0.33655" layer="21"/>
