@@ -2,7 +2,6 @@
 - v0.13 - 2013-06-28
 ------------------------------------------------------------------------
 - Put silkscreen for switch and battery jacks on bottom of board
-- Made room for FCC identification number
 - Move headers out 15 mils each
 - Move RGB LED and lower ISP pads up
 
@@ -10,7 +9,7 @@
 - v0.12 - 2013-06-27
 ------------------------------------------------------------------------
 - Add schottky diode between power load switch input and VUSB--was causing
-  the P-channel MOSFET from fully enabling after plugging in USB then 
+  the P-channel MOSFET from fully enabling after plugging in USB then
   unplugging it
 - Remove voltage divider circuit from Lipo charge status pin to CHGSTATUS
 - Changed load switch/MOSFET pull-down resistor to 100k with diode fix

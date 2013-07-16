@@ -210,7 +210,6 @@
 <text x="24.5618" y="43.2562" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">switch</text>
 <text x="14.0462" y="41.8084" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">16U2</text>
 <text x="15.1892" y="33.5534" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">256RFR2</text>
-<text x="18.5258" y="46.4168" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">FCC: AAA-1234567</text>
 </plain>
 <libraries>
 <library name="SparkFun">
@@ -2718,14 +2717,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="17.615" y1="46.9646" x2="17.5006" y2="46.8502" width="0.3048" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="19,1,882268166e738e47"/>
-<approved hash="19,1,886068546f348f00"/>
-<approved hash="19,1,041fec2beb48037c"/>
-<approved hash="19,1,045dec69ea0f023b"/>
-<approved hash="19,1,b86038543f3cbf08"/>
-<approved hash="19,1,b82238163e7bbe4f"/>
-</errors>
 </board>
 </drawing>
 </eagle>
