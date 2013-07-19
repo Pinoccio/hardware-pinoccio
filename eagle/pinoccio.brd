@@ -1033,8 +1033,8 @@ Please make sure your boards conform to these design rules.</description>
 <element name="R6" library="Pinoccio" package="0402-RES" value="470" x="4.2418" y="34.3662" smashed="yes"/>
 <element name="R20" library="Pinoccio" package="0402-RES" value="100k" x="14.732" y="45.2374" smashed="yes"/>
 <element name="R21" library="Pinoccio" package="0402-RES" value="DNI" x="14.6558" y="10.0076" smashed="yes"/>
-<element name="L2" library="Pinoccio" package="0402-RES" value="4.7nH" x="13.1826" y="9.525" smashed="yes" rot="R270"/>
-<element name="R23" library="Pinoccio" package="0402-RES" value="1.0pF" x="11.9126" y="8.9662" smashed="yes" rot="R180"/>
+<element name="L2" library="Pinoccio" package="0402-CAP" value="4.7nH" x="13.1826" y="9.525" smashed="yes" rot="R270"/>
+<element name="C23" library="Pinoccio" package="0402-CAP" value="1.0pF" x="11.9126" y="8.9662" smashed="yes" rot="R180"/>
 <element name="R24" library="Pinoccio" package="0402-RES" value="0" x="14.4526" y="8.9662" smashed="yes"/>
 <element name="Q4" library="Pinoccio" package="SOT23-3" value="MOSFET-PCHANNELSMD" x="18.4556" y="42.857" smashed="yes" rot="R270"/>
 <element name="U$2" library="Pinoccio" package="TDFN4" value="SWITCH-MOSFETTDFN4" x="18.2776" y="44.7096"/>
@@ -1261,7 +1261,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U2" pad="4"/>
 <via x="4.6482" y="16.0774" extent="1-16" drill="0.3302"/>
 <contactref element="R20" pad="2"/>
-<contactref element="R23" pad="2"/>
+<contactref element="C23" pad="2"/>
 <contactref element="R21" pad="2"/>
 <polygon width="0.2032" layer="16">
 <vertex x="6.6294" y="40.894"/>
@@ -2142,8 +2142,8 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$27">
 <contactref element="L2" pad="2"/>
 <contactref element="R24" pad="1"/>
-<contactref element="R23" pad="1"/>
-<contactref element="R23" pad="1"/>
+<contactref element="C23" pad="1"/>
+<contactref element="C23" pad="1"/>
 <wire x1="13.9526" y1="8.9662" x2="14.097" y2="8.9154" width="0.4064" layer="1"/>
 <wire x1="14.097" y1="8.9154" x2="14.1224" y2="8.9916" width="0.4064" layer="1"/>
 <wire x1="14.097" y1="8.9154" x2="13.2588" y2="8.9154" width="0.4064" layer="1"/>

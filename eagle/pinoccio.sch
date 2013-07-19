@@ -4110,6 +4110,108 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <wire x1="0.2286" y1="0" x2="-0.254" y2="0.4572" width="0.127" layer="21"/>
 <wire x1="0.254" y1="0" x2="-0.2286" y2="-0.4826" width="0.127" layer="21"/>
 </package>
+<package name="INDUCTOR-COILCRAFT">
+<smd name="P$1" x="0.5207" y="1.1049" dx="2.2098" dy="1.0414" layer="1" rot="R90"/>
+<smd name="P$2" x="1.9685" y="1.1049" dx="2.2098" dy="1.0414" layer="1" rot="R90"/>
+<wire x1="0.254" y1="2.1082" x2="0.254" y2="0.1016" width="0.127" layer="51"/>
+<wire x1="0.254" y1="0.1016" x2="2.2352" y2="0.1016" width="0.127" layer="51"/>
+<wire x1="2.2352" y1="0.1016" x2="2.2352" y2="2.1082" width="0.127" layer="51"/>
+<wire x1="2.2352" y1="2.1082" x2="0.254" y2="2.1082" width="0.127" layer="51"/>
+</package>
+<package name="INDUCTOR-COILCRAFT-LPS4018">
+<polygon width="0.127" layer="1">
+<vertex x="0.0254" y="0.635"/>
+<vertex x="0.0254" y="3.1496"/>
+<vertex x="0.635" y="3.7592"/>
+<vertex x="1.4224" y="3.7592"/>
+<vertex x="1.4224" y="3.0734"/>
+<vertex x="1.0414" y="3.0734"/>
+<vertex x="0.6858" y="2.7178"/>
+<vertex x="0.6858" y="1.0414"/>
+<vertex x="1.0414" y="0.7112"/>
+<vertex x="1.397" y="0.7112"/>
+<vertex x="1.397" y="0.0254"/>
+<vertex x="0.635" y="0.0254"/>
+</polygon>
+<smd name="P$1" x="0.3556" y="1.8796" dx="1.27" dy="0.508" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<smd name="P$2" x="4.2164" y="1.905" dx="1.27" dy="0.508" layer="1" rot="R90" stop="no" thermals="no" cream="no"/>
+<wire x1="1.8034" y1="3.7846" x2="2.6924" y2="3.7846" width="0.127" layer="21"/>
+<wire x1="1.7272" y1="-0.0508" x2="2.7178" y2="-0.0508" width="0.127" layer="21"/>
+<polygon width="0.127" layer="29">
+<vertex x="-0.127" y="0.6096"/>
+<vertex x="-0.127" y="3.2004"/>
+<vertex x="0.5842" y="3.9116"/>
+<vertex x="1.5494" y="3.9116"/>
+<vertex x="1.5494" y="2.921"/>
+<vertex x="1.0922" y="2.921"/>
+<vertex x="0.8128" y="2.6416"/>
+<vertex x="0.8128" y="1.143"/>
+<vertex x="1.1176" y="0.8382"/>
+<vertex x="1.5494" y="0.8382"/>
+<vertex x="1.5494" y="-0.1016"/>
+<vertex x="1.524" y="-0.127"/>
+<vertex x="0.5842" y="-0.127"/>
+<vertex x="-0.127" y="0.5842"/>
+</polygon>
+<polygon width="0.127" layer="31">
+<vertex x="0.127" y="0.6858"/>
+<vertex x="0.127" y="3.048"/>
+<vertex x="0.7112" y="3.6322"/>
+<vertex x="1.27" y="3.6322"/>
+<vertex x="1.27" y="3.175"/>
+<vertex x="0.9652" y="3.175"/>
+<vertex x="0.5588" y="2.7686"/>
+<vertex x="0.5588" y="1.0414"/>
+<vertex x="0.9906" y="0.6096"/>
+<vertex x="1.2954" y="0.6096"/>
+<vertex x="1.2954" y="0.1016"/>
+<vertex x="0.7112" y="0.1016"/>
+</polygon>
+<polygon width="0.127" layer="1">
+<vertex x="4.4196" y="3.1242"/>
+<vertex x="4.4196" y="0.6096"/>
+<vertex x="3.81" y="0"/>
+<vertex x="3.0226" y="0"/>
+<vertex x="3.0226" y="0.6858"/>
+<vertex x="3.4036" y="0.6858"/>
+<vertex x="3.7592" y="1.0414"/>
+<vertex x="3.7592" y="2.7178"/>
+<vertex x="3.4036" y="3.048"/>
+<vertex x="3.048" y="3.048"/>
+<vertex x="3.048" y="3.7338"/>
+<vertex x="3.81" y="3.7338"/>
+</polygon>
+<smd name="P$3" x="4.0894" y="1.8796" dx="1.27" dy="0.508" layer="1" rot="R270" stop="no" thermals="no" cream="no"/>
+<polygon width="0.127" layer="29">
+<vertex x="4.572" y="3.175"/>
+<vertex x="4.572" y="0.5588"/>
+<vertex x="3.7084" y="-0.1524"/>
+<vertex x="2.8702" y="-0.1524"/>
+<vertex x="2.8702" y="0.8382"/>
+<vertex x="3.3528" y="0.8382"/>
+<vertex x="3.6322" y="1.1176"/>
+<vertex x="3.6322" y="2.6162"/>
+<vertex x="3.3274" y="2.921"/>
+<vertex x="2.8956" y="2.921"/>
+<vertex x="2.8956" y="3.8608"/>
+<vertex x="2.921" y="3.8862"/>
+<vertex x="3.8608" y="3.8862"/>
+</polygon>
+<polygon width="0.127" layer="31">
+<vertex x="4.318" y="3.0734"/>
+<vertex x="4.318" y="0.7112"/>
+<vertex x="3.7338" y="0.127"/>
+<vertex x="3.175" y="0.127"/>
+<vertex x="3.175" y="0.5842"/>
+<vertex x="3.4798" y="0.5842"/>
+<vertex x="3.8862" y="0.9906"/>
+<vertex x="3.8862" y="2.7178"/>
+<vertex x="3.4544" y="3.1496"/>
+<vertex x="3.1496" y="3.1496"/>
+<vertex x="3.1496" y="3.6576"/>
+<vertex x="3.7338" y="3.6576"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="JUMPER-2">
@@ -4362,6 +4464,16 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
 <pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+<symbol name="INDUCTOR">
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="-2.54" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="point"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="point" rot="R180"/>
+<text x="-4.826" y="4.191" size="1.778" layer="95">&gt;NAME</text>
+<text x="-4.826" y="-4.699" size="1.778" layer="96">&gt;VALUE</text>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94" curve="-180"/>
 </symbol>
 <symbol name="RESISTOR">
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
@@ -5390,6 +5502,40 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="INDUCTOR" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="CC" package="INDUCTOR-COILCRAFT">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CC-4108" package="INDUCTOR-COILCRAFT-LPS4018">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="0402-CAP">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+<connect gate="G$1" pin="P$2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="RESISTOR" prefix="R" uservalue="yes">
 <description>&lt;b&gt;Resistor&lt;/b&gt;
 Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</description>
@@ -6327,8 +6473,8 @@ Various fiducial points for machine vision alignment.</description>
 <part name="R20" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="100k"/>
 <part name="GND17" library="SparkFun" deviceset="GND" device=""/>
 <part name="R21" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="DNI"/>
-<part name="L2" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="4.7nH"/>
-<part name="R23" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="1.0pF"/>
+<part name="L2" library="Pinoccio" deviceset="INDUCTOR" device="" value="4.7nH"/>
+<part name="C23" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0pF"/>
 <part name="R24" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="0"/>
 <part name="Q4" library="Pinoccio" deviceset="MOSFET-PCHANNEL" device="SMD"/>
 <part name="U$2" library="Pinoccio" deviceset="SWITCH-MOSFET" device="TDFN4"/>
@@ -9102,7 +9248,10 @@ Various fiducial points for machine vision alignment.</description>
 <attribute name="NAME" x="108.204" y="109.601" size="1.778" layer="95"/>
 <attribute name="VALUE" x="108.204" y="104.521" size="1.778" layer="96"/>
 </instance>
-<instance part="C9" gate="G$1" x="157.48" y="40.64"/>
+<instance part="C9" gate="G$1" x="157.48" y="40.64" smashed="yes">
+<attribute name="NAME" x="160.528" y="41.275" size="1.778" layer="95"/>
+<attribute name="VALUE" x="160.02" y="38.481" size="1.778" layer="96"/>
+</instance>
 <instance part="B1" gate="G$1" x="170.18" y="43.18" smashed="yes">
 <attribute name="VALUE" x="173.482" y="43.942" size="1.778" layer="96"/>
 <attribute name="NAME" x="163.576" y="47.498" size="1.778" layer="95"/>
@@ -9125,7 +9274,10 @@ Various fiducial points for machine vision alignment.</description>
 </instance>
 <instance part="GND2" gate="1" x="139.7" y="5.08"/>
 <instance part="GND3" gate="1" x="45.72" y="48.26"/>
-<instance part="C10" gate="G$1" x="177.8" y="35.56"/>
+<instance part="C10" gate="G$1" x="177.8" y="35.56" smashed="yes">
+<attribute name="NAME" x="180.848" y="36.449" size="1.778" layer="95"/>
+<attribute name="VALUE" x="180.594" y="33.909" size="1.778" layer="96"/>
+</instance>
 <instance part="Q1" gate="G$1" x="121.92" y="134.62" smashed="yes">
 <attribute name="NAME" x="124.46" y="133.096" size="1.778" layer="95"/>
 <attribute name="VALUE" x="119.38" y="137.16" size="1.778" layer="96"/>
@@ -9204,20 +9356,20 @@ Various fiducial points for machine vision alignment.</description>
 <instance part="R20" gate="G$1" x="10.16" y="48.26" rot="R270"/>
 <instance part="GND17" gate="1" x="10.16" y="40.64"/>
 <instance part="R21" gate="G$1" x="152.4" y="40.64" smashed="yes" rot="MR270">
-<attribute name="NAME" x="150.3934" y="42.926" size="1.778" layer="95" rot="MR270"/>
-<attribute name="VALUE" x="155.956" y="40.64" size="1.778" layer="96" rot="MR270"/>
+<attribute name="NAME" x="146.812" y="42.1894" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="146.812" y="39.37" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="L2" gate="G$1" x="147.32" y="50.8" smashed="yes" rot="MR0">
-<attribute name="NAME" x="148.59" y="52.2986" size="1.778" layer="95" rot="MR0"/>
+<attribute name="NAME" x="148.844" y="52.8066" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="151.13" y="47.498" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="R23" gate="G$1" x="142.24" y="40.64" smashed="yes" rot="MR270">
-<attribute name="NAME" x="140.2334" y="42.926" size="1.778" layer="95" rot="MR270"/>
-<attribute name="VALUE" x="145.542" y="43.942" size="1.778" layer="96" rot="MR270"/>
+<instance part="C23" gate="G$1" x="142.24" y="40.64" smashed="yes" rot="MR0">
+<attribute name="NAME" x="139.192" y="41.1226" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="141.478" y="38.1" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R24" gate="G$1" x="137.16" y="50.8" smashed="yes" rot="MR0">
-<attribute name="NAME" x="138.43" y="52.2986" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="138.43" y="47.498" size="1.778" layer="96" rot="MR0"/>
+<attribute name="NAME" x="139.446" y="52.2986" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="137.922" y="47.498" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="Q4" gate="G$1" x="25.4" y="50.8" smashed="yes">
 <attribute name="NAME" x="26.67" y="53.594" size="1.778" layer="95"/>
@@ -9294,8 +9446,7 @@ Various fiducial points for machine vision alignment.</description>
 <junction x="177.8" y="22.86"/>
 <pinref part="C9" gate="G$1" pin="2"/>
 <pinref part="B1" gate="G$1" pin="GND@6"/>
-<wire x1="157.48" y1="38.1" x2="157.48" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="30.48" x2="157.48" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="38.1" x2="157.48" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="22.86" x2="162.56" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="35.56" x2="162.56" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="35.56" x2="162.56" y2="22.86" width="0.1524" layer="91"/>
@@ -9304,14 +9455,14 @@ Various fiducial points for machine vision alignment.</description>
 <wire x1="167.64" y1="22.86" x2="167.64" y2="33.02" width="0.1524" layer="91"/>
 <junction x="162.56" y="22.86"/>
 <junction x="167.64" y="22.86"/>
-<pinref part="R23" gate="G$1" pin="2"/>
-<wire x1="142.24" y1="35.56" x2="142.24" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="30.48" x2="152.4" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="C23" gate="G$1" pin="2"/>
+<wire x1="142.24" y1="38.1" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="22.86" x2="152.4" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-<wire x1="152.4" y1="30.48" x2="157.48" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="35.56" x2="152.4" y2="30.48" width="0.1524" layer="91"/>
-<junction x="152.4" y="30.48"/>
-<junction x="157.48" y="30.48"/>
+<wire x1="152.4" y1="22.86" x2="157.48" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="35.56" x2="152.4" y2="22.86" width="0.1524" layer="91"/>
+<junction x="152.4" y="22.86"/>
+<junction x="157.48" y="22.86"/>
 </segment>
 <segment>
 <pinref part="C12" gate="G$1" pin="2"/>
@@ -9847,7 +9998,7 @@ Various fiducial points for machine vision alignment.</description>
 <wire x1="157.48" y1="50.8" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="50.8" x2="157.48" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="48.26" x2="167.64" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="L2" gate="G$1" pin="1"/>
+<pinref part="L2" gate="G$1" pin="P$1"/>
 <junction x="157.48" y="50.8"/>
 <pinref part="R21" gate="G$1" pin="1"/>
 <wire x1="152.4" y1="45.72" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
@@ -10467,13 +10618,12 @@ Various fiducial points for machine vision alignment.</description>
 </net>
 <net name="N$27" class="0">
 <segment>
-<pinref part="L2" gate="G$1" pin="2"/>
+<pinref part="L2" gate="G$1" pin="P$2"/>
 <pinref part="R24" gate="G$1" pin="1"/>
-<pinref part="R23" gate="G$1" pin="1"/>
-<pinref part="R23" gate="G$1" pin="1"/>
+<pinref part="C23" gate="G$1" pin="1"/>
+<pinref part="C23" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="45.72" x2="142.24" y2="50.8" width="0.1524" layer="91"/>
 <junction x="142.24" y="50.8"/>
-<junction x="142.24" y="45.72"/>
 </segment>
 </net>
 <net name="N$28" class="0">
