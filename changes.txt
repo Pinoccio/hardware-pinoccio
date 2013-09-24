@@ -4,6 +4,8 @@
 - Put silkscreen for switch and battery jacks on bottom of board
 - Move headers out 15 mils each
 - Move RGB LED and lower ISP pads up
+- Add 2k pull-up resistor to backpack bus
+- Add 2k pull-up resistors to SDA/SCL
 
 ------------------------------------------------------------------------
 - v0.12 - 2013-06-27
