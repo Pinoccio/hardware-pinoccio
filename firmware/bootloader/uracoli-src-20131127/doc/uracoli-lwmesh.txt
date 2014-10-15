@@ -1,0 +1,33 @@
+= A Simple Routing Protocol =
+:author: Samuel Klipphahn.
+:toc: 1
+
+== Abstract ==
+
+The simple routing protocoll provides multihop frame routing.
+
+
+== Usage ==
+
+To implement an application, running on the Simple Routing Protocol,
+following conditions have to be fulfilled:
+
+. include +lw_mesh.h+
+. initialize Lightweight Mesh by calling +lw_mesh_init(...)+
+. enable global interrupts by calling +sei()+
+. call +lw_mesh_task_handler()+ at frequent intervals to give Lightweight Mesh
+the chance to do protocol specific things as sending data frames and processing
+received frames
+. (optionally) register an endpoint to receive data by calling
++lw_mesh_open_endpoint(...)+
+. (optionally) send data by calling +lw_mesh_data_req(...)+
+
+
+The following modules are used by Lightweight Mesh and therefore initialized in
++lw_mesh_init(...)+. If the user application needs some of them, they have not
+to be initialized separately to avoid double initialization:
+
+* radio functions (to initialize transceiver as well as send and receive frames)
+* timer functions (for update of duplicate frame rejection tables and network
+acknowledgment time outs)
+
