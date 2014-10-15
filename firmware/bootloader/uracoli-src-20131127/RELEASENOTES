@@ -1,0 +1,92 @@
+0.5.0 201308xx
+ Enhancements
+  -
+ Bugfixes
+  -
+ New Hardware
+  - Transceiver: ATmega256rfr2
+  - Boards: bat, dracula, stb256rfr2, raspbee
+
+0.4.0 20130408
+ Enhancements
+  - wibo
+    * compile time selectable handling of bootloader exit modes, e.g. check a
+      key or mailbox register in order to stay or exit immediate.
+  - nodeaddr.py:
+    * create and use config files
+    * combine application and bootloader hex files together with config record
+  - Arduino pakage
+    * added a COSM logger sketch
+ Bugfixes
+  - wibo
+    * uses now the correct radio channels from node config structure
+ New Hardware
+  - pinoccio
+
+0.3.1 20121023
+ Bugfixes
+  - fixed bugs in wibohost
+  - default baudrate for serial UART boards
+    set to 38400 bit/s.
+
+0.3.0 201208xx
+ New Features
+  - added sniffer source code to source code package
+  - wuart refurished and it has now Hayes 302 break detection
+    (the patent is expired)
+  - arduino bootloader speed changed to 38400bps
+  - introduced a simple p2p protocoll for wuart and wibo
+    and added custom lua dissector for wireshark.
+  - sniffer.py works now on 64bit Windows too.
+ New Hardware
+  - AT86RF233 and its standard boards.
+  - derftorcbrfa1:
+     Dresden Elektronik deRFtoRCB Adapter for ATmega128RFA1
+ Changes/Misc
+  - arduino package added
+  - sniffer package added (moved from uracoli-appnotes)
+
+0.2.0  20120314
+ New Features
+  - generation of Makefile based source distribution
+  - wireless bootloader (wibo) documented and added in
+    source package
+ New Hardware
+  - Boards: stb128rfa1, muse231, zgbt1281a2uart0, zgbt1281a2uart1,
+    zgbt1281a2nouart, im240a, im240a_eval, bitbean,
+    cbb230[b], cbb231, cbb212, icm230_12a|b|c
+ Changes/Misc
+  - packages are now defined in packages.cfg instead in
+    Tools/makerelease.sh
+  - new example build scheme uses one (make,aps)-file per example.
+  - software workaround for Sensor Terminal Board design issue, to
+    avoid xmem bus contention
+  - new documentaion scheme uses flat doxygen structure
+
+0.0.11 20100121
+ New Features
+  - added new hardware abstraction using board.cfg file
+  - addded Zigbit Core for Arduino
+  - added python serial throuput tool wuarttest.py
+ New Hardware
+  - MCU ATmega8, Atmega88, Atmega644P, ATmega128RFA1
+  - Boards: littleGee V3, stkm8, rbb128rfa1, derfa1
+ Bugs
+  - #28148: incorporate patch that simplifies aps file generation
+    (xsl transformation was replaced by simple text transformation)
+ Changes/Misc
+  - raven usb stick uses now correct uracoli VID/PID
+  - clean up of warnings in the code
+  - reworked linear buffer examples
+  - refactoring of wuart application
+  - io data handling in ieee802154_io.py
+  - continued documentation
+
+0.0.10 20090721
+  - added new buffer macros in ioutil.h
+  - added FCTL macros in transceiver.h
+  - updated examples for lgee and radio stream
+    fixes in makerelease.sh
+
+0.0.9
+  - no change tracking till here
