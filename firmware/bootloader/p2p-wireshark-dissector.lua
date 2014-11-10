@@ -59,9 +59,6 @@
         [string.byte("X")] = "X: Dry run",
     }
 
-    local f_pan = ProtoField.uint16("p2p.pan", "pan", base.HEX)
-    local f_to = ProtoField.uint16("p2p.to", "to", base.HEX)
-    local f_from = ProtoField.uint16("p2p.from", "from", base.HEX)
     local f_cmd = ProtoField.uint8("p2p.cmd", "cmd", nil, cmd_table)
     local f_rawdata = ProtoField.bytes("p2p.rawdata", "rawdata", base.HEX)
 
@@ -125,12 +122,8 @@
         if (fcf == 0x6188 or fcf == 0x4188) then
             pinfo.cols.protocol = "P2P"
             local subtree = tree:add(p2p,buffer(),"P2P Protocol Data")
-            subtree:add(buffer(0,2),"FCF: " .. buffer(0,2))
-            offs = 3
-            subtree:add_le(f_pan, buffer(offs, 2))
-            subtree:add_le(f_to, buffer(offs+2, 2))
-            subtree:add_le(f_from, buffer(offs+4, 2))
-            local cmd = buffer(offs+6,1)
+
+            local cmd = buffer(9,1)
             subtree:add(f_cmd, cmd)
 
             -- Skip 9 bytes of 802.15.4 headers, 1 byte of p2p command,
