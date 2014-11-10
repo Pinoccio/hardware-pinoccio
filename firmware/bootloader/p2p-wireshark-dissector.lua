@@ -46,12 +46,17 @@
         [0x21] = "P2P_WIBO_FINISH",
         [0x22] = "P2P_WIBO_RESET",
         [0x23] = "P2P_WIBO_EXIT",
+        [0x24] = "P2P_WIBO_TARGET",
+        [0x25] = "P2P_WIBO_DEAF",
+        [0x26] = "P2P_WIBO_ADDR",
         [0x30] = "P2P_XMPL_LED",
         [0x40] = "P2P_WUART_DATA",
-        [0x50] = "P2P_CHSWEEP_SWEEP_REQ",
-        [0x51] = "P2P_CHSWEEP_RESULT_REQ",
-        [0x52] = "P2P_CHSWEEP_RESULT_CNF",
-        [0x53] = "P2P_CHSWEEP_EXEC_REQ"
+    }
+
+    local targmem_table = {
+        [string.byte("F")] = "F: Flash",
+        [string.byte("E")] = "E: EEPROM",
+        [string.byte("X")] = "X: Dry run",
     }
 
     local f_pan = ProtoField.uint16("p2p.pan", "pan", base.HEX)
@@ -65,27 +70,21 @@
     local f_errno = ProtoField.uint8("p2p.errno", "errno")
     local f_version = ProtoField.uint8("p2p.version", "version")
     local f_crc = ProtoField.uint16("p2p.crc", "crc", base.HEX)
-    local f_pagesz = ProtoField.uint16("p2p.pgsz", "pgsz", base.HEX)
     local f_appname = ProtoField.string("p2p.appname", "appname")
     local f_boardname = ProtoField.string("p2p.boardname", "boardname")
     -- P2P_WIBO_DATA
-    local f_targmem = ProtoField.string("p2p.targmem", "targmem")
     local f_dsize = ProtoField.uint8("p2p.dsize", "dsize")
     local f_data = ProtoField.bytes("p2p.data", "data")
+    -- P2P_WIBO_TARGET
+    local f_targmem = ProtoField.uint8("p2p.targmem", "targmem", nil, targmem_table)
+    -- P2P_WIBO_ADDR
+    local f_addr = ProtoField.uint32("p2p.addr", "addr")
     -- P2P_XMPL_LED
     local f_led = ProtoField.uint8("p2p.led", "led")
     local f_state = ProtoField.uint8("p2p.state", "state")
     -- P2P_WUART_DATA
     local f_mode = ProtoField.uint8("p2p.mode", "mode")
     local f_sdata = ProtoField.string("p2p.sdata", "sdata")
-    -- P2P_CHSWEEP_SWEEP_REQ
-    local f_rx_addr = ProtoField.uint16("p2p.rxaddr", "rxaddr", base.HEX)
-    -- P2P_CHSWEEP_RESULT_REQ / P2P_CHSWEEP_RESULT_CNF
-    local f_res_mode = ProtoField.uint8("p2p.res_mode","res_mode")
-    -- P2P_CHSWEEP_EXEC_REQ
-    local f_clear_stat = ProtoField.uint8("p2p.clear_stat", "clear_stat")
-    local f_next_channel = ProtoField.uint8("p2p.next_channel", "next_channel")
-
 
     -- Init function, called before any packet is dissected
     function p2p.init()
@@ -98,27 +97,26 @@
         st:add(f_errno, buffer(offs+1, 1))
         st:add(f_version, buffer(offs+2, 1))
         st:add_le(f_crc, buffer(offs+3, 2))
-        st:add_le(f_pagesz, buffer(offs+5, 2))
-        st:add(f_appname, buffer(offs+7, 8))
-        st:add(f_boardname, buffer(offs+15, buffer:len() - offs - 15 -2))
+        st:add(f_appname, buffer(offs+5, 16))
+        st:add(f_boardname, buffer(offs+21, 16))
     end
 
     function dissect_wibo_data(offs, buffer, pinfo, tree)
+        tree:add_le(f_dsize, buffer(offs, 1))
+        tree:add(f_data, buffer(offs+1, buffer(offs, 1):uint()))
+    end
+
+    function dissect_wibo_target(offs, buffer, pinfo, tree)
         tree:add(f_targmem, buffer(offs, 1))
-        tree:add_le(f_dsize, buffer(offs+1, 1))
-        tree:add(f_data, buffer(offs+2, buffer:len() - offs - 2 - 2))
+    end
+
+    function dissect_wibo_addr(offs, buffer, pinfo, tree)
+        tree:add(f_addr, buffer(offs, 4))
     end
 
     function dissect_wuart_data(offs, buffer, pinfo, tree)
         tree:add(f_mode, buffer(offs, 1))
         tree:add(f_sdata, buffer(offs+1, buffer:len() - offs - 1 - 2))
-    end
-
-    function dissect_chsweep_result_cnf(offs, buffer, pinfo, subtree)
-        tree:add(f_res_mode, buffer(offs, 1))
-        tree:add(f_data, buffer(offs+1, buffer:len() - offs - 1 - 2))
-        -- once more then one result mode is defined, we will dissect
-        -- it in this function.
     end
 
     -- The main dissector function
@@ -146,24 +144,15 @@
                 dissect_ping_cnf(offs, buffer, pinfo, subtree)
             elseif (cmdname == "P2P_WIBO_DATA") then
                 dissect_wibo_data(offs, buffer, pinfo, subtree)
+            elseif (cmdname == "P2P_WIBO_TARGET") then
+                dissect_wibo_target(offs, buffer, pinfo, subtree)
+            elseif (cmdname == "P2P_WIBO_ADDR") then
+                dissect_wibo_addr(offs, buffer, pinfo, subtree)
             elseif (cmdname == "P2P_XMPL_LED") then
                 tree:add(f_led, buffer(offs, 1))
                 tree:add(f_state, buffer(offs+1, 1))
             elseif (cmdname == "P2P_WUART_DATA") then
                 dissect_wuart_data(offs, buffer, pinfo, subtree)
-            elseif (cmdname == "P2P_CHSWEEP_SWEEP_REQ") then
-                subtree:add_le(f_rx_addr, buffer(offs, 2))
-                -- debug code for old p2p.pcap example trace, that had mismatch
-                -- between SWEEP_REQ and EXEC_REQ.
-                -- subtree:add(f_clear_stat, buffer(offs, 1))
-                -- subtree:add(f_next_channel, buffer(offs+1, 1))
-            elseif (cmdname == "P2P_CHSWEEP_RESULT_REQ") then
-                subtree:add(f_res_mode, buffer(offs, 1))
-            elseif (cmdname == "P2P_CHSWEEP_RESULT_CNF") then
-                dissect_chsweep_result_cnf(offs, buffer, pinfo, subtree)
-            elseif (cmdname == "P2P_CHSWEEP_EXEC_REQ") then
-                subtree:add(f_clear_stat, buffer(offs, 1))
-                subtree:add(f_next_channel, buffer(offs+1, 1))
             end
         end
     end
@@ -173,19 +162,17 @@
                    f_pan, f_to, f_from, f_cmd, f_rawdata,
                    -- P2P_PING_CNF
                    f_status, f_errno, f_version, f_crc,
-                   f_pagesz, f_appname, f_boardname,
+                   f_appname, f_boardname,
                    -- P2P_WIBO_DATA
-                   f_targmem, f_dsize, f_data,
+                   f_dsize, f_data,
+                   -- P2P_WIBO_TARGET
+                   f_targmem,
+                   -- P2P_WIBO_ADDR
+                   f_addr,
                    -- P2P_XMPL_LED
                    f_led, f_state,
                    -- P2P_WUART_DATA
                    f_mode, f_sdata,
-                   -- P2P_CHSWEEP_SWEEP_REQ
-                   f_rx_addr,
-                   -- P2P_CHSWEEP_RESULT_REQ/CNF
-                   f_res_mode,
-                   -- P2P_CHSWEEP_EXEC_REQ
-                   f_clear_stat, f_next_channel
                  }
 
      -- Register dissector
