@@ -91,32 +91,32 @@
         -- print("p2p.init")
     end
 
-    function dissect_ping_cnf (offs, buffer, pinfo, tree)
+    function dissect_ping_cnf (buffer, pinfo, tree)
         local st = tree --tree:add(p2p, buffer())
-        st:add(f_status, buffer(offs, 1))
-        st:add(f_errno, buffer(offs+1, 1))
-        st:add(f_version, buffer(offs+2, 1))
-        st:add_le(f_crc, buffer(offs+3, 2))
-        st:add(f_appname, buffer(offs+5, 16))
-        st:add(f_boardname, buffer(offs+21, 16))
+        st:add(f_status, buffer(0, 1))
+        st:add(f_errno, buffer(1, 1))
+        st:add(f_version, buffer(2, 1))
+        st:add_le(f_crc, buffer(3, 2))
+        st:add(f_appname, buffer(5, 16))
+        st:add(f_boardname, buffer(21, 16))
     end
 
-    function dissect_wibo_data(offs, buffer, pinfo, tree)
-        tree:add_le(f_dsize, buffer(offs, 1))
-        tree:add(f_data, buffer(offs+1, buffer(offs, 1):uint()))
+    function dissect_wibo_data(buffer, pinfo, tree)
+        tree:add_le(f_dsize, buffer(0, 1))
+        tree:add(f_data, buffer(1, buffer(0, 1):uint()))
     end
 
-    function dissect_wibo_target(offs, buffer, pinfo, tree)
-        tree:add(f_targmem, buffer(offs, 1))
+    function dissect_wibo_target(buffer, pinfo, tree)
+        tree:add(f_targmem, buffer(0, 1))
     end
 
-    function dissect_wibo_addr(offs, buffer, pinfo, tree)
-        tree:add(f_addr, buffer(offs, 4))
+    function dissect_wibo_addr(buffer, pinfo, tree)
+        tree:add(f_addr, buffer(0, 4))
     end
 
-    function dissect_wuart_data(offs, buffer, pinfo, tree)
-        tree:add(f_mode, buffer(offs, 1))
-        tree:add(f_sdata, buffer(offs+1, buffer:len() - offs - 1 - 2))
+    function dissect_wuart_data(buffer, pinfo, tree)
+        tree:add(f_mode, buffer(0, 1))
+        tree:add(f_sdata, buffer(1))
     end
 
     -- The main dissector function
@@ -132,27 +132,29 @@
             subtree:add_le(f_from, buffer(offs+4, 2))
             local cmd = buffer(offs+6,1)
             subtree:add(f_cmd, cmd)
-            
-            local rlen = buffer:len() - offs - 7 - 2
-            if (rlen > 0) then
-                subtree:add(f_rawdata, buffer(offs+7, buffer:len() - offs - 7 - 2))
+
+            -- Skip 9 bytes of 802.15.4 headers, 1 byte of p2p command,
+            -- and 2 bytes of checksum at the end
+            subbuf = buffer(10, buffer:len() - 10 - 2):tvb()
+
+            if (subbuf:len() > 0) then
+                subtree:add(f_rawdata, subbuf())
             end
             -- decode frame internals
-            offs = 10
             cmdname = cmd_table[cmd:uint()]
             if (cmdname == "P2P_PING_CNF") then
-                dissect_ping_cnf(offs, buffer, pinfo, subtree)
+                dissect_ping_cnf(subbuf, pinfo, subtree)
             elseif (cmdname == "P2P_WIBO_DATA") then
-                dissect_wibo_data(offs, buffer, pinfo, subtree)
+                dissect_wibo_data(subbuf, pinfo, subtree)
             elseif (cmdname == "P2P_WIBO_TARGET") then
-                dissect_wibo_target(offs, buffer, pinfo, subtree)
+                dissect_wibo_target(subbuf, pinfo, subtree)
             elseif (cmdname == "P2P_WIBO_ADDR") then
-                dissect_wibo_addr(offs, buffer, pinfo, subtree)
+                dissect_wibo_addr(subbuf, pinfo, subtree)
             elseif (cmdname == "P2P_XMPL_LED") then
-                tree:add(f_led, buffer(offs, 1))
-                tree:add(f_state, buffer(offs+1, 1))
+                tree:add(f_led, subbuf(0, 1))
+                tree:add(f_state, subbuf(1, 1))
             elseif (cmdname == "P2P_WUART_DATA") then
-                dissect_wuart_data(offs, buffer, pinfo, subtree)
+                dissect_wuart_data(subbuf, pinfo, subtree)
             end
         end
     end
