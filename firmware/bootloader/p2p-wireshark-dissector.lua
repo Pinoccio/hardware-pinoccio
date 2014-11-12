@@ -121,7 +121,7 @@
         local fcf = buffer(0,2):uint()
         if (fcf == 0x6188 or fcf == 0x4188) then
             pinfo.cols.protocol = "P2P"
-            local subtree = tree:add(p2p,buffer(),"P2P Protocol Data")
+            local subtree = tree:add(p2p,"P2P Protocol Data")
 
             local cmd = buffer(9,1)
             subtree:add(f_cmd, cmd)
