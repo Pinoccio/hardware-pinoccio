@@ -83,6 +83,9 @@
     local f_mode = ProtoField.uint8("p2p.mode", "mode")
     local f_sdata = ProtoField.string("p2p.sdata", "sdata")
 
+    p2p.experts.too_short = ProtoExpert.new("short", "Packet too short", expert.group.MALFORMED, expert.severity.ERROR)
+    p2p.experts.unknown_cmd = ProtoExpert.new("unknown_cmd", "Unknown command", expert.group.MALFORMED, expert.severity.ERROR)
+
     -- Init function, called before any packet is dissected
     function p2p.init()
         -- print("p2p.init")
@@ -118,38 +121,49 @@
 
     -- The main dissector function
     function p2p.dissector (buffer, pinfo, tree)
-        local fcf = buffer(0,2):uint()
-        if (fcf == 0x6188 or fcf == 0x4188) then
-            pinfo.cols.protocol = "P2P"
-            local subtree = tree:add(p2p,"P2P Protocol Data")
-
-            local cmd = buffer(9,1)
-            subtree:add(f_cmd, cmd)
-
-            -- Skip 9 bytes of 802.15.4 headers, 1 byte of p2p command,
-            -- and 2 bytes of checksum at the end
-            subbuf = buffer(10, buffer:len() - 10 - 2):tvb()
-
-            if (subbuf:len() > 0) then
-                subtree:add(f_rawdata, subbuf())
-            end
-            -- decode frame internals
-            cmdname = cmd_table[cmd:uint()]
-            if (cmdname == "P2P_PING_CNF") then
-                dissect_ping_cnf(subbuf, pinfo, subtree)
-            elseif (cmdname == "P2P_WIBO_DATA") then
-                dissect_wibo_data(subbuf, pinfo, subtree)
-            elseif (cmdname == "P2P_WIBO_TARGET") then
-                dissect_wibo_target(subbuf, pinfo, subtree)
-            elseif (cmdname == "P2P_WIBO_ADDR") then
-                dissect_wibo_addr(subbuf, pinfo, subtree)
-            elseif (cmdname == "P2P_XMPL_LED") then
-                tree:add(f_led, subbuf(0, 1))
-                tree:add(f_state, subbuf(1, 1))
-            elseif (cmdname == "P2P_WUART_DATA") then
-                dissect_wuart_data(subbuf, pinfo, subtree)
-            end
+        local subtree = tree:add(p2p, "P2P Protocol Data")
+        if buffer:len() < 1 then
+            subtree:add_proto_expert_info(p2p.experts.too_short)
+            return false
         end
+
+        local cmd = buffer(0,1)
+        subtree:add(f_cmd, cmd)
+
+        cmdname = cmd_table[cmd:uint()]
+        if (not cmdname) then
+            subtree:add_tvb_expert_info(p2p.experts.unknown_cmd, cmd)
+            return false
+        end
+
+        -- Skip 1 byte of p2p command
+        subbuf = buffer(1):tvb()
+
+        if (subbuf:len() > 0) then
+            subtree:add(f_rawdata, subbuf())
+        end
+
+        -- decode frame internals
+        if (cmdname == "P2P_PING_CNF") then
+            dissect_ping_cnf(subbuf, pinfo, subtree)
+        elseif (cmdname == "P2P_WIBO_DATA") then
+            dissect_wibo_data(subbuf, pinfo, subtree)
+        elseif (cmdname == "P2P_WIBO_TARGET") then
+            dissect_wibo_target(subbuf, pinfo, subtree)
+        elseif (cmdname == "P2P_WIBO_ADDR") then
+            dissect_wibo_addr(subbuf, pinfo, subtree)
+        elseif (cmdname == "P2P_XMPL_LED") then
+            tree:add(f_led, subbuf(0, 1))
+            tree:add(f_state, subbuf(1, 1))
+        elseif (cmdname == "P2P_WUART_DATA") then
+            dissect_wuart_data(subbuf, pinfo, subtree)
+        end
+
+        -- Only set the protocol name last, so we only set it for
+        -- packets that look valid.
+        pinfo.cols.protocol = "P2P"
+
+        return true
     end
 
     -- Create the protocol fields
@@ -170,7 +184,14 @@
                    f_mode, f_sdata,
                  }
 
-     -- Register dissector
-    register_postdissector (p2p)
+    -- Register as a heuristic dissector, that gets called for all wpan
+    -- packets. The labmda is a workaround, see
+    -- https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=10695
+    p2p:register_heuristic("wpan", function(...) p2p.dissector(...) end)
 
+    -- Register as a normal dissector. We have to specify a panid here,
+    -- so we just pass -1 as we don't really care (we cannot leave it
+    -- out, see https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=10696).
+    table = DissectorTable.get("wpan.panid")
+    table:add(-1, p2p)
 -- end
