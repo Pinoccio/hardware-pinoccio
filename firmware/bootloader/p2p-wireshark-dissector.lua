@@ -114,6 +114,11 @@
         tree:add(f_addr, buffer(0, 4))
     end
 
+    function dissect_xmpl_led(buffer, pinfo, subtree)
+        tree:add(f_led, buffer(0, 1))
+        tree:add(f_state, buffer(1, 1))
+    end
+
     function dissect_wuart_data(buffer, pinfo, tree)
         tree:add(f_mode, buffer(0, 1))
         tree:add(f_sdata, buffer(1))
@@ -153,8 +158,7 @@
         elseif (cmdname == "P2P_WIBO_ADDR") then
             dissect_wibo_addr(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_XMPL_LED") then
-            tree:add(f_led, subbuf(0, 1))
-            tree:add(f_state, subbuf(1, 1))
+            dissect_xmpl_led(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WUART_DATA") then
             dissect_wuart_data(subbuf, pinfo, subtree)
         end
