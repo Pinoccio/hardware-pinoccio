@@ -125,13 +125,7 @@
     end
 
     -- The main dissector function
-    function p2p.dissector (buffer, pinfo, tree)
-        local subtree = tree:add(p2p, "P2P Protocol Data")
-        if buffer:len() < 1 then
-            subtree:add_proto_expert_info(p2p.experts.too_short)
-            return false
-        end
-
+    function real_dissector (buffer, pinfo, subtree)
         local cmd = buffer(0,1)
         subtree:add(f_cmd, cmd)
 
@@ -169,6 +163,22 @@
 
         return true
     end
+
+    -- The main dissector function
+    function p2p.dissector (buffer, pinfo, tree)
+        local subtree = tree:add(p2p, "P2P Protocol Data")
+
+        ok, result = pcall(real_dissector, buffer, pinfo, subtree)
+        if not ok and result:match("Range is out of bounds$") then
+            subtree:add_proto_expert_info(p2p.experts.too_short)
+            return false
+        elseif not ok then
+            error(result)
+        else
+            return result
+        end
+    end
+
 
     -- Create the protocol fields
     p2p.fields = { -- P2P frame header and payload
