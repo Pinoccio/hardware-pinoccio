@@ -182,7 +182,12 @@
     end
 
     -- The main dissector function
-    function p2p.dissector (buffer, pinfo, tree)
+    -- This is first defined as a regular function and then assigned to
+    -- p2p.dissector, since that assignment converts it into a Dissector
+    -- object and we need access to the original function for
+    -- register_heuristic. See also
+    -- https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=10695
+    function dissector(buffer, pinfo, tree)
         local subtree = tree:add(p2p, "P2P Protocol Data")
 
         ok, result = pcall(real_dissector, buffer, pinfo, subtree)
@@ -195,11 +200,11 @@
             return result
         end
     end
+    p2p.dissector = dissector
 
     -- Register as a heuristic dissector, that gets called for all wpan
-    -- packets. The labmda is a workaround, see
-    -- https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=10695
-    p2p:register_heuristic("wpan", function(...) p2p.dissector(...) end)
+    -- packets.
+    p2p:register_heuristic("wpan", dissector)
 
     -- Register as a normal dissector. We have to specify a panid here,
     -- so we just pass -1 as we don't really care (we cannot leave it
