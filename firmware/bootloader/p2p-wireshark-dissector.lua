@@ -59,29 +59,29 @@
         [string.byte("X")] = "X: Dry run",
     }
 
-    local f_cmd = ProtoField.uint8("p2p.cmd", "cmd", nil, cmd_table)
-    local f_rawdata = ProtoField.bytes("p2p.rawdata", "rawdata", base.HEX)
+    p2p.fields.f_cmd = ProtoField.uint8("p2p.cmd", "cmd", nil, cmd_table)
+    p2p.fields.f_rawdata = ProtoField.bytes("p2p.rawdata", "rawdata", base.HEX)
 
     -- PING_CNF
-    local f_status = ProtoField.uint8("p2p.status","status")
-    local f_errno = ProtoField.uint8("p2p.errno", "errno")
-    local f_version = ProtoField.uint8("p2p.version", "version")
-    local f_crc = ProtoField.uint16("p2p.crc", "crc", base.HEX)
-    local f_appname = ProtoField.string("p2p.appname", "appname")
-    local f_boardname = ProtoField.string("p2p.boardname", "boardname")
+    p2p.fields.f_status = ProtoField.uint8("p2p.status","status")
+    p2p.fields.f_errno = ProtoField.uint8("p2p.errno", "errno")
+    p2p.fields.f_version = ProtoField.uint8("p2p.version", "version")
+    p2p.fields.f_crc = ProtoField.uint16("p2p.crc", "crc", base.HEX)
+    p2p.fields.f_appname = ProtoField.string("p2p.appname", "appname")
+    p2p.fields.f_boardname = ProtoField.string("p2p.boardname", "boardname")
     -- P2P_WIBO_DATA
-    local f_dsize = ProtoField.uint8("p2p.dsize", "dsize")
-    local f_data = ProtoField.bytes("p2p.data", "data")
+    p2p.fields.f_dsize = ProtoField.uint8("p2p.dsize", "dsize")
+    p2p.fields.f_data = ProtoField.bytes("p2p.data", "data")
     -- P2P_WIBO_TARGET
-    local f_targmem = ProtoField.uint8("p2p.targmem", "targmem", nil, targmem_table)
+    p2p.fields.f_targmem = ProtoField.uint8("p2p.targmem", "targmem", nil, targmem_table)
     -- P2P_WIBO_ADDR
-    local f_addr = ProtoField.uint32("p2p.addr", "addr")
+    p2p.fields.f_addr = ProtoField.uint32("p2p.addr", "addr")
     -- P2P_XMPL_LED
-    local f_led = ProtoField.uint8("p2p.led", "led")
-    local f_state = ProtoField.uint8("p2p.state", "state")
+    p2p.fields.f_led = ProtoField.uint8("p2p.led", "led")
+    p2p.fields.f_state = ProtoField.uint8("p2p.state", "state")
     -- P2P_WUART_DATA
-    local f_mode = ProtoField.uint8("p2p.mode", "mode")
-    local f_sdata = ProtoField.string("p2p.sdata", "sdata")
+    p2p.fields.f_mode = ProtoField.uint8("p2p.mode", "mode")
+    p2p.fields.f_sdata = ProtoField.string("p2p.sdata", "sdata")
 
     p2p.experts.too_short = ProtoExpert.new("short", "Packet too short", expert.group.MALFORMED, expert.severity.ERROR)
     p2p.experts.unknown_cmd = ProtoExpert.new("unknown_cmd", "Unknown command", expert.group.MALFORMED, expert.severity.ERROR)
@@ -93,41 +93,41 @@
 
     function dissect_ping_cnf (buffer, pinfo, tree)
         local st = tree --tree:add(p2p, buffer())
-        st:add(f_status, buffer(0, 1))
-        st:add(f_errno, buffer(1, 1))
-        st:add(f_version, buffer(2, 1))
-        st:add_le(f_crc, buffer(3, 2))
-        st:add(f_appname, buffer(5, 16))
-        st:add(f_boardname, buffer(21, 16))
+        st:add(p2p.fields.f_status, buffer(0, 1))
+        st:add(p2p.fields.f_errno, buffer(1, 1))
+        st:add(p2p.fields.f_version, buffer(2, 1))
+        st:add_le(p2p.fields.f_crc, buffer(3, 2))
+        st:add(p2p.fields.f_appname, buffer(5, 16))
+        st:add(p2p.fields.f_boardname, buffer(21, 16))
     end
 
     function dissect_wibo_data(buffer, pinfo, tree)
-        tree:add_le(f_dsize, buffer(0, 1))
-        tree:add(f_data, buffer(1, buffer(0, 1):uint()))
+        tree:add_le(p2p.fields.f_dsize, buffer(0, 1))
+        tree:add(p2p.fields.f_data, buffer(1, buffer(0, 1):uint()))
     end
 
     function dissect_wibo_target(buffer, pinfo, tree)
-        tree:add(f_targmem, buffer(0, 1))
+        tree:add(p2p.fields.f_targmem, buffer(1, 1))
     end
 
     function dissect_wibo_addr(buffer, pinfo, tree)
-        tree:add(f_addr, buffer(0, 4))
+        tree:add(p2p.fields.f_addr, buffer(0, 4))
     end
 
     function dissect_xmpl_led(buffer, pinfo, subtree)
-        tree:add(f_led, buffer(0, 1))
-        tree:add(f_state, buffer(1, 1))
+        tree:add(p2p.fields.f_led, buffer(0, 1))
+        tree:add(p2p.fields.f_state, buffer(1, 1))
     end
 
     function dissect_wuart_data(buffer, pinfo, tree)
-        tree:add(f_mode, buffer(0, 1))
-        tree:add(f_sdata, buffer(1))
+        tree:add(p2p.fields.f_mode, buffer(0, 1))
+        tree:add(p2p.fields.f_sdata, buffer(1))
     end
 
     -- The main dissector function
     function real_dissector (buffer, pinfo, subtree)
         local cmd = buffer(0,1)
-        subtree:add(f_cmd, cmd)
+        subtree:add(p2p.fields.f_cmd, cmd)
 
         cmdname = cmd_table[cmd:uint()]
         if (not cmdname) then
@@ -139,7 +139,7 @@
         subbuf = buffer(1):tvb()
 
         if (subbuf:len() > 0) then
-            subtree:add(f_rawdata, subbuf())
+            subtree:add(p2p.fields.f_rawdata, subbuf())
         end
 
         -- decode frame internals
@@ -178,25 +178,6 @@
             return result
         end
     end
-
-
-    -- Create the protocol fields
-    p2p.fields = { -- P2P frame header and payload
-                   f_pan, f_to, f_from, f_cmd, f_rawdata,
-                   -- P2P_PING_CNF
-                   f_status, f_errno, f_version, f_crc,
-                   f_appname, f_boardname,
-                   -- P2P_WIBO_DATA
-                   f_dsize, f_data,
-                   -- P2P_WIBO_TARGET
-                   f_targmem,
-                   -- P2P_WIBO_ADDR
-                   f_addr,
-                   -- P2P_XMPL_LED
-                   f_led, f_state,
-                   -- P2P_WUART_DATA
-                   f_mode, f_sdata,
-                 }
 
     -- Register as a heuristic dissector, that gets called for all wpan
     -- packets. The labmda is a workaround, see
