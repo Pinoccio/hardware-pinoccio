@@ -97,8 +97,8 @@
         tree:add(p2p.fields.f_version, buffer(2, 1))
         tree:add_le(p2p.fields.f_crc, buffer(3, 2))
         tree:add(p2p.fields.f_appname, buffer(5, 16))
-        tree:add(p2p.fields.f_boardname, buffer(21, 16))
-        return 21+16
+        tree:add(p2p.fields.f_boardname, buffer(21))
+        return buffer:len()
     end
 
     function dissect_wibo_data(buffer, pinfo, tree)
