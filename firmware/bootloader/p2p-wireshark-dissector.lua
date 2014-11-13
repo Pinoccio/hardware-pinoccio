@@ -31,7 +31,7 @@
 --  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 --  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 --  POSSIBILITY OF SUCH DAMAGE.
--- do
+
     --
     -- uracoli P2P dissector for Wireshark
     --
@@ -89,17 +89,15 @@
 
     -- Init function, called before any packet is dissected
     function p2p.init()
-        -- print("p2p.init")
     end
 
     function dissect_ping_cnf (buffer, pinfo, tree)
-        local st = tree --tree:add(p2p, buffer())
-        st:add(p2p.fields.f_status, buffer(0, 1))
-        st:add(p2p.fields.f_errno, buffer(1, 1))
-        st:add(p2p.fields.f_version, buffer(2, 1))
-        st:add_le(p2p.fields.f_crc, buffer(3, 2))
-        st:add(p2p.fields.f_appname, buffer(5, 16))
-        st:add(p2p.fields.f_boardname, buffer(21, 16))
+        tree:add(p2p.fields.f_status, buffer(0, 1))
+        tree:add(p2p.fields.f_errno, buffer(1, 1))
+        tree:add(p2p.fields.f_version, buffer(2, 1))
+        tree:add_le(p2p.fields.f_crc, buffer(3, 2))
+        tree:add(p2p.fields.f_appname, buffer(5, 16))
+        tree:add(p2p.fields.f_boardname, buffer(21, 16))
         return 21+16
     end
 
@@ -204,4 +202,3 @@
     -- out, see https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=10696).
     table = DissectorTable.get("wpan.panid")
     table:add(-1, p2p)
--- end
