@@ -116,7 +116,7 @@
 
     function dissect_wibo_addr(buffer, pinfo, tree)
         local addr = buffer(0, 4)
-        tree:add(p2p.fields.f_addr, addr)
+        tree:add_le(p2p.fields.f_addr, addr)
         return 4, string.format("0x%08x", addr:uint())
     end
 
