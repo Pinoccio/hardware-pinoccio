@@ -105,17 +105,19 @@
         local size = buffer(0, 1)
         tree:add_le(p2p.fields.f_dsize, size)
         tree:add(p2p.fields.f_data, buffer(1, size:uint()))
-        return 1 + size:uint()
+        return 1 + size:uint(), string.format("%u bytes", size:uint())
     end
 
     function dissect_wibo_target(buffer, pinfo, tree)
-        tree:add(p2p.fields.f_targmem, buffer(0, 1))
-        return 1
+        local targmem = buffer(0, 1)
+        tree:add(p2p.fields.f_targmem, targmem)
+        return 1, targmem_table[targmem:uint()]
     end
 
     function dissect_wibo_addr(buffer, pinfo, tree)
-        tree:add(p2p.fields.f_addr, buffer(0, 4))
-        return 4
+        local addr = buffer(0, 4)
+        tree:add(p2p.fields.f_addr, addr)
+        return 4, string.format("0x%08x", addr:uint())
     end
 
     function dissect_xmpl_led(buffer, pinfo, subtree)
@@ -150,19 +152,20 @@
 
         -- decode frame internals
         if (cmdname == "P2P_PING_CNF") then
-            len = dissect_ping_cnf(subbuf, pinfo, subtree)
+            len, msg = dissect_ping_cnf(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WIBO_DATA") then
-            len = dissect_wibo_data(subbuf, pinfo, subtree)
+            len, msg = dissect_wibo_data(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WIBO_TARGET") then
-            len = dissect_wibo_target(subbuf, pinfo, subtree)
+            len, msg = dissect_wibo_target(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WIBO_ADDR") then
-            len = dissect_wibo_addr(subbuf, pinfo, subtree)
+            len, msg = dissect_wibo_addr(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_XMPL_LED") then
-            len = dissect_xmpl_led(subbuf, pinfo, subtree)
+            len, msg = dissect_xmpl_led(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WUART_DATA") then
-            len = dissect_wuart_data(subbuf, pinfo, subtree)
+            len, msg = dissect_wuart_data(subbuf, pinfo, subtree)
         else
             len = 0
+            msg = nil
         end
 
         if subbuf:len() ~= len then
@@ -170,9 +173,10 @@
             return false
         end
 
-        -- Only set the protocol name last, so we only set it for
+        -- Only set the protocol info last, so we only set it for
         -- packets that look valid.
         pinfo.cols.protocol = "P2P"
+        pinfo.cols.info = string.format("%s %s", cmdname, msg or "")
 
         return true
     end
