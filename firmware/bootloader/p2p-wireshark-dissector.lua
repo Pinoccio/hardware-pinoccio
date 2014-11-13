@@ -84,6 +84,7 @@
     p2p.fields.f_sdata = ProtoField.string("p2p.sdata", "sdata")
 
     p2p.experts.too_short = ProtoExpert.new("short", "Packet too short", expert.group.MALFORMED, expert.severity.ERROR)
+    p2p.experts.too_long = ProtoExpert.new("long", "Packet too long", expert.group.MALFORMED, expert.severity.ERROR)
     p2p.experts.unknown_cmd = ProtoExpert.new("unknown_cmd", "Unknown command", expert.group.MALFORMED, expert.severity.ERROR)
 
     -- Init function, called before any packet is dissected
@@ -99,29 +100,36 @@
         st:add_le(p2p.fields.f_crc, buffer(3, 2))
         st:add(p2p.fields.f_appname, buffer(5, 16))
         st:add(p2p.fields.f_boardname, buffer(21, 16))
+        return 21+16
     end
 
     function dissect_wibo_data(buffer, pinfo, tree)
-        tree:add_le(p2p.fields.f_dsize, buffer(0, 1))
-        tree:add(p2p.fields.f_data, buffer(1, buffer(0, 1):uint()))
+        local size = buffer(0, 1)
+        tree:add_le(p2p.fields.f_dsize, size)
+        tree:add(p2p.fields.f_data, buffer(1, size:uint()))
+        return 1 + size:uint()
     end
 
     function dissect_wibo_target(buffer, pinfo, tree)
-        tree:add(p2p.fields.f_targmem, buffer(1, 1))
+        tree:add(p2p.fields.f_targmem, buffer(0, 1))
+        return 1
     end
 
     function dissect_wibo_addr(buffer, pinfo, tree)
         tree:add(p2p.fields.f_addr, buffer(0, 4))
+        return 4
     end
 
     function dissect_xmpl_led(buffer, pinfo, subtree)
         tree:add(p2p.fields.f_led, buffer(0, 1))
         tree:add(p2p.fields.f_state, buffer(1, 1))
+        return 1 + 1
     end
 
     function dissect_wuart_data(buffer, pinfo, tree)
         tree:add(p2p.fields.f_mode, buffer(0, 1))
         tree:add(p2p.fields.f_sdata, buffer(1))
+        return buffer:len()
     end
 
     -- The main dissector function
@@ -144,17 +152,24 @@
 
         -- decode frame internals
         if (cmdname == "P2P_PING_CNF") then
-            dissect_ping_cnf(subbuf, pinfo, subtree)
+            len = dissect_ping_cnf(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WIBO_DATA") then
-            dissect_wibo_data(subbuf, pinfo, subtree)
+            len = dissect_wibo_data(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WIBO_TARGET") then
-            dissect_wibo_target(subbuf, pinfo, subtree)
+            len = dissect_wibo_target(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WIBO_ADDR") then
-            dissect_wibo_addr(subbuf, pinfo, subtree)
+            len = dissect_wibo_addr(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_XMPL_LED") then
-            dissect_xmpl_led(subbuf, pinfo, subtree)
+            len = dissect_xmpl_led(subbuf, pinfo, subtree)
         elseif (cmdname == "P2P_WUART_DATA") then
-            dissect_wuart_data(subbuf, pinfo, subtree)
+            len = dissect_wuart_data(subbuf, pinfo, subtree)
+        else
+            len = 0
+        end
+
+        if subbuf:len() ~= len then
+            subtree:add_tvb_expert_info(p2p.experts.too_long, subbuf(len))
+            return false
         end
 
         -- Only set the protocol name last, so we only set it for
