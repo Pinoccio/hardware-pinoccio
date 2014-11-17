@@ -90,8 +90,7 @@
 
 #if defined(_DEBUG_SERIAL_)
 #include <avr/interrupt.h>
-#include <hif.h>
-#define EOL "\n"
+#define EOL "\r\n"
 #endif
 
 /* incoming frames are collected here */
@@ -277,9 +276,9 @@ LED_SET(PROGLED);
 	trx_reg_write(RG_IRQ_STATUS, TRX_IRQ_RX_END); /* clear the flag */
 
 #if defined(_DEBUG_SERIAL_)
-	static FILE usart_stdio = FDEV_SETUP_STREAM(hif_putc, NULL, _FDEV_SETUP_WRITE);
+	void sendchar(char c);
+	static FILE usart_stdio = FDEV_SETUP_STREAM(sendchar, NULL, _FDEV_SETUP_WRITE);
 
-	hif_init(HIF_DEFAULT_BAUDRATE);
 	stdout = stderr = &usart_stdio;
 	printf("WIBO Bootlapp Serial Debug"EOL);
 	printf("PANID=%04X SHORTADDR=%04X CHANNEL=%d"EOL,
