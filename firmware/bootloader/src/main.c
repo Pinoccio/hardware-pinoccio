@@ -433,7 +433,7 @@ volatile unsigned char ledToggle = 0;
 /*
  * function prototypes
  */
-static void sendchar(char c);
+void sendchar(char c);
 static unsigned char recchar(void);
 
 /*
@@ -478,7 +478,7 @@ void  PrintHexByte(unsigned char theByte);
 /*
  * send single byte to USART, wait until transmission is completed
  */
-static void sendchar(char c)
+void sendchar(char c)
 {
   UART_DATA_REG  =  c;                    // prepare transmission
   while (!(UART_STATUS_REG & (1 << UART_TRANSMIT_COMPLETE)));  // wait until byte sent
