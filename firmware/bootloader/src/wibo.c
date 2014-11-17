@@ -408,10 +408,14 @@ uint8_t wibo_run(void)
 			isStay=1;
 #if defined(_DEBUG_SERIAL_)
 			printf("Data[%d]", rxbuf.wibo_data.dsize);
-			for(uint8_t j=0;j<rxbuf.wibo_data.dsize;j++)
+			uint8_t len = rxbuf.wibo_data.dsize;
+			if (len > 10) len = 10;
+			for(uint8_t j=0;j<len;j++)
 			{
 				printf(" %02X", rxbuf.wibo_data.data[j]);
 			}
+			if (len != rxbuf.wibo_data.dsize)
+				printf("...");
 			printf(EOL);
 #endif
 			tmp = rxbuf.wibo_data.dsize;
