@@ -60,6 +60,8 @@ uracoli:
 
 uracoli_clean:
 	$(MAKE) -C $(URACOLI)/src clean
+	# uracoli forgets to clean its actual build result
+	rm -rf $(URACOLI)/lib
 
 .PHONY: uracoli all lst hex clean uracoli_clean
 
