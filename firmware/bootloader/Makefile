@@ -24,6 +24,8 @@ LIBS           = -luracoli_pinoccio -L $(URACOLI)/lib
 CFLAGS        = $(DEFS) $(INCLUDES) $(OPTIMIZE)
 CFLAGS       += -fdata-sections -fpack-struct -fshort-enums -g3 -Wall -pedantic -mmcu=$(MCU)
 CFLAGS       += -std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith -mrelax
+# Workaround until https://gcc.gnu.org/git/?p=gcc.git;a=commit;h=986b9a67c847f59e5c383e1f8d6faa7431a11911 is released
+CFLAGS       += -fno-jump-tables
 LDFLAGS       = -Wl,-Map,$(PRG).map -Wl,--gc-sections -Wl,--section-start=.text=0x3E000 -Wl,--section-start=.bootlup=0x3FD00
 LDFLAGS      += -mmcu=$(MCU) -Wl,--relax
 
