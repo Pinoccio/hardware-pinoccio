@@ -117,9 +117,6 @@ LICENSE:
   #define EEMWE   2
 #endif
 
-//#define  _DEBUG_SERIAL_ (1)
-//#define  _DEBUG_WITH_LEDS_ (1)
-
 /*
  * Uncomment the following lines to save code space
  */
@@ -138,7 +135,6 @@ LICENSE:
   #define F_CPU 16000000UL
 #endif
 
-#define  _BLINK_LOOP_COUNT_  (F_CPU / 2250)
 /*
  * UART Baudrate, AVRStudio AVRISP only accepts 115200 bps
  */
@@ -951,33 +947,6 @@ int main(void)
 
 		  if ((isLeave) || (isTimeout && (data != 0xffff)))          //*  require valid flash address on timeout
 		  {
-				#ifndef REMOVE_BOOTLOADER_LED
-					#if defined( _PINOCCIO_256RFR2_ )
-						PROGLED_DDR    &=  ~((1<<PROGLED_RED)|(1<<PROGLED_GREEN)|(1<<PROGLED_BLUE));
-						#if defined(PROGLED_LOWACTIVE)
-							PROGLED_PORT  &=  ~((1<<PROGLED_RED)|(1<<PROGLED_GREEN)|(1<<PROGLED_BLUE));  // active high LED ON
-						#else
-							PROGLED_PORT  |=  (1<<PROGLED_RED)|(1<<PROGLED_GREEN)|(1<<PROGLED_BLUE);  // active low LED ON
-						#endif
-
-						#if defined ( FANCY_BOOTLOADER_LED )
-
-							TCCR1A = 0;
-							TCCR1B = 0;
-
-							TCCR2A = 0;
-							TCCR2B = 0;
-						#endif
-					#else
-						PROGLED_DDR    &=  ~(1<<PROGLED_PIN);
-						#if defined(PROGLED_LOWACTIVE)
-							PROGLED_PORT  &=  ~(1<<PROGLED_PIN);  // active high LED ON
-						#else
-							PROGLED_PORT  |=  (1<<PROGLED_PIN);  // active low LED ON
-						#endif
-					#endif
-				#endif
-
 				  asm volatile ("nop");      // wait until port has changed
 
 				  /*
@@ -985,22 +954,6 @@ int main(void)
 				   */
 
 				  UART_STATUS_REG  &=  0xfd;
-
-				  #ifdef FANCY_BOOTLOADER_LED	// turn timers and LED off
-  
-  					TCCR1A = 0;
-  					TCCR1B = 0;
-  		
-  					TCCR2A = 0;
-  					TCCR2B = 0;
-
-					#if defined(PROGLED_LOWACTIVE)
-					PROGLED_PORT  |=  (1<<PROGLED_RED)|(1<<PROGLED_GREEN)|(1<<PROGLED_BLUE);  // active low LED OFF
-					#else
-					PROGLED_PORT  &=  ~((1<<PROGLED_RED)|(1<<PROGLED_GREEN)|(1<<PROGLED_BLUE));  // active high LED OFF
-					#endif
-  
-				  #endif
 
 			asm("jmp 0000");
 		}
