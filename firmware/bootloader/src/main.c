@@ -110,10 +110,6 @@ LICENSE:
 #include  <stdlib.h>
 #include  "command.h"
 
-#include "board.h" // uracoli
-
-#include "wibo.h"
-
 #if defined(_MEGA_BOARD_) || defined(_BOARD_AMBER128_) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || defined(__AVR_ATmega2561__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega256RFR2__) || defined(ENABLE_MONITOR)
   #undef    ENABLE_MONITOR
   //#define    ENABLE_MONITOR
@@ -548,7 +544,6 @@ int main(void)
   unsigned char  c, *p;
   unsigned char   isLeave = 0;
   unsigned char   isTimeout = 0;
-  unsigned char  wdtReset = 0;
   unsigned char badMessage = 0;
   unsigned long  boot_timeout;
   unsigned long  boot_timer;
@@ -572,12 +567,6 @@ int main(void)
   */
  GPIOR0 = MCUSR;	// store status register in GPIOR0 to provide feedback on reset reason to main app
  
- if (GPIOR0 & _BV(WDRF) && (!(eeprom_read_byte((uint8_t *)8125))))	// If we watchdogged and have an OTA request pending, fly the flag
- {
-	 wdtReset = 1;
-	 eeprom_write_byte((uint8_t *)8125, 0xFF);	// clear OTA request
- }
-
  // make sure watchdog is off!
  __asm__ __volatile__ ("cli");
  __asm__ __volatile__ ("wdr");
@@ -672,16 +661,10 @@ int main(void)
 #endif
 
 	for(;;) {
-		if (wdtReset) {
-		  boot_state=2;	// skip serial part
-		  isTimeout=1;
-		}
-		else {
 		  boot_state=0;
 		  boot_timer=0;
 		  isLeave=0;
 		  isTimeout=0;
-		}
 	  while (boot_state==0)
 	  {
 		while ((!(Serial_Available())) && (boot_state == 0))    // wait for data
@@ -1199,49 +1182,6 @@ int main(void)
 		}
 
 	  } 
- 
-	  else {
-	  
-		 if (wdtReset) {
-
-			  #ifdef FANCY_BOOTLOADER_LED	// turn PWM off in preparation for wibo.  leave port directions configured.
-
-				  TCCR1A = 0;
-				  TCCR1B = 0;
-		  
-				  TCCR2A = 0;
-				  TCCR2B = 0;
-
-				  #if defined(PROGLED_LOWACTIVE)
-					PROGLED_PORT  |=  (1<<PROGLED_RED)|(1<<PROGLED_GREEN)|(1<<PROGLED_BLUE);  // active low LED OFF
-				  #else
-					PROGLED_PORT  &=  ~((1<<PROGLED_RED)|(1<<PROGLED_GREEN)|(1<<PROGLED_BLUE));  // active high LED OFF
-				  #endif
-			  #endif
-
-			  /* decide here where to fetch IEEE 802.15.4 comm parameters */
-			  #if defined(_PINOCCIO_256RFR2_)
-			  // Address 8130 - 32 bytes - HQ Token
-			  // Address 8162 - 16 bytes - Security Key
-			  // Address 8178 - 1 byte   - Transmitter Power
-			  // Address 8179 - 1 byte   - Frequency Channel
-			  // Address 8180 - 2 bytes  - Network Identifier/Troop ID
-			  // Address 8182 - 2 bytes  - Network Address/Scout ID
-			  // Address 8184 - 4 bytes  - Unique ID
-			  // Address 8188 - 2 bytes  - HW family
-			  // Address 8190 - 1 byte   - HW Version
-			  // Address 8191 - 1 byte   - EEPROM Version
-				wibo_init(eeprom_read_byte((uint8_t *)8179), eeprom_read_word((uint16_t *)8180), eeprom_read_word((uint16_t *)8182), 0);
-			  #else
-				node_config_t nodeconfig;
-				get_node_config(&nodeconfig);
-				wibo_init(nodeconfig.channel ,nodeconfig.pan_id ,nodeconfig.short_addr, nodeconfig.ieee_addr);
-			  #endif
-		 
-				wibo_run();
-		 }
-
-	  }
 
 		boot_rww_enable();        // enable application section so we can read from it
 		

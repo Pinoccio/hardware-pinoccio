@@ -13,13 +13,12 @@
 # and type "make".
 #
 PRG            = bootloader
-OBJ            = src/main.o src/wibo.o
+OBJ            = src/main.o
 MCU            = atmega256rfr2
-URACOLI        = uracoli-src-20131127
 DEFS           = -DF_CPU=16000000UL -D_PINOCCIO_256RFR2_=1 -Dpinoccio -D_SW_VERSION_=5 -DWIBO_FLAVOUR_BOOTLUP=1
-INCLUDES       = -I$(URACOLI)/inc -I$(URACOLI)/inc/boards
+INCLUDES       =
 OPTIMIZE       = -Os
-LIBS           = -luracoli_pinoccio -L $(URACOLI)/lib
+LIBS           =
 
 CFLAGS        = $(DEFS) $(INCLUDES) $(OPTIMIZE)
 CFLAGS       += -fdata-sections -fpack-struct -fshort-enums -g3 -Wall -pedantic -mmcu=$(MCU)
@@ -43,7 +42,7 @@ hex:  $(PRG).hex
 clean: uracoli_clean
 	rm -rf $(OBJ) $(OBJ:.o=.d) $(PRG).elf $(PRG).hex $(PRG).lst $(PRG).map
 
-$(PRG).elf: $(OBJ) uracoli
+$(PRG).elf: $(OBJ)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJ) $(LIBS)
 
 %.o: %.c
@@ -55,15 +54,7 @@ $(PRG).elf: $(OBJ) uracoli
 %.hex: %.elf
 	$(OBJCOPY) -j .text -j .data -O ihex $< $@
 
-uracoli:
-	$(MAKE) -C $(URACOLI)/src pinoccio
-
-uracoli_clean:
-	$(MAKE) -C $(URACOLI)/src clean
-	# uracoli forgets to clean its actual build result
-	rm -rf $(URACOLI)/lib
-
-.PHONY: uracoli all lst hex clean uracoli_clean
+.PHONY: all lst hex clean uracoli_clean
 
 # pull in dependency info for *existing* .o files
 -include $(OBJ:.o=.d)
