@@ -706,79 +706,9 @@ int main(void)
 			  isLeave  =  1;
 			  //*  fall thru
 
-			case CMD_SET_PARAMETER:
 			case CMD_ENTER_PROGMODE_ISP:
 			  msgLength    =  2;
 			  msgBuffer[1]  =  STATUS_CMD_OK;
-			  break;
-
-			case CMD_READ_SIGNATURE_ISP:
-			  {
-				unsigned char signatureIndex  =  msgBuffer[4];
-				unsigned char signature;
-
-				if ( signatureIndex == 0 )
-				  signature  =  (SIGNATURE_BYTES >>16) & 0x000000FF;
-				else if ( signatureIndex == 1 )
-				  signature  =  (SIGNATURE_BYTES >> 8) & 0x000000FF;
-				else
-				  signature  =  SIGNATURE_BYTES & 0x000000FF;
-
-				msgLength    =  4;
-				msgBuffer[1]  =  STATUS_CMD_OK;
-				msgBuffer[2]  =  signature;
-				msgBuffer[3]  =  STATUS_CMD_OK;
-			  }
-			  break;
-
-			case CMD_READ_LOCK_ISP:
-			  msgLength    =  4;
-			  msgBuffer[1]  =  STATUS_CMD_OK;
-			  msgBuffer[2]  =  boot_lock_fuse_bits_get( GET_LOCK_BITS );
-			  msgBuffer[3]  =  STATUS_CMD_OK;
-			  break;
-
-			case CMD_READ_FUSE_ISP:
-			  {
-				unsigned char fuseBits;
-
-				if ( msgBuffer[2] == 0x50 )
-				{
-				  if ( msgBuffer[3] == 0x08 )
-					fuseBits  =  boot_lock_fuse_bits_get( GET_EXTENDED_FUSE_BITS );
-				  else
-					fuseBits  =  boot_lock_fuse_bits_get( GET_LOW_FUSE_BITS );
-				}
-				else
-				{
-				  fuseBits  =  boot_lock_fuse_bits_get( GET_HIGH_FUSE_BITS );
-				}
-				msgLength    =  4;
-				msgBuffer[1]  =  STATUS_CMD_OK;
-				msgBuffer[2]  =  fuseBits;
-				msgBuffer[3]  =  STATUS_CMD_OK;
-			  }
-			  break;
-
-	  #ifndef REMOVE_PROGRAM_LOCK_BIT_SUPPORT
-			case CMD_PROGRAM_LOCK_ISP:
-			  {
-				unsigned char lockBits  =  msgBuffer[4];
-
-				lockBits  =  (~lockBits) & 0x3C;  // mask BLBxx bits
-				boot_lock_bits_set(lockBits);    // and program it
-				boot_spm_busy_wait();
-
-				msgLength    =  3;
-				msgBuffer[1]  =  STATUS_CMD_OK;
-				msgBuffer[2]  =  STATUS_CMD_OK;
-			  }
-			  break;
-	  #endif
-			case CMD_CHIP_ERASE_ISP:
-			  msgLength    =  2;
-			//  msgBuffer[1]  =  STATUS_CMD_OK;
-			  msgBuffer[1]  =  STATUS_CMD_FAILED;  //*  isue 543, return FAILED instead of OK
 			  break;
 
 			case CMD_LOAD_ADDRESS:
@@ -792,7 +722,6 @@ int main(void)
 			  break;
 
 			case CMD_PROGRAM_FLASH_ISP:
-			case CMD_PROGRAM_EEPROM_ISP:
 			  {
 				unsigned int  size  =  ((msgBuffer[1])<<8) | msgBuffer[2];
 				unsigned char  *p  =  msgBuffer+10;
@@ -850,48 +779,6 @@ int main(void)
 					msgLength    =  2;
 					msgBuffer[1]  =  STATUS_CMD_OK;
 				}
-			  }
-			  break;
-
-			case CMD_READ_FLASH_ISP:
-			case CMD_READ_EEPROM_ISP:
-			  {
-				unsigned int  size  =  ((msgBuffer[1])<<8) | msgBuffer[2];
-				unsigned char  *p    =  msgBuffer+1;
-				msgLength        =  size+3;
-
-				*p++  =  STATUS_CMD_OK;
-				if (msgBuffer[0] == CMD_READ_FLASH_ISP )
-				{
-				  unsigned int data;
-
-				  // Read FLASH
-				  do {
-				//#if defined(RAMPZ)
-				#if (FLASHEND > 0x10000)
-					data  =  pgm_read_word_far(address);
-				#else
-					data  =  pgm_read_word_near(address);
-				#endif
-					*p++  =  (unsigned char)data;    //LSB
-					*p++  =  (unsigned char)(data >> 8);  //MSB
-					address  +=  2;              // Select next word in memory
-					size  -=  2;
-				  }while (size);
-				}
-				else
-				{
-				  /* Read EEPROM */
-				  do {
-					EEARL  =  address;      // Setup EEPROM address
-					EEARH  =  ((address >> 8));
-					address++;          // Select next EEPROM byte
-					EECR  |=  (1<<EERE);      // Read EEPROM
-					*p++  =  EEDR;        // Send EEPROM data
-					size--;
-				  } while (size);
-				}
-				*p++  =  STATUS_CMD_OK;
 			  }
 			  break;
 
