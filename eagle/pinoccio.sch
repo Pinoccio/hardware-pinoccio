@@ -6691,7 +6691,7 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <part name="U1" library="Pinoccio" deviceset="MCP73832" device="" value="MCP73832"/>
 <part name="R4" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="2K"/>
 <part name="U4" library="Pinoccio" deviceset="ATMEGA128RFA1" device="" value="ATMEGA256RFR2"/>
-<part name="C8" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C8" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
 <part name="C13" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="10pF"/>
@@ -6743,19 +6743,19 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <part name="R22" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="2K"/>
 <part name="R23" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="2K"/>
 <part name="P+6" library="SparkFun" deviceset="VCC" device=""/>
-<part name="C1" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C1" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
-<part name="C10" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C10" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
-<part name="C20" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C20" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
-<part name="C21" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C21" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
-<part name="C22" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C22" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
 <part name="FRAME2" library="Pinoccio" deviceset="FRAME-LETTER" device=""/>
@@ -6797,10 +6797,10 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <part name="C9" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0pF"/>
 <part name="R21" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="DNI"/>
 <part name="U$2" library="Pinoccio" deviceset="AGND" device=""/>
-<part name="C11" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C11" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
-<part name="C19" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<part name="C19" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF">
 <attribute name="MFG" value="C1005X7R1H104K050BB"/>
 </part>
 <part name="C23" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="0.1uF"/>
@@ -6839,6 +6839,9 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <part name="R28" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="100K"/>
 <part name="R29" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="100K"/>
 <part name="R30" library="Pinoccio" deviceset="RESISTOR" device="0402-RES" value="100K"/>
+<part name="C31" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF">
+<attribute name="MFG" value="C1005X7R1H104K050BB"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -9640,10 +9643,12 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <instance part="U$2" gate="G$1" x="149.86" y="96.52" rot="MR0"/>
 <instance part="R6" gate="G$1" x="33.02" y="119.38" rot="MR90"/>
 <instance part="U$17" gate="G$1" x="152.4" y="73.66"/>
-<instance part="U$18" gate="G$1" x="154.94" y="35.56">
+<instance part="U$18" gate="G$1" x="154.94" y="35.56" smashed="yes">
 <attribute name="MFG" x="154.94" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="154.94" y="46.482" size="1.778" layer="95"/>
+<attribute name="VALUE" x="154.94" y="48.768" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="177.8" y="43.18" rot="MR0"/>
+<instance part="R1" gate="G$1" x="175.26" y="43.18" rot="MR0"/>
 <instance part="U$19" gate="G$1" x="149.86" y="45.72" smashed="yes">
 <attribute name="VALUE" x="141.224" y="44.196" size="1.778" layer="96"/>
 </instance>
@@ -9670,16 +9675,16 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 </instance>
 <instance part="U$25" gate="G$1" x="180.34" y="96.52"/>
 <instance part="C28" gate="G$1" x="137.16" y="27.94" smashed="yes">
-<attribute name="NAME" x="137.668" y="26.035" size="1.778" layer="95"/>
-<attribute name="VALUE" x="137.16" y="22.733" size="1.778" layer="96"/>
+<attribute name="NAME" x="137.668" y="33.147" size="1.778" layer="95"/>
+<attribute name="VALUE" x="137.668" y="30.607" size="1.778" layer="96"/>
 </instance>
 <instance part="C29" gate="G$1" x="152.4" y="27.94" smashed="yes">
-<attribute name="NAME" x="152.908" y="26.035" size="1.778" layer="95"/>
-<attribute name="VALUE" x="151.638" y="22.733" size="1.778" layer="96"/>
+<attribute name="NAME" x="153.416" y="26.035" size="1.778" layer="95"/>
+<attribute name="VALUE" x="153.416" y="22.733" size="1.778" layer="96"/>
 </instance>
 <instance part="C30" gate="G$1" x="147.32" y="27.94" smashed="yes">
-<attribute name="NAME" x="147.828" y="26.035" size="1.778" layer="95"/>
-<attribute name="VALUE" x="145.288" y="22.733" size="1.778" layer="96"/>
+<attribute name="NAME" x="141.986" y="26.035" size="1.778" layer="95"/>
+<attribute name="VALUE" x="141.732" y="22.733" size="1.778" layer="96"/>
 </instance>
 <instance part="L4" gate="G$1" x="180.34" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="183.642" y="81.915" size="1.778" layer="95" rot="MR0"/>
@@ -10577,8 +10582,8 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="43.18" x2="190.5" y2="43.18" width="0.1524" layer="91"/>
-<label x="182.88" y="43.18" size="1.778" layer="95"/>
+<wire x1="180.34" y1="43.18" x2="187.96" y2="43.18" width="0.1524" layer="91"/>
+<label x="180.34" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="CPS" class="0">
@@ -10617,7 +10622,6 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="U$18" gate="G$1" pin="I1"/>
-<wire x1="172.72" y1="43.18" x2="170.18" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SEROPN" class="0">
@@ -10840,8 +10844,8 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <attribute name="MFG" x="25.4" y="91.44" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="GND7" gate="1" x="15.24" y="33.02"/>
-<instance part="P+3" gate="1" x="48.26" y="91.44"/>
-<instance part="GND9" gate="1" x="15.24" y="73.66"/>
+<instance part="P+3" gate="1" x="40.64" y="93.98"/>
+<instance part="GND9" gate="1" x="15.24" y="68.58"/>
 <instance part="C24" gate="G$1" x="66.04" y="43.18" smashed="yes" rot="R270">
 <attribute name="NAME" x="61.341" y="40.894" size="1.778" layer="95"/>
 <attribute name="VALUE" x="59.309" y="43.688" size="1.778" layer="96"/>
@@ -10862,7 +10866,7 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <instance part="U$4" gate="G$1" x="58.42" y="58.42"/>
 <instance part="U$5" gate="G$1" x="76.2" y="27.94"/>
 <instance part="U$1" gate="G$1" x="15.24" y="106.68"/>
-<instance part="U$7" gate="G$1" x="48.26" y="106.68"/>
+<instance part="U$7" gate="G$1" x="40.64" y="106.68"/>
 <instance part="U$16" gate="G$1" x="73.66" y="58.42"/>
 <instance part="C11" gate="G$1" x="30.48" y="106.68" smashed="yes" rot="R270">
 <attribute name="NAME" x="30.734" y="106.299" size="1.778" layer="95" rot="R180"/>
@@ -10881,6 +10885,11 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <instance part="L3" gate="G$1" x="71.12" y="50.8" smashed="yes" rot="R270">
 <attribute name="NAME" x="67.4116" y="52.07" size="1.778" layer="95" rot="R270"/>
 </instance>
+<instance part="C31" gate="G$1" x="25.4" y="71.12" smashed="yes" rot="R270">
+<attribute name="NAME" x="24.638" y="70.739" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="25.654" y="73.533" size="1.778" layer="96" rot="R180"/>
+<attribute name="MFG" x="25.4" y="71.12" size="1.778" layer="96" rot="R270" display="off"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10891,6 +10900,7 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <wire x1="15.24" y1="91.44" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="86.36" x2="15.24" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="81.28" x2="15.24" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="76.2" x2="15.24" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="91.44" x2="15.24" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="C21" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="86.36" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
@@ -10900,7 +10910,11 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <junction x="15.24" y="81.28"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="76.2" x2="15.24" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="76.2" x2="15.24" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
+<junction x="15.24" y="71.12"/>
+<pinref part="C31" gate="G$1" pin="2"/>
+<wire x1="22.86" y1="71.12" x2="15.24" y2="71.12" width="0.1524" layer="91"/>
 <junction x="15.24" y="76.2"/>
 </segment>
 <segment>
@@ -11045,10 +11059,14 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <pinref part="C20" gate="G$1" pin="1"/>
 <junction x="40.64" y="81.28"/>
 <wire x1="40.64" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="91.44" x2="48.26" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="91.44" x2="40.64" y2="93.98" width="0.1524" layer="91"/>
 <label x="40.64" y="91.44" size="1.778" layer="95"/>
 <pinref part="P+3" gate="1" pin="VCC"/>
 <junction x="40.64" y="91.44"/>
+<pinref part="C31" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="71.12" x2="40.64" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="71.12" x2="40.64" y2="76.2" width="0.1524" layer="91"/>
+<junction x="40.64" y="76.2"/>
 </segment>
 <segment>
 <pinref part="C24" gate="G$1" pin="1"/>
@@ -11306,10 +11324,10 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 </net>
 <net name="AVCC" class="0">
 <segment>
-<wire x1="35.56" y1="106.68" x2="48.26" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="106.68" x2="40.64" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="U$7" gate="G$1" pin="AVCC"/>
 <pinref part="C11" gate="G$1" pin="1"/>
-<label x="40.64" y="106.68" size="1.778" layer="95"/>
+<label x="35.56" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$16" gate="G$1" pin="AVCC"/>
