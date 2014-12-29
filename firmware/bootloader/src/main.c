@@ -471,7 +471,7 @@ int main(void)
 	  {
 		while ((!(Serial_Available())) && (boot_state == 0))    // wait for data
 		{
-		  _delay_ms(0.001);
+		  _delay_ms(0.040);
 		  boot_timer++;
 		  if (boot_timer > boot_timeout)
 		  {
