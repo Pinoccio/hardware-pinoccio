@@ -419,10 +419,6 @@ int main(void)
   unsigned char  c, *p;
   unsigned char   isLeave = 0;
   unsigned char   isTimeout = 0;
-  unsigned char badMessage = 0;
-  unsigned long  boot_timeout;
-  unsigned long  boot_timer;
-  unsigned int  boot_state;
 
   //*  some chips dont set the stack properly
   asm volatile ( ".set __stack, %0" :: "i" (RAMEND) );
@@ -446,9 +442,6 @@ int main(void)
  WDTCSR  =  0;
  __asm__ __volatile__ ("sei");
    
- boot_timeout  =   10000;    //*  short delay for serial
- boot_timer  =  0;
- boot_state  =  0;
   /*
    * Init UART
    * set baudrate and enable USART receiver and transmiter without interrupts
@@ -463,27 +456,6 @@ int main(void)
 
 
 	for(;;) {
-		  boot_state=0;
-		  boot_timer=0;
-		  isLeave=0;
-		  isTimeout=0;
-	  while (boot_state==0)
-	  {
-		while ((!(Serial_Available())) && (boot_state == 0))    // wait for data
-		{
-		  _delay_ms(0.040);
-		  boot_timer++;
-		  if (boot_timer > boot_timeout)
-		  {
-			  isTimeout = 1;
-			boot_state  =  1; // get us out, this is incremented to 2 below
-		  }
-		}
-		boot_state++; // increment to 1 for serial bootloader, 2 for other purposes
-	  }
-
-	  if (boot_state==1) // enter serial bootloader
-	  {
 		//*  main loop
 		while ((!isLeave) && (!isTimeout))
 		{
@@ -493,16 +465,7 @@ int main(void)
 		  msgParseState  =  ST_START;
 		  while ((msgParseState != ST_PROCESS) && (!isLeave) && (!isTimeout))
 		  {
-			if (boot_state==1)
-			{
-			  boot_state  =  0;
-			  c      =  UART_DATA_REG;
-			}
-			else
-			{
-			//  c  =  recchar();
-			  c  =  recchar_timeout(&isTimeout);
-			}
+			c  =  recchar_timeout(&isTimeout);
 
 			switch (msgParseState)
 			{
@@ -618,40 +581,7 @@ int main(void)
 				  address = (FLASHEND + 1) / 2;
 			  }
 
-		  /*
-		   * Now send answer message back
-		   */
-		  sendchar(MESSAGE_START);
-		  checksum  =  MESSAGE_START^0;
-
-		  sendchar(seqNum);
-		  checksum  ^=  seqNum;
-
-		  c      =  ((msgLength>>8)&0xFF);
-		  sendchar(c);
-		  checksum  ^=  c;
-
-		  c      =  msgLength&0x00FF;
-		  sendchar(c);
-		  checksum ^= c;
-
-		  sendchar(TOKEN);
-		  checksum ^= TOKEN;
-
-		  p  =  msgBuffer;
-		  while ( msgLength )
-		  {
-			c  =  *p++;
-			sendchar(c);
-			checksum ^=c;
-			msgLength--;
-		  }
-		  sendchar(checksum);
-		  seqNum++;
-
 		}
-
-	  }
 
 	}
 }
