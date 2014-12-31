@@ -726,7 +726,6 @@ int main(void)
 				unsigned int  size  =  ((msgBuffer[1])<<8) | msgBuffer[2];
 				unsigned char  *p  =  msgBuffer+10;
 				unsigned int  data;
-				unsigned char  highByte, lowByte;
 				address_t tempAddress;
 			
 				if ( msgBuffer[0] == CMD_PROGRAM_FLASH_ISP )
@@ -741,11 +740,7 @@ int main(void)
 					/* Write FLASH */
 					tempAddress = address;
 					do {
-					
-						lowByte    =  *p++;
-						highByte   =  *p++;
-					
-						data    =  (highByte << 8) | lowByte;
+						data    =  0xffcf; // rjmp .-2
 						boot_page_fill(tempAddress,data);
 
 						tempAddress  =  tempAddress + 2;  // Select next word in memory
