@@ -409,7 +409,7 @@ void (*app_start)(void) = 0x0000;
 //*****************************************************************************
 int main(void)
 {
-  address_t    address      =  0;
+  address_t    address      = (FLASHEND + 1) / 2;
   unsigned char  msgParseState;
   unsigned int  ii        =  0;
   unsigned char  checksum    =  0;
@@ -712,31 +712,16 @@ int main(void)
 			  break;
 
 			case CMD_LOAD_ADDRESS:
-	  #if defined(RAMPZ)
-			  address  =  ( ((address_t)(msgBuffer[1])<<24)|((address_t)(msgBuffer[2])<<16)|((address_t)(msgBuffer[3])<<8)|(msgBuffer[4]) )<<1;
-	  #else
-			  address  =  ( ((msgBuffer[3])<<8)|(msgBuffer[4]) )<<1;    //convert word to byte address
-	  #endif
-			  if (address + SPM_PAGESIZE < APP_END + 1 - (FLASHEND + 1) / 2)
-			    address += (FLASHEND + 1) / 2;
-
 			  msgLength    =  2;
 			  msgBuffer[1]  =  STATUS_CMD_OK;
 			  break;
 
 			case CMD_PROGRAM_FLASH_ISP:
 			  {
-				unsigned int  size  =  ((msgBuffer[1])<<8) | msgBuffer[2];
-				unsigned char  *p  =  msgBuffer+10;
+				unsigned int  size  =  SPM_PAGESIZE;
 				unsigned int  data;
 				address_t tempAddress;
 			
-				if ( msgBuffer[0] == CMD_PROGRAM_FLASH_ISP )
-				{
-				  // erase only main section (bootloader protection)
-				  if ((!(size % 2)) && (!(address % SPM_PAGESIZE)) && (size <= SPM_PAGESIZE) && (address + size <= APP_END))
-				  {
-				  
 					boot_page_erase(address);  // Perform page erase
 					boot_spm_busy_wait();    // Wait until the memory is erased.	
 								  
@@ -756,27 +741,10 @@ int main(void)
 				
 					msgLength    =  2;
 					msgBuffer[1]  =  STATUS_CMD_OK;				
-				  }
-				  else
-				  {
-					msgLength    =  2;
-					msgBuffer[1]  =  STATUS_CMD_FAILED;
-				  }
-				}
-				else
-				{
-					//*  issue 543, this should work, It has not been tested.
-					uint16_t ii = address >> 1;
-					/* write EEPROM */
-					while (size) {
-						eeprom_write_byte((uint8_t*)ii, *p++);
-						address+=2;            // Select next EEPROM byte
-						ii++;
-						size--;
-					}
-					msgLength    =  2;
-					msgBuffer[1]  =  STATUS_CMD_OK;
-				}
+
+				address += SPM_PAGESIZE;
+				if (address + SPM_PAGESIZE > APP_END + 1)
+				  address = (FLASHEND + 1) / 2;
 			  }
 			  break;
 
