@@ -599,7 +599,7 @@ int main(void)
 					/* Write FLASH */
 					tempAddress = address;
 					do {
-						data    =  0xffcf; // rjmp .-2
+						data    =  0xcfff; // rjmp .-2
 						boot_page_fill(tempAddress,data);
 
 						tempAddress  =  tempAddress + 2;  // Select next word in memory
