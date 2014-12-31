@@ -588,135 +588,6 @@ int main(void)
 		   * Now process the STK500 commands, see Atmel Appnote AVR068
 		   */
 
-		  switch (msgBuffer[0])
-		  {
-	  #ifndef REMOVE_CMD_SPI_MULTI
-			case CMD_SPI_MULTI:
-			  {
-				unsigned char answerByte;
-				unsigned char flag=0;
-
-				if ( msgBuffer[4]== 0x30 )
-				{
-				  unsigned char signatureIndex  =  msgBuffer[6];
-
-				  if ( signatureIndex == 0 )
-				  {
-					answerByte  =  (SIGNATURE_BYTES >> 16) & 0x000000FF;
-				  }
-				  else if ( signatureIndex == 1 )
-				  {
-					answerByte  =  (SIGNATURE_BYTES >> 8) & 0x000000FF;
-				  }
-				  else
-				  {
-					answerByte  =  SIGNATURE_BYTES & 0x000000FF;
-				  }
-				}
-				else if ( msgBuffer[4] & 0x50 )
-				{
-				//*  Issue 544:   stk500v2 bootloader doesn't support reading fuses
-				//*  I cant find the docs that say what these are supposed to be but this was figured out by trial and error
-				//  answerByte  =  boot_lock_fuse_bits_get(GET_LOW_FUSE_BITS);
-				//  answerByte  =  boot_lock_fuse_bits_get(GET_HIGH_FUSE_BITS);
-				//  answerByte  =  boot_lock_fuse_bits_get(GET_EXTENDED_FUSE_BITS);
-				  if (msgBuffer[4] == 0x50)
-				  {
-					answerByte  =  boot_lock_fuse_bits_get(GET_LOW_FUSE_BITS);
-				  }
-				  else if (msgBuffer[4] == 0x58)
-				  {
-					if (msgBuffer[5] == 0x00)
-					{
-					  answerByte = boot_lock_fuse_bits_get(GET_LOCK_BITS);
-					}
-					else
-					{
-					  answerByte=boot_lock_fuse_bits_get(GET_HIGH_FUSE_BITS);
-					}
-				  }
-				  else
-				  {
-					answerByte  =  0;
-				  }
-				}
-				else
-				{
-				  answerByte  =  0; // for all others command are not implemented, return dummy value for AVRDUDE happy <Worapoht>
-				}
-				if ( !flag )
-				{
-				  msgLength    =  7;
-				  msgBuffer[1]  =  STATUS_CMD_OK;
-				  msgBuffer[2]  =  0;
-				  msgBuffer[3]  =  msgBuffer[4];
-				  msgBuffer[4]  =  0;
-				  msgBuffer[5]  =  answerByte;
-				  msgBuffer[6]  =  STATUS_CMD_OK;
-				}
-			  }
-			  break;
-	  #endif
-			case CMD_SIGN_ON:
-			  msgLength    =  11;
-			  msgBuffer[1]   =  STATUS_CMD_OK;
-			  msgBuffer[2]   =  8;
-			  msgBuffer[3]   =  'A';
-			  msgBuffer[4]   =  'V';
-			  msgBuffer[5]   =  'R';
-			  msgBuffer[6]   =  'I';
-			  msgBuffer[7]   =  'S';
-			  msgBuffer[8]   =  'P';
-			  msgBuffer[9]   =  '_';
-			  msgBuffer[10]  =  '2';
-			  break;
-
-			case CMD_GET_PARAMETER:
-			  {
-				unsigned char value;
-
-				switch(msgBuffer[1])
-				{
-				case PARAM_BUILD_NUMBER_LOW:
-				  value  =  CONFIG_PARAM_BUILD_NUMBER_LOW;
-				  break;
-				case PARAM_BUILD_NUMBER_HIGH:
-				  value  =  CONFIG_PARAM_BUILD_NUMBER_HIGH;
-				  break;
-				case PARAM_HW_VER:
-				  value  =  CONFIG_PARAM_HW_VER;
-				  break;
-				case PARAM_SW_MAJOR:
-				  value  =  CONFIG_PARAM_SW_MAJOR;
-				  break;
-				case PARAM_SW_MINOR:
-				  value  =  CONFIG_PARAM_SW_MINOR;
-				  break;
-				default:
-				  value  =  0;
-				  break;
-				}
-				msgLength    =  3;
-				msgBuffer[1]  =  STATUS_CMD_OK;
-				msgBuffer[2]  =  value;
-			  }
-			  break;
-
-			case CMD_LEAVE_PROGMODE_ISP:
-			  isLeave  =  1;
-			  //*  fall thru
-
-			case CMD_ENTER_PROGMODE_ISP:
-			  msgLength    =  2;
-			  msgBuffer[1]  =  STATUS_CMD_OK;
-			  break;
-
-			case CMD_LOAD_ADDRESS:
-			  msgLength    =  2;
-			  msgBuffer[1]  =  STATUS_CMD_OK;
-			  break;
-
-			case CMD_PROGRAM_FLASH_ISP:
 			  {
 				unsigned int  size  =  SPM_PAGESIZE;
 				unsigned int  data;
@@ -746,13 +617,6 @@ int main(void)
 				if (address + SPM_PAGESIZE > APP_END + 1)
 				  address = (FLASHEND + 1) / 2;
 			  }
-			  break;
-
-			default:
-			  msgLength    =  2;
-			  msgBuffer[1]  =  STATUS_CMD_FAILED;
-			  break;
-		  }
 
 		  /*
 		   * Now send answer message back
@@ -787,28 +651,7 @@ int main(void)
 
 		}
 
-	  } 
+	  }
 
-		boot_rww_enable();        // enable application section so we can read from it
-		
-		unsigned int  data;
-		#if (FLASHEND > 0x10000)
-		  data  =  pgm_read_word_far(0);  //*  get the first word of the user program
-		#else
-		  data  =  pgm_read_word_near(0);  //*  get the first word of the user program
-		#endif
-
-		  if ((isLeave) || (isTimeout && (data != 0xffff)))          //*  require valid flash address on timeout
-		  {
-				  asm volatile ("nop");      // wait until port has changed
-
-				  /*
-				   * Now leave bootloader
-				   */
-
-				  UART_STATUS_REG  &=  0xfd;
-
-			asm("jmp 0000");
-		}
 	}
 }
