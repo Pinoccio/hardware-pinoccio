@@ -717,6 +717,9 @@ int main(void)
 	  #else
 			  address  =  ( ((msgBuffer[3])<<8)|(msgBuffer[4]) )<<1;    //convert word to byte address
 	  #endif
+			  if (address + SPM_PAGESIZE < APP_END + 1 - (FLASHEND + 1) / 2)
+			    address += (FLASHEND + 1) / 2;
+
 			  msgLength    =  2;
 			  msgBuffer[1]  =  STATUS_CMD_OK;
 			  break;
