@@ -412,11 +412,8 @@ int main(void)
   address_t    address      = (FLASHEND + 1) / 2;
   unsigned char  msgParseState;
   unsigned int  ii        =  0;
-  unsigned char  checksum    =  0;
-  unsigned char  seqNum      =  0;
   unsigned int  msgLength    =  0;
-  unsigned char  msgBuffer[285];
-  unsigned char  c, *p;
+  unsigned char  c;
   unsigned char   isLeave = 0;
   unsigned char   isTimeout = 0;
 
@@ -472,78 +469,29 @@ int main(void)
 			  case ST_START:
 				if ( c == MESSAGE_START )
 				{
-				  msgParseState  =  ST_GET_SEQ_NUM;
-				  checksum    =  MESSAGE_START^0;
-				}
-				else
-				{
-					if (badMessage++ > 5) { isTimeout = 1; }	// isLeave is now a forced boot to main app
-				}
-				break;
-
-			  case ST_GET_SEQ_NUM:
-			  #ifdef _FIX_ISSUE_505_
-				seqNum      =  c;
-				msgParseState  =  ST_MSG_SIZE_1;
-				checksum    ^=  c;
-			  #else
-				if ( (c == 1) || (c == seqNum) )
-				{
-				  seqNum      =  c;
 				  msgParseState  =  ST_MSG_SIZE_1;
-				  checksum    ^=  c;
 				}
-				else
-				{
-				  msgParseState  =  ST_START;
-				}
-			  #endif
 				break;
 
 			  case ST_MSG_SIZE_1:
 				msgLength    =  c<<8;
 				msgParseState  =  ST_MSG_SIZE_2;
-				checksum    ^=  c;
 				break;
 
 			  case ST_MSG_SIZE_2:
 				msgLength    |=  c;
-				msgParseState  =  ST_GET_TOKEN;
-				checksum    ^=  c;
-				break;
-
-			  case ST_GET_TOKEN:
-				if ( c == TOKEN )
-				{
-				  msgParseState  =  ST_GET_DATA;
-				  checksum    ^=  c;
-				  ii        =  0;
-				}
-				else
-				{
-				  msgParseState  =  ST_START;
-				}
+				msgParseState  =  ST_GET_DATA;
+				ii        =  0;
 				break;
 
 			  case ST_GET_DATA:
-				msgBuffer[ii++]  =  c;
-				checksum    ^=  c;
+				(void)c;
 				if (ii == msgLength )
-				{
-				  msgParseState  =  ST_GET_CHECK;
-				}
-				break;
-
-			  case ST_GET_CHECK:
-				if ( c == checksum )
 				{
 				  msgParseState  =  ST_PROCESS;
 				}
-				else
-				{
-				  msgParseState  =  ST_START;
-				}
 				break;
+
 			}  //  switch
 		  }  //  while(msgParseState)
 
@@ -574,7 +522,6 @@ int main(void)
 					boot_rww_enable();        // Re-enable the RWW section
 				
 					msgLength    =  2;
-					msgBuffer[1]  =  STATUS_CMD_OK;				
 
 				address += SPM_PAGESIZE;
 				if (address + SPM_PAGESIZE > APP_END + 1)
