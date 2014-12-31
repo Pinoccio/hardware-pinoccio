@@ -69,8 +69,6 @@ int main(void)
 
 					boot_page_write(address);
 					boot_spm_busy_wait();
-					boot_rww_enable();        // Re-enable the RWW section
-				
 				address += SPM_PAGESIZE;
 				if (address + SPM_PAGESIZE > APP_END + 1)
 				  address = (FLASHEND + 1) / 2;
