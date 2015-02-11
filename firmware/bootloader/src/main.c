@@ -12,35 +12,6 @@
 
 #define APP_END  (FLASHEND -(2*BOOTSIZE) + 1)
 
-/*
- * since this bootloader is not linked against the avr-gcc crt1 functions,
- * to reduce the code size, we need to provide our own initialization
- */
-void __jumpMain  (void) __attribute__ ((naked)) __attribute__ ((section (".init9")));
-#include <avr/sfr_defs.h>
-
-//*****************************************************************************/
-void __jumpMain(void)
-{
-//  July 17, 2010  <MLS> Added stack pointer initialzation
-//  the first line did not do the job on the ATmega128
-
-  asm volatile ( ".set __stack, %0" :: "i" (RAMEND) );
-
-//  set stack pointer to top of RAM
-
-  asm volatile ( "ldi  16, %0" :: "i" (RAMEND >> 8) );
-  asm volatile ( "out %0,16" :: "i" (AVR_STACK_POINTER_HI_ADDR) );
-
-  asm volatile ( "ldi  16, %0" :: "i" (RAMEND & 0x0ff) );
-  asm volatile ( "out %0,16" :: "i" (AVR_STACK_POINTER_LO_ADDR) );
-
-  asm volatile ( "clr __zero_reg__" );                  // GCC depends on register r1 set to 0
-  asm volatile ( "out %0, __zero_reg__" :: "I" (_SFR_IO_ADDR(SREG)) );  // set SREG to 0
-  asm volatile ( "jmp main");                        // jump to main()
-  asm volatile ( "jmp 0x3e000");                        // jump to main()
-}
-
 //*****************************************************************************/
 int main(void)
 {
