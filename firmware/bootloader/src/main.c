@@ -1,12 +1,5 @@
-#include  <inttypes.h>
 #include  <avr/io.h>
-#include  <avr/interrupt.h>
 #include  <avr/boot.h>
-#include  <avr/pgmspace.h>
-#include  <util/delay.h>
-#include  <avr/eeprom.h>
-#include  <avr/common.h>
-#include  <stdlib.h>
 
 #define BOOTSIZE 4096	// bootsize in words
 
