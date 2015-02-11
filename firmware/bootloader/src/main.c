@@ -8,22 +8,26 @@
 //*****************************************************************************/
 int main(void)
 {
-  // Setup some pins as outputs. PORTB has active low leds, PORTE is for
+  // Setup some pins as outputs. PD6/PG2/PE2 has active low leds, PORTF is for
   // logic analyzer outputs
-  DDRB |= (1 << PB4) | (1 << PB5) | (1 << PB6);
-  DDRE |= (1 << PE2) | (1 << PE3) | (1 << PE4) | (1 << PE5) | (1 << PE6);
+  DDRF |= (1 << PF0) | (1 << PF1) | (1 << PF2) | (1 << PF3);
+  DDRD |= (1 << PD6); // Red
+  DDRG |= (1 << PG2); // Green
+  DDRE |= (1 << PE2); // Yellow
 
   if (!MCUSR) {
     // If we get here, we "reset" without a proper hardware reset. This
     // should never happen.
-    PORTB &= ~(1 << PB6);
-    PORTE |= (1 << PE3);
+    PORTD &= ~(1 << PD6); // Red
+    PORTF |= (1 << PF1);
     while(1);
   } else {
     // Normal startup: Turn off leds (active low), provide trigger to
     // analyzer
-    PORTB |= (1 << PB4) | (1 << PB5) | (1 << PB6);
+    PORTD |= (1 << PD6);
+    PORTG |= (1 << PG2);
     PORTE |= (1 << PE2);
+    PORTF |= (1 << PF0);
   }
   MCUSR = 0;
 
@@ -31,12 +35,12 @@ int main(void)
   uint32_t    address      = (FLASHEND + 1) / 2;
   for(;;) {
     // Erase
-    PORTB &= ~(1 << PB4);
-    PORTE &= ~(1 << PE4);
+    PORTG &= ~(1 << PG2); // Green
+    PORTF &= ~(1 << PF2);
     boot_page_erase(address);  // Perform page erase
     boot_spm_busy_wait();    // Wait until the memory is erased.	
-    PORTE |= (1 << PE4);
-    PORTB |= (1 << PB4);
+    PORTF |= (1 << PF2);
+    PORTG |= (1 << PG2);
 
     // Write
     uint32_t tempAddress = address;
@@ -50,12 +54,12 @@ int main(void)
       size  -=  2;        // Reduce number of bytes to write by two
     } while (size);          // Loop until all bytes written
 
-    PORTE &= ~(1 << PE5);
-    PORTB &= ~(1 << PB5);
+    PORTF &= ~(1 << PF3);
+    PORTE &= ~(1 << PE2); // Yellow
     boot_page_write(address);
     boot_spm_busy_wait();
-    PORTE |= (1 << PE5);
-    PORTB |= (1 << PB5);
+    PORTF |= (1 << PF3);
+    PORTE |= (1 << PE2);
 
     // Wrap around from APP_END to halfway
     // FLASHEND
