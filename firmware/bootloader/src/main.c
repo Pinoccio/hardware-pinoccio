@@ -525,6 +525,30 @@ uint32_t count = 0;
   return UART_DATA_REG;
 }
 
+ISR(SPM_READY_vect) {} // empty vector, just wake us up
+
+static void spm_wait(void)
+{
+  // Point interrupt vectors to bootloader section
+  MCUCR = (1 << IVCE);
+  MCUCR = (1 << IVSEL);
+
+  // Enable SPM interupt
+  SPMCSR |= (1 << SPMIE);
+  set_sleep_mode(SLEEP_MODE_IDLE);
+  sleep_enable();
+  sei();
+  sleep_cpu();
+  cli();
+  sleep_disable();
+  // Disable SPM interupt again
+  SPMCSR &= ~(1 << SPMIE);
+
+  // Point interrupt vectors back to main section
+  MCUCR = (1 << IVCE);
+  MCUCR = (0 << IVSEL);
+}
+
 //*  for watch dog timer startup
 void (*app_start)(void) = 0x0000;
 
@@ -1058,7 +1082,7 @@ int main(void)
 				  {
 				  
 					boot_page_erase(address);  // Perform page erase
-					boot_spm_busy_wait();    // Wait until the memory is erased.	
+					spm_wait();
 								  
 					/* Write FLASH */
 					tempAddress = address;
@@ -1075,7 +1099,7 @@ int main(void)
 					} while (size);          // Loop until all bytes written
 
 					boot_page_write(address);
-					boot_spm_busy_wait();
+					spm_wait();
 					boot_rww_enable();        // Re-enable the RWW section
 				
 					msgLength    =  2;
