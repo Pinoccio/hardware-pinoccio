@@ -1,0 +1,616 @@
+Archive member included because of file (symbol)
+
+uracoli-src-20131127/lib/liburacoli_pinoccio.a(pinoccio_trx_rfa.o)
+                              src/wibo.o (trx_io_init)
+/usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+                              src/main.o (__udivmodsi4)
+/usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o (exit)
+/usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+                              src/main.o (__do_copy_data)
+/usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+                              src/main.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(memcpy.o)
+                              uracoli-src-20131127/lib/liburacoli_pinoccio.a(pinoccio_trx_rfa.o) (memcpy)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_byte_atmega256rfr2.o)
+                              src/main.o (__eerd_byte_EEPROM_SUFFIX)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_word_atmega256rfr2.o)
+                              src/main.o (__eerd_word_EEPROM_SUFFIX)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eewr_byte_atmega256rfr2.o)
+                              src/main.o (__eewr_byte_EEPROM_SUFFIX)
+/usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_block_atmega256rfr2.o)
+                              /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_word_atmega256rfr2.o) (__eerd_blraw_EEPROM_SUFFIX)
+
+Allocating common symbols
+Common symbol       size              file
+
+tmp                 0x1               src/wibo.o
+ptr                 0x2               src/wibo.o
+greenLedVal         0x1               src/main.o
+redLedVal           0x1               src/main.o
+blueLedVal          0x1               src/main.o
+
+Discarded input sections
+
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+ .bss           0x0000000000000000        0x0 src/main.o
+ .bss.app_start
+                0x0000000000000000        0x2 src/main.o
+ .bss           0x0000000000000000        0x0 src/wibo.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_byte_atmega256rfr2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_byte_atmega256rfr2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_word_atmega256rfr2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_word_atmega256rfr2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eewr_byte_atmega256rfr2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eewr_byte_atmega256rfr2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_block_atmega256rfr2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_block_atmega256rfr2.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000100000 xr
+data             0x0000000000800200 0x000000000000fe00 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+Address of section .text set to 0x3e000
+Address of section .bootlup set to 0x3fd00
+LOAD src/main.o
+LOAD src/wibo.o
+LOAD uracoli-src-20131127/lib/liburacoli_pinoccio.a
+START GROUP
+LOAD /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libm.a
+LOAD /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a
+END GROUP
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x000000000003e000     0x119c
+ *(.vectors)
+ .vectors       0x000000000003e000      0x134 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+                0x000000000003e000                __vectors
+                0x000000000003e000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x000000000003e134                . = ALIGN (0x2)
+                0x000000000003e134                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000000003e134        0x0 linker stubs
+ *(.trampolines*)
+                0x000000000003e134                __trampolines_end = .
+ *(.progmem*)
+                0x000000000003e134                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000003e134                __ctors_start = .
+ *(.ctors)
+                0x000000000003e134                __ctors_end = .
+                0x000000000003e134                __dtors_start = .
+ *(.dtors)
+                0x000000000003e134                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000003e134        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+                0x000000000003e134                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000003e134       0x10 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000000003e144       0x1a /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+                0x000000000003e144                __do_copy_data
+ .init4         0x000000000003e15e       0x10 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+                0x000000000003e15e                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000000003e16e        0x6 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+ .init9         0x000000000003e174        0xe src/main.o
+                0x000000000003e174                __jumpMain
+ *(.init9)
+ *(.text)
+ .text          0x000000000003e182        0x2 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+                0x000000000003e182                __vector_38
+                0x000000000003e182                __vector_22
+                0x000000000003e182                __vector_63
+                0x000000000003e182                __vector_28
+                0x000000000003e182                __vector_67
+                0x000000000003e182                __vector_1
+                0x000000000003e182                __vector_32
+                0x000000000003e182                __vector_75
+                0x000000000003e182                __vector_71
+                0x000000000003e182                __vector_34
+                0x000000000003e182                __vector_62
+                0x000000000003e182                __vector_24
+                0x000000000003e182                __vector_12
+                0x000000000003e182                __vector_55
+                0x000000000003e182                __vector_69
+                0x000000000003e182                __vector_46
+                0x000000000003e182                __bad_interrupt
+                0x000000000003e182                __vector_72
+                0x000000000003e182                __vector_6
+                0x000000000003e182                __vector_31
+                0x000000000003e182                __vector_35
+                0x000000000003e182                __vector_74
+                0x000000000003e182                __vector_39
+                0x000000000003e182                __vector_3
+                0x000000000003e182                __vector_23
+                0x000000000003e182                __vector_68
+                0x000000000003e182                __vector_30
+                0x000000000003e182                __vector_73
+                0x000000000003e182                __vector_45
+                0x000000000003e182                __vector_25
+                0x000000000003e182                __vector_61
+                0x000000000003e182                __vector_11
+                0x000000000003e182                __vector_54
+                0x000000000003e182                __vector_13
+                0x000000000003e182                __vector_17
+                0x000000000003e182                __vector_19
+                0x000000000003e182                __vector_56
+                0x000000000003e182                __vector_7
+                0x000000000003e182                __vector_49
+                0x000000000003e182                __vector_41
+                0x000000000003e182                __vector_64
+                0x000000000003e182                __vector_43
+                0x000000000003e182                __vector_27
+                0x000000000003e182                __vector_5
+                0x000000000003e182                __vector_33
+                0x000000000003e182                __vector_76
+                0x000000000003e182                __vector_47
+                0x000000000003e182                __vector_52
+                0x000000000003e182                __vector_37
+                0x000000000003e182                __vector_4
+                0x000000000003e182                __vector_44
+                0x000000000003e182                __vector_51
+                0x000000000003e182                __vector_9
+                0x000000000003e182                __vector_2
+                0x000000000003e182                __vector_21
+                0x000000000003e182                __vector_15
+                0x000000000003e182                __vector_66
+                0x000000000003e182                __vector_36
+                0x000000000003e182                __vector_58
+                0x000000000003e182                __vector_70
+                0x000000000003e182                __vector_29
+                0x000000000003e182                __vector_60
+                0x000000000003e182                __vector_8
+                0x000000000003e182                __vector_26
+                0x000000000003e182                __vector_48
+                0x000000000003e182                __vector_14
+                0x000000000003e182                __vector_57
+                0x000000000003e182                __vector_53
+                0x000000000003e182                __vector_10
+                0x000000000003e182                __vector_50
+                0x000000000003e182                __vector_16
+                0x000000000003e182                __vector_59
+                0x000000000003e182                __vector_18
+                0x000000000003e182                __vector_20
+                0x000000000003e182                __vector_42
+                0x000000000003e182                __vector_65
+ .text          0x000000000003e184       0x60 src/main.o
+                0x000000000003e1b8                sendchar
+                0x000000000003e1d0                __vector_40
+ .text          0x000000000003e1e4      0x4c6 src/wibo.o
+                0x000000000003e28e                wibo_init
+                0x000000000003e380                wibo_available
+                0x000000000003e38c                wibo_run
+ .text          0x000000000003e6aa      0x170 uracoli-src-20131127/lib/liburacoli_pinoccio.a(pinoccio_trx_rfa.o)
+                0x000000000003e6aa                trx_io_init
+                0x000000000003e6ac                trx_set_irq_handler
+                0x000000000003e6ae                trx_reg_write
+                0x000000000003e6ba                trx_reg_read
+                0x000000000003e6c6                trx_bit_read
+                0x000000000003e6e2                trx_bit_write
+                0x000000000003e704                trx_frame_write
+                0x000000000003e716                trx_frame_read
+                0x000000000003e750                trx_frame_read_crc
+                0x000000000003e78a                trx_frame_read_data_crc
+                0x000000000003e7cc                trx_frame_get_length
+                0x000000000003e7d2                trx_sram_write
+                0x000000000003e7f6                trx_sram_read
+                0x000000000003e81a                . = ALIGN (0x2)
+ *(.text.*)
+ .text.startup  0x000000000003e81a      0x8d2 src/main.o
+                0x000000000003e81a                main
+ .text.libgcc.div
+                0x000000000003f0ec       0x44 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+                0x000000000003f0ec                __udivmodsi4
+ .text.avr-libc
+                0x000000000003f130       0x12 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(memcpy.o)
+                0x000000000003f130                memcpy
+ .text.avr-libc
+                0x000000000003f142       0x10 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_byte_atmega256rfr2.o)
+                0x000000000003f142                __eerd_byte_EEPROM_SUFFIX
+ .text.avr-libc
+                0x000000000003f152        0xa /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_word_atmega256rfr2.o)
+                0x000000000003f152                __eerd_word_EEPROM_SUFFIX
+ .text.avr-libc
+                0x000000000003f15c       0x1c /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eewr_byte_atmega256rfr2.o)
+                0x000000000003f15c                __eewr_byte_EEPROM_SUFFIX
+                0x000000000003f15e                __eewr_r18_EEPROM_SUFFIX
+ .text.avr-libc
+                0x000000000003f178       0x20 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_block_atmega256rfr2.o)
+                0x000000000003f178                __eerd_block_EEPROM_SUFFIX
+                0x000000000003f17c                __eerd_blraw_EEPROM_SUFFIX
+                0x000000000003f198                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000000000003f198        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+                0x000000000003f198                exit
+                0x000000000003f198                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000000000003f198        0x4 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000000000003f19c                _etext = .
+
+.data           0x0000000000800200       0x2c load address 0x000000000003f19c
+                0x0000000000800200                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/crtm256rfr2.o
+ .data          0x0000000000800200        0x0 src/main.o
+ .data          0x0000000000800200        0x0 src/wibo.o
+ .data          0x0000000000800200        0x0 uracoli-src-20131127/lib/liburacoli_pinoccio.a(pinoccio_trx_rfa.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_exit.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_copy_data.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/avr6/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(memcpy.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_byte_atmega256rfr2.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_word_atmega256rfr2.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eewr_byte_atmega256rfr2.o)
+ .data          0x0000000000800200        0x0 /usr/lib/gcc/avr/4.8.1/../../../avr/lib/avr6/libc.a(eerd_block_atmega256rfr2.o)
+ *(.data*)
+ .data.target   0x0000000000800200        0x1 src/wibo.o
+ .data.pingrep  0x0000000000800201       0x28 src/wibo.o
+ *(.rodata)
+ *(.rodata*)
+ .rodata.CSWTCH.55
+                0x0000000000800229        0x3 src/main.o
+ *(.gnu.linkonce.d*)
+                0x000000000080022c                . = ALIGN (0x2)
+                0x000000000080022c                _edata = .
+                0x000000000080022c                PROVIDE (__data_end, .)
+
+.bss            0x000000000080022c      0x1a0
+                0x000000000080022c                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x000000000080022c        0x1 uracoli-src-20131127/lib/liburacoli_pinoccio.a(pinoccio_trx_rfa.o)
+                0x000000000080022c                SHADOW_IRQ_MASK
+ *(.bss*)
+ .bss.ledToggle
+                0x000000000080022d        0x1 src/main.o
+                0x000000000080022d                ledToggle
+ .bss.datacrc   0x000000000080022e        0x2 src/wibo.o
+                0x000000000080022e                datacrc
+ .bss.nodeconfig
+                0x0000000000800230       0x10 src/wibo.o
+ .bss.deaf      0x0000000000800240        0x1 src/wibo.o
+ .bss.pagebufidx
+                0x0000000000800241        0x2 src/wibo.o
+ .bss.addr      0x0000000000800243        0x4 src/wibo.o
+ .bss.pagebuf   0x0000000000800247      0x100 src/wibo.o
+ .bss.rxbuf     0x0000000000800347       0x7f src/wibo.o
+ *(COMMON)
+ COMMON         0x00000000008003c6        0x3 src/main.o
+                0x00000000008003c6                greenLedVal
+                0x00000000008003c7                redLedVal
+                0x00000000008003c8                blueLedVal
+ COMMON         0x00000000008003c9        0x3 src/wibo.o
+                0x00000000008003c9                tmp
+                0x00000000008003ca                ptr
+                0x00000000008003cc                PROVIDE (__bss_end, .)
+                0x000000000003f19c                __data_load_start = LOADADDR (.data)
+                0x000000000003f1c8                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00000000008003cc        0x0
+                0x00000000008003cc                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00000000008003cc                PROVIDE (__noinit_end, .)
+                0x00000000008003cc                _end = .
+                0x00000000008003cc                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab           0x0000000000000000     0x2de4
+ *(.stab)
+ .stab          0x0000000000000000     0x1614 src/main.o
+ .stab          0x0000000000001614      0xda4 src/wibo.o
+                                       0x1050 (size before relaxing)
+ .stab          0x00000000000023b8      0xa2c uracoli-src-20131127/lib/liburacoli_pinoccio.a(pinoccio_trx_rfa.o)
+                                        0xc24 (size before relaxing)
+
+.stabstr        0x0000000000000000     0x2393
+ *(.stabstr)
+ .stabstr       0x0000000000000000     0x2393 src/main.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 src/main.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 src/wibo.o
+ .comment       0x0000000000000000       0x12 uracoli-src-20131127/lib/liburacoli_pinoccio.a(pinoccio_trx_rfa.o)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bootloader.elf elf32-avr)
+LOAD linker stubs
+
+.bootlup        0x000000000003fd00       0xa2
+ .bootlup       0x000000000003fd00       0xa2 src/wibo.o
+                0x000000000003fd00                bootlup
