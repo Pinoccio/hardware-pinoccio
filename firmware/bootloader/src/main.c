@@ -529,21 +529,24 @@ ISR(SPM_READY_vect) {} // empty vector, just wake us up
 
 void spm_wait(void)
 {
-	if (boot_spm_busy())
-	{
-		MCUCR = (1 << IVCE);
-		MCUCR = (1 << IVSEL);
+  // Point interrupt vectors to bootloader section
+  MCUCR = (1 << IVCE);
+  MCUCR = (1 << IVSEL);
 
-		SPMCSR |= (1 << SPMIE);
-		SMCR = (1 << SE);
-		sei();
-		asm("sleep");
-		SMCR = 0;
-		cli();
+  // Enable SPM interupt
+  SPMCSR |= (1 << SPMIE);
+  set_sleep_mode(SLEEP_MODE_IDLE);
+  sleep_enable();
+  sei();
+  sleep_cpu();
+  cli();
+  sleep_disable();
+  // Disable SPM interupt again
+  SPMCSR &= ~(1 << SPMIE);
 
-		MCUCR = (1 << IVCE);
-		MCUCR = (0 << IVSEL);
-	}
+  // Point interrupt vectors back to main section
+  MCUCR = (1 << IVCE);
+  MCUCR = (0 << IVSEL);
 }
 
 //*  for watch dog timer startup
