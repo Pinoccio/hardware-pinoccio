@@ -9,7 +9,7 @@
 <grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="Ground" color="11" fill="12" visible="yes" active="yes"/>
+<layer number="2" name="Ground" color="11" fill="12" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -22,7 +22,7 @@
 <layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Power" color="13" fill="12" visible="yes" active="yes"/>
+<layer number="15" name="Power" color="13" fill="12" visible="no" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
@@ -32,10 +32,10 @@
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="5" fill="1" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -206,10 +206,10 @@
 <text x="-10.4648" y="-10.2362" size="1.27" layer="51" font="vector" ratio="15">Licensed under CERN OHL v.1.1</text>
 <wire x1="25.4" y1="7.62" x2="25.4" y2="50.8" width="0.2032" layer="20"/>
 <text x="16.9002" y="48.2964" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">pinoccio v1.1</text>
-<text x="17.7384" y="47.2804" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">http://pinocc.io</text>
+<text x="17.7384" y="47.2042" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">http://pinocc.io</text>
 <text x="24.5618" y="43.2562" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">switch</text>
-<text x="14.0462" y="41.8084" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">16U2</text>
-<text x="15.1892" y="33.0708" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">256RFR2</text>
+<text x="13.9954" y="41.3766" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">16U2</text>
+<text x="15.1892" y="33.1216" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">256RFR2</text>
 <text x="16.6208" y="46.0612" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0">2015-03-22</text>
 <text x="28.575" y="45.339" size="0.8128" layer="51">Layout Notes:
 RFN and RFP are a differential pair. 
@@ -1042,282 +1042,134 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C2" library="Pinoccio" package="0402-CAP" value="2.2uF" x="17.3434" y="38.735" smashed="yes" rot="R90">
-<attribute name="NAME" x="17.5593" y="38.3794" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="18.3594" y="37.5793" size="0.4064" layer="27" rot="R90"/>
-</element>
+<element name="C2" library="Pinoccio" package="0402-CAP" value="1.0uF" x="17.3434" y="38.735" smashed="yes" rot="R90"/>
 <element name="J2" library="Pinoccio" package="2X3-PAD" value="AVR_SPI" x="10.16" y="31.75" locked="yes" smashed="yes" rot="MR180"/>
-<element name="U2" library="Pinoccio" package="SOT666" value="STLQ015XX" x="19.5818" y="39.478" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.912" y="40.0368" size="0.4064" layer="25" rot="R180"/>
-</element>
-<element name="C4" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="42.6212" smashed="yes" rot="R90">
-<attribute name="NAME" x="6.4897" y="42.3418" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="7.0104" y="41.5671" size="0.4064" layer="27" rot="R90"/>
-</element>
-<element name="C5" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="44.958" smashed="yes" rot="R270">
-<attribute name="NAME" x="6.1087" y="45.4152" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="6.7056" y="45.7073" size="0.4064" layer="27" rot="R270"/>
-</element>
-<element name="D2" library="Pinoccio" package="LED-0603" value="Yellow" x="7.112" y="49.0982" smashed="yes" rot="R180">
-<attribute name="NAME" x="6.8961" y="49.5046" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="6.0325" y="50.1142" size="0.4064" layer="27" rot="R270"/>
-</element>
-<element name="R3" library="Pinoccio" package="0402-RES" value="470" x="8.0772" y="47.2694" smashed="yes" rot="R90">
-<attribute name="NAME" x="8.2423" y="46.9138" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="7.6962" y="46.6217" size="0.4064" layer="27" rot="R90"/>
-</element>
+<element name="U2" library="Pinoccio" package="SOT666" value="STLQ015XX" x="19.5818" y="39.478" smashed="yes" rot="R180"/>
+<element name="C4" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="42.6212" smashed="yes" rot="R90"/>
+<element name="C5" library="Pinoccio" package="0402-CAP" value="4.7uF" x="6.2992" y="44.958" smashed="yes" rot="R270"/>
+<element name="D2" library="Pinoccio" package="LED-0603" value="Yellow" x="7.112" y="49.0982" smashed="yes" rot="R180"/>
+<element name="R3" library="Pinoccio" package="0402-RES" value="470" x="8.0772" y="47.2694" smashed="yes" rot="R90"/>
 <element name="USB-JACK" library="Pinoccio" package="USB-MICROB" value="" x="12.7" y="49.3522" locked="yes" smashed="yes" rot="R180">
 <attribute name="NAME" x="15.543" y="51.826" size="0.762" layer="25" rot="R180"/>
 <attribute name="VALUE" x="16.2306" y="52.7812" size="0.508" layer="25" rot="R180"/>
 </element>
 <element name="S1" library="Pinoccio" package="SWITCH-SPDT-SMD" value="SPST" x="23.0505" y="46.5074" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="22.3393" y="47.0408" size="0.6096" layer="25" rot="R270"/>
-<attribute name="VALUE" x="23.1013" y="47.7266" size="0.6096" layer="27" rot="R270"/>
 <attribute name="MFG" value="AYZ0102AGRLC" x="23.0505" y="46.5074" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U1" library="Pinoccio" package="SOT23-5" value="MCP73832" x="8.2296" y="43.8658" smashed="yes" rot="R180">
-<attribute name="NAME" x="8.636" y="44.45" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="9.7409" y="43.7007" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="R4" library="Pinoccio" package="0402-RES" value="2K" x="4.2418" y="38.4048" smashed="yes" rot="R180">
-<attribute name="NAME" x="4.6228" y="38.5953" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="3.4417" y="38.5826" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="U4" library="Pinoccio" package="QFN-64-256RFR2" value="ATMEGA256RFR2" x="12.7" y="18.2118" locked="yes" smashed="yes" rot="R90">
-<attribute name="NAME" x="15.8578" y="14.4458" size="0.4064" layer="25" ratio="12" rot="R90"/>
-<attribute name="VALUE" x="17.0542" y="14.0902" size="0.4064" layer="27" ratio="12" rot="R90"/>
-</element>
-<element name="C8" library="Pinoccio" package="0402-CAP" value="1.0uF" x="19.431" y="16.812259375" smashed="yes">
-<attribute name="NAME" x="19.1262" y="16.647159375" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="18.7071" y="17.244059375" size="0.4064" layer="27"/>
-<attribute name="MFG" value="C1005X7R1H104K050BB" x="19.431" y="16.812259375" size="1.778" layer="27" display="off"/>
-</element>
-<element name="C13" library="Pinoccio" package="0402-CAP" value="10pF" x="3.774440625" y="18.369278125" smashed="yes" rot="R180">
-<attribute name="NAME" x="4.333240625" y="18.585178125" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="4.650740625" y="19.207478125" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="C12" library="Pinoccio" package="0402-CAP" value="10pF" x="3.789678125" y="16.39061875" smashed="yes" rot="R180">
-<attribute name="NAME" x="4.348478125" y="16.58111875" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="2.964178125" y="16.56841875" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="C15" library="Pinoccio" package="0402-CAP" value="12pF" x="21.5138" y="14.264" smashed="yes">
-<attribute name="NAME" x="21.0058" y="14.0989" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="20.9423" y="14.7212" size="0.4064" layer="27"/>
-</element>
-<element name="C14" library="Pinoccio" package="0402-CAP" value="12pF" x="20.145640625" y="13.726159375" smashed="yes" rot="R270">
-<attribute name="NAME" x="19.955140625" y="14.259559375" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="20.526640625" y="14.526259375" size="0.4064" layer="27" rot="R270"/>
-</element>
-<element name="Y1" library="SparkFun" package="ANTENNA-CHIP5" value="ANTENNA2SMD5" x="12.7" y="1.905" smashed="yes">
-<attribute name="NAME" x="10.16" y="2.286" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="10.16" y="1.143" size="0.4064" layer="27"/>
-</element>
-<element name="JP-R" library="Pinoccio" package="1X16_2MM" value="M162MM" x="23.749" y="39.37" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="24.6888" y="40.9956" size="0.508" layer="25" ratio="10" rot="R180"/>
-</element>
-<element name="JP-L" library="Pinoccio" package="1X16_2MM" value="M162MM" x="1.651" y="39.37" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="0.8636" y="40.5384" size="0.508" layer="25" ratio="10"/>
-</element>
-<element name="JST" library="bean" package="JST-SFH" value="SFH" x="0.5334" y="48.3362" smashed="yes" rot="R270"/>
-<element name="X2" library="Pinoccio" package="CRYSTAL-SMD-2X1.2-ABS06" value="32.768k" x="18.965259375" y="14.061440625" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.838259375" y="13.782040625" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="19.422459375" y="12.994640625" size="0.4064" layer="27" rot="R90"/>
-</element>
-<element name="C6" library="Pinoccio" package="0402-CAP" value="1.0uF" x="18.923" y="40.7988" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.2532" y="40.9893" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="19.8755" y="41.6116" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="R9" library="Pinoccio" package="0402-RES" value="22" x="11.3538" y="42.7228" smashed="yes">
-<attribute name="NAME" x="11.049" y="42.5577" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="11.0363" y="41.91" size="0.4064" layer="27"/>
-</element>
-<element name="R10" library="Pinoccio" package="0402-RES" value="22" x="13.2588" y="42.7228" smashed="yes" rot="R180">
-<attribute name="NAME" x="13.7922" y="42.8879" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="13.5763" y="42.2148" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="J3" library="Pinoccio" package="1X02" value="Switch" x="20.8407" y="41.656" smashed="yes" rot="MR180"/>
-<element name="J4" library="Pinoccio" package="1X02" value="Ext Battery" x="3.1496" y="46.482" smashed="yes" rot="MR270">
-<attribute name="NAME" x="1.3208" y="47.8282" size="1.27" layer="26" ratio="10" rot="MR270"/>
-<attribute name="VALUE" x="6.3246" y="47.752" size="1.27" layer="28" rot="MR270"/>
-</element>
-<element name="R11" library="Pinoccio" package="0402-RES" value="470" x="9.3472" y="31.2166" smashed="yes">
-<attribute name="NAME" x="8.89" y="31.0515" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="8.8773" y="31.6484" size="0.4064" layer="27"/>
-</element>
-<element name="R12" library="Pinoccio" package="0402-RES" value="470" x="9.3472" y="30.2006" smashed="yes">
-<attribute name="NAME" x="8.8138" y="29.9847" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="7.4549" y="30.0228" size="0.4064" layer="27"/>
-</element>
-<element name="U8" library="Pinoccio" package="PLCC4" value="LED-RGB" x="12.7" y="29.845" locked="yes" smashed="yes">
-<attribute name="NAME" x="12.446" y="30.353" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="11.5062" y="29.0576" size="0.4064" layer="27"/>
-</element>
-<element name="C16" library="Pinoccio" package="0402-CAP" value="10pF" x="7.1882" y="38.1762" smashed="yes" rot="R180">
-<attribute name="NAME" x="7.7724" y="38.4175" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="8.3439" y="37.8206" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="C17" library="Pinoccio" package="0402-CAP" value="10pF" x="5.6134" y="41.0464" smashed="yes" rot="R180">
-<attribute name="NAME" x="6.1976" y="41.2115" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="6.5151" y="40.6908" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="R17" library="Pinoccio" package="0402-RES" value="10K" x="4.2418" y="36.2966" smashed="yes">
-<attribute name="NAME" x="3.7592" y="36.1315" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="2.8067" y="36.0934" size="0.4064" layer="27"/>
-</element>
-<element name="C18" library="Pinoccio" package="0402-CAP" value="1.0uF" x="15.0368" y="42.3926" smashed="yes" rot="R180">
-<attribute name="NAME" x="15.5194" y="42.5831" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="15.9893" y="42.0116" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="L1" library="Pinoccio" package="0603" value="BEAD" x="15.1384" y="44.2214" smashed="yes" rot="R180">
-<attribute name="NAME" x="15.5956" y="44.4246" size="0.4064" layer="25" font="vector" rot="R180"/>
-<attribute name="VALUE" x="15.8496" y="43.6626" size="0.4064" layer="27" font="vector" rot="R180"/>
-<attribute name="MFG" value="MPZ1608S221A" x="15.1384" y="44.2214" size="1.778" layer="27" rot="R180" display="off"/>
-</element>
-<element name="U3" library="Pinoccio" package="QFN-32" value="ATMEGA16U2" x="12.7" y="38.608" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="12.446" y="39.1414" size="0.4318" layer="25" rot="R270"/>
-<attribute name="VALUE" x="14.3002" y="40.6654" size="0.4318" layer="27" rot="R270"/>
-</element>
-<element name="R2" library="Pinoccio" package="0402" value="VAR" x="10.7442" y="44.069" smashed="yes" rot="R90">
-<attribute name="NAME" x="10.8966" y="43.688" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="11.557" y="43.5864" size="0.4064" layer="27" rot="R90"/>
-</element>
-<element name="R13" library="Pinoccio" package="0402" value="VAR" x="13.4112" y="43.9928" smashed="yes" rot="R90">
-<attribute name="NAME" x="13.589" y="43.5102" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="13.0302" y="43.4848" size="0.4064" layer="27" rot="R90"/>
-</element>
-<element name="J1" library="Pinoccio" package="2X3-PAD" value="AVR_SPI_PRG_6" x="10.16" y="39.878" locked="yes" smashed="yes" rot="MR180"/>
-<element name="D1" library="Pinoccio" package="LED-0603" value="(Green)" x="18.288" y="49.0982" smashed="yes">
-<attribute name="NAME" x="18.4277" y="48.8696" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="17.7419" y="48.26" size="0.4064" layer="27" rot="R90"/>
-</element>
-<element name="R14" library="Pinoccio" package="0402-RES" value="470" x="19.304" y="49.1998" smashed="yes" rot="R90">
-<attribute name="NAME" x="19.5199" y="48.7172" size="0.4064" layer="25" rot="R90"/>
-<attribute name="VALUE" x="20.1422" y="48.6029" size="0.4064" layer="27" rot="R90"/>
-</element>
-<element name="R18" library="Pinoccio" package="0402-RES" value="470" x="9.3472" y="29.1846" smashed="yes">
-<attribute name="NAME" x="8.8392" y="28.9941" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="8.8265" y="28.3718" size="0.4064" layer="27"/>
-</element>
-<element name="R8" library="Pinoccio" package="0402-RES" value="1K" x="4.2418" y="28.448" smashed="yes">
-<attribute name="NAME" x="3.9116" y="28.2575" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="2.8067" y="28.2956" size="0.4064" layer="27"/>
-</element>
-<element name="R15" library="Pinoccio" package="0402-RES" value="1K" x="4.2418" y="26.416" smashed="yes">
-<attribute name="NAME" x="3.7592" y="26.2255" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="2.7813" y="26.2128" size="0.4064" layer="27"/>
-</element>
-<element name="R6" library="Pinoccio" package="0402-RES" value="470" x="4.2418" y="34.3662" smashed="yes">
-<attribute name="NAME" x="3.9116" y="34.1757" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="2.3241" y="34.1376" size="0.4064" layer="27"/>
-</element>
-<element name="R20" library="Pinoccio" package="0402-RES" value="100K" x="14.732" y="45.2374" smashed="yes">
-<attribute name="NAME" x="14.2494" y="45.0469" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="14.1351" y="45.6438" size="0.4064" layer="27"/>
-</element>
-<element name="R24" library="Pinoccio" package="0402-RES" value="0" x="5.1562" y="8.7122" smashed="yes" rot="R270">
-<attribute name="NAME" x="4.9657" y="9.1948" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="5.0292" y="8.8265" size="0.4064" layer="27" rot="R270"/>
-</element>
-<element name="Q1" library="Pinoccio" package="SOT23-3" value="PFET" x="18.4556" y="42.857" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.0238" y="43.3015" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="18.5953" y="43.7206" size="0.4064" layer="27" rot="R270"/>
-<attribute name="MFG" value="SI2305CDS" x="18.4556" y="42.857" size="1.778" layer="27" rot="R270" display="off"/>
-</element>
-<element name="U5" library="Pinoccio" package="DFN-8" value="MAX17048" x="19.304" y="33.655" smashed="yes" rot="R180">
-<attribute name="NAME" x="19.1516" y="32.258" size="0.4064" layer="25" rot="R180"/>
-</element>
-<element name="U7" library="Pinoccio" package="TDFN4" value="SWITCH" x="19.4564" y="36.1188" smashed="yes" rot="R90">
-<attribute name="NAME" x="18.8468" y="36.322" size="0.4064" layer="25" rot="R90"/>
-</element>
-<element name="R5" library="Pinoccio" package="0402-RES" value="100K" x="18.4912" y="35.0774" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.3007" y="35.3568" size="0.4064" layer="25" rot="R270"/>
-<attribute name="VALUE" x="17.6784" y="35.7251" size="0.4064" layer="27" rot="R270"/>
-</element>
-<element name="C3" library="Pinoccio" package="0402-CAP" value="0.1uF" x="20.701" y="36.322" smashed="yes">
-<attribute name="NAME" x="20.3454" y="36.1061" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="19.7485" y="36.6776" size="0.4064" layer="27"/>
-</element>
-<element name="R7" library="Pinoccio" package="0402-RES" value="1K" x="4.2418" y="40.2844" smashed="yes">
-<attribute name="NAME" x="3.9878" y="40.0939" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="2.7813" y="40.0812" size="0.4064" layer="27"/>
-</element>
-<element name="R16" library="Pinoccio" package="0402-RES" value="2K" x="4.2418" y="32.3596" smashed="yes">
-<attribute name="NAME" x="3.7338" y="32.1691" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="2.7813" y="32.1564" size="0.4064" layer="27"/>
-</element>
-<element name="D3" library="Pinoccio" package="0603-DIODE" value="" x="18.0848" y="45.2374" smashed="yes">
-<attribute name="NAME" x="17.78" y="45.085" size="0.4064" layer="25" font="vector"/>
-<attribute name="VALUE" x="17.0688" y="44.0944" size="0.4064" layer="27" font="vector"/>
-</element>
-<element name="R19" library="Pinoccio" package="0402-RES" value="100K" x="15.9512" y="27.2034" smashed="yes">
-<attribute name="NAME" x="15.4686" y="27.0129" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="15.3289" y="27.6606" size="0.4064" layer="27"/>
-</element>
-<element name="R22" library="Pinoccio" package="0402-RES" value="2K" x="18.0594" y="30.3276" smashed="yes">
-<attribute name="NAME" x="17.5514" y="30.1625" size="0.4064" layer="25"/>
-<attribute name="VALUE" x="17.6911" y="29.5656" size="0.4064" layer="27"/>
-</element>
-<element name="R23" library="Pinoccio" package="0402-RES" value="2K" x="19.8374" y="30.3276" smashed="yes" rot="R180">
-<attribute name="NAME" x="20.447" y="30.5435" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="20.5867" y="31.115" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="C1" library="Pinoccio" package="0402-CAP" value="1.0uF" x="19.431" y="16.0528">
+<element name="U1" library="Pinoccio" package="SOT23-5" value="MCP73832" x="8.2296" y="43.8658" smashed="yes" rot="R180"/>
+<element name="R4" library="Pinoccio" package="0402-RES" value="2K" x="4.2418" y="38.4048" smashed="yes" rot="R180"/>
+<element name="U4" library="Pinoccio" package="QFN-64-256RFR2" value="ATMEGA256RFR2" x="12.7" y="18.2118" locked="yes" smashed="yes" rot="R90"/>
+<element name="C8" library="Pinoccio" package="0402-CAP" value="1.0uF" x="19.431" y="16.0528" smashed="yes">
 <attribute name="MFG" value="C1005X7R1H104K050BB" x="19.431" y="16.0528" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C10" library="Pinoccio" package="0402-CAP" value="1.0uF" x="6.8072" y="19.0754" rot="R180">
+<element name="C13" library="Pinoccio" package="0402-CAP" value="10pF" x="3.774440625" y="18.369278125" smashed="yes" rot="R180"/>
+<element name="C12" library="Pinoccio" package="0402-CAP" value="10pF" x="3.789678125" y="16.39061875" smashed="yes" rot="R180"/>
+<element name="C15" library="Pinoccio" package="0402-CAP" value="12pF" x="21.5138" y="14.264" smashed="yes"/>
+<element name="C14" library="Pinoccio" package="0402-CAP" value="12pF" x="20.145640625" y="13.726159375" smashed="yes" rot="R270"/>
+<element name="Y1" library="SparkFun" package="ANTENNA-CHIP5" value="ANTENNA2SMD5" x="12.7" y="1.905" smashed="yes"/>
+<element name="JP-R" library="Pinoccio" package="1X16_2MM" value="M162MM" x="23.749" y="39.37" locked="yes" smashed="yes" rot="R270"/>
+<element name="JP-L" library="Pinoccio" package="1X16_2MM" value="M162MM" x="1.651" y="39.37" locked="yes" smashed="yes" rot="R270"/>
+<element name="JST" library="bean" package="JST-SFH" value="SFH" x="0.5334" y="48.3362" smashed="yes" rot="R270"/>
+<element name="X2" library="Pinoccio" package="CRYSTAL-SMD-2X1.2-ABS06" value="32.768k" x="18.965259375" y="14.061440625" smashed="yes" rot="R90"/>
+<element name="C6" library="Pinoccio" package="0402-CAP" value="1.0uF" x="18.923" y="40.7988" smashed="yes" rot="R180"/>
+<element name="R9" library="Pinoccio" package="0402-RES" value="22" x="11.3538" y="42.7228" smashed="yes"/>
+<element name="R10" library="Pinoccio" package="0402-RES" value="22" x="13.2588" y="42.7228" smashed="yes" rot="R180"/>
+<element name="J3" library="Pinoccio" package="1X02" value="Switch" x="20.8407" y="41.656" smashed="yes" rot="MR180"/>
+<element name="J4" library="Pinoccio" package="1X02" value="Ext Battery" x="3.1496" y="46.482" smashed="yes" rot="MR270"/>
+<element name="R11" library="Pinoccio" package="0402-RES" value="470" x="9.3472" y="31.2166" smashed="yes"/>
+<element name="R12" library="Pinoccio" package="0402-RES" value="470" x="9.3472" y="30.2006" smashed="yes"/>
+<element name="U8" library="Pinoccio" package="PLCC4" value="LED-RGB" x="12.7" y="29.845" locked="yes" smashed="yes"/>
+<element name="C16" library="Pinoccio" package="0402-CAP" value="10pF" x="7.1882" y="38.1762" smashed="yes" rot="R180"/>
+<element name="C17" library="Pinoccio" package="0402-CAP" value="10pF" x="5.6134" y="41.0464" smashed="yes" rot="R180"/>
+<element name="R17" library="Pinoccio" package="0402-RES" value="10K" x="4.2418" y="36.2966" smashed="yes"/>
+<element name="C18" library="Pinoccio" package="0402-CAP" value="1.0uF" x="15.0368" y="42.3926" smashed="yes" rot="R180"/>
+<element name="L1" library="Pinoccio" package="0603" value="BEAD" x="15.1384" y="44.2214" smashed="yes" rot="R180">
+<attribute name="MFG" value="MPZ1608S221A" x="15.1384" y="44.2214" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="U3" library="Pinoccio" package="QFN-32" value="ATMEGA16U2" x="12.7" y="38.608" locked="yes" smashed="yes" rot="R270"/>
+<element name="R2" library="Pinoccio" package="0402" value="VAR" x="10.7442" y="44.069" smashed="yes" rot="R90"/>
+<element name="R13" library="Pinoccio" package="0402" value="VAR" x="13.4112" y="43.9928" smashed="yes" rot="R90"/>
+<element name="J1" library="Pinoccio" package="2X3-PAD" value="AVR_SPI_PRG_6" x="10.16" y="39.878" locked="yes" smashed="yes" rot="MR180"/>
+<element name="D1" library="Pinoccio" package="LED-0603" value="(Green)" x="18.288" y="49.0982" smashed="yes"/>
+<element name="R14" library="Pinoccio" package="0402-RES" value="470" x="19.304" y="49.1998" smashed="yes" rot="R90"/>
+<element name="R18" library="Pinoccio" package="0402-RES" value="470" x="9.3472" y="29.1846" smashed="yes"/>
+<element name="R8" library="Pinoccio" package="0402-RES" value="1K" x="4.2418" y="28.448" smashed="yes"/>
+<element name="R15" library="Pinoccio" package="0402-RES" value="1K" x="4.2418" y="26.416" smashed="yes"/>
+<element name="R6" library="Pinoccio" package="0402-RES" value="470" x="4.2418" y="34.3662" smashed="yes"/>
+<element name="R20" library="Pinoccio" package="0402-RES" value="100K" x="14.732" y="45.2374" smashed="yes"/>
+<element name="R24" library="Pinoccio" package="0402-RES" value="0" x="5.1562" y="8.7122" smashed="yes" rot="R270"/>
+<element name="Q1" library="Pinoccio" package="SOT23-3" value="PFET" x="18.4556" y="42.857" smashed="yes" rot="R270">
+<attribute name="MFG" value="SI2305CDS" x="18.4556" y="42.857" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="U5" library="Pinoccio" package="DFN-8" value="MAX17048" x="19.304" y="33.655" smashed="yes" rot="R180"/>
+<element name="U7" library="Pinoccio" package="TDFN4" value="SWITCH" x="19.4564" y="36.1188" smashed="yes" rot="R90"/>
+<element name="R5" library="Pinoccio" package="0402-RES" value="100K" x="18.4912" y="35.0774" smashed="yes" rot="R270"/>
+<element name="C3" library="Pinoccio" package="0402-CAP" value="0.1uF" x="20.701" y="36.322" smashed="yes"/>
+<element name="R7" library="Pinoccio" package="0402-RES" value="1K" x="4.2418" y="40.2844" smashed="yes"/>
+<element name="R16" library="Pinoccio" package="0402-RES" value="2K" x="4.2418" y="32.3596" smashed="yes"/>
+<element name="D3" library="Pinoccio" package="0603-DIODE" value="" x="18.0848" y="45.2374" smashed="yes">
+<attribute name="VALUE" x="17.0688" y="44.0944" size="0.4064" layer="27" font="vector"/>
+</element>
+<element name="R19" library="Pinoccio" package="0402-RES" value="100K" x="15.9512" y="27.2034" smashed="yes"/>
+<element name="R22" library="Pinoccio" package="0402-RES" value="2K" x="18.0594" y="30.3276" smashed="yes"/>
+<element name="R23" library="Pinoccio" package="0402-RES" value="2K" x="19.8374" y="30.3276" smashed="yes" rot="R180"/>
+<element name="C1" library="Pinoccio" package="0402-CAP" value="1.0uF" x="19.431" y="16.8148" smashed="yes">
+<attribute name="MFG" value="C1005X7R1H104K050BB" x="19.431" y="16.8148" size="1.778" layer="27" display="off"/>
+</element>
+<element name="C10" library="Pinoccio" package="0402-CAP" value="1.0uF" x="6.8072" y="19.0754" smashed="yes" rot="R180">
 <attribute name="MFG" value="C1005X7R1H104K050BB" x="6.8072" y="19.0754" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C20" library="Pinoccio" package="0402-CAP" value="1.0uF" x="19.431" y="17.5768">
+<element name="C20" library="Pinoccio" package="0402-CAP" value="1.0uF" x="19.431" y="17.5768" smashed="yes">
 <attribute name="MFG" value="C1005X7R1H104K050BB" x="19.431" y="17.5768" size="1.778" layer="27" display="off"/>
 </element>
-<element name="C21" library="Pinoccio" package="0402-CAP" value="1.0uF" x="15.9512" y="24.0792" rot="R90">
+<element name="C21" library="Pinoccio" package="0402-CAP" value="1.0uF" x="15.9512" y="24.0792" smashed="yes" rot="R90">
 <attribute name="MFG" value="C1005X7R1H104K050BB" x="15.9512" y="24.0792" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C22" library="Pinoccio" package="0402-CAP" value="1.0uF" x="9.1948" y="24.6634" rot="R180">
+<element name="C22" library="Pinoccio" package="0402-CAP" value="1.0uF" x="9.1948" y="24.6634" smashed="yes" rot="R180">
 <attribute name="MFG" value="C1005X7R1H104K050BB" x="9.1948" y="24.6634" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C24" library="Pinoccio" package="0402-CAP" value="1.0uF" x="16.3576" y="38.735" rot="R90"/>
-<element name="X1" library="Pinoccio" package="CRYSTAL-SMD-2.5X2-ABM10" value="16MHz" x="5.8166" y="16.9164" rot="R90"/>
-<element name="X3" library="Pinoccio" package="CRYSTAL-SMD-2.5X2-ABM10" value="16MHz" x="7.6962" y="39.9542" rot="R90"/>
-<element name="L2" library="Pinoccio" package="0402" value="2.7nH" x="5.969" y="9.4488" rot="R270"/>
-<element name="C7" library="Pinoccio" package="0402-CAP" value="1.0pF" x="7.5184" y="9.4488" rot="R90"/>
-<element name="C9" library="Pinoccio" package="0402-CAP" value="1.0pF" x="5.1562" y="10.4648" rot="R90"/>
-<element name="C11" library="Pinoccio" package="0402-CAP" value="1.0uF" x="5.5626" y="14.9606" rot="R180">
+<element name="C24" library="Pinoccio" package="0402-CAP" value="1.0uF" x="16.3576" y="38.735" smashed="yes" rot="R90"/>
+<element name="X1" library="Pinoccio" package="CRYSTAL-SMD-2.5X2-ABM10" value="16MHz" x="5.8166" y="16.9164" smashed="yes" rot="R90"/>
+<element name="X3" library="Pinoccio" package="CRYSTAL-SMD-2.5X2-ABM10" value="16MHz" x="7.6962" y="39.9542" smashed="yes" rot="R90"/>
+<element name="L2" library="Pinoccio" package="0402" value="2.7nH" x="5.969" y="9.4488" smashed="yes" rot="R270"/>
+<element name="C7" library="Pinoccio" package="0402-CAP" value="1.0pF" x="7.5184" y="9.4488" smashed="yes" rot="R90"/>
+<element name="C9" library="Pinoccio" package="0402-CAP" value="1.0pF" x="5.1562" y="10.4648" smashed="yes" rot="R90"/>
+<element name="C11" library="Pinoccio" package="0402-CAP" value="1.0uF" x="5.5626" y="14.9606" smashed="yes" rot="R180">
 <attribute name="MFG" value="C1005X7R1H104K050BB" x="5.5626" y="14.9606" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C19" library="Pinoccio" package="0402-CAP" value="0.1uF" x="5.5626" y="14.097" rot="R180">
+<element name="C19" library="Pinoccio" package="0402-CAP" value="0.1uF" x="5.5626" y="14.097" smashed="yes" rot="R180">
 <attribute name="MFG" value="C1005X7R1H104K050BB" x="5.5626" y="14.097" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C23" library="Pinoccio" package="0402-CAP" value="1.0uF" x="16.383" y="33.8582" rot="R180"/>
-<element name="L3" library="Pinoccio" package="0603" value="BEAD" x="16.7386" y="35.56" rot="R90">
+<element name="C23" library="Pinoccio" package="0402-CAP" value="1.0uF" x="16.383" y="33.8582" smashed="yes" rot="R180"/>
+<element name="L3" library="Pinoccio" package="0603" value="BEAD" x="16.7386" y="35.56" smashed="yes" rot="R90">
 <attribute name="MFG" value="MPZ1608S221A" x="16.7386" y="35.56" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R25" library="Pinoccio" package="0402-RES" value="68K" x="9.5758" y="33.4518" rot="R270"/>
-<element name="R26" library="Pinoccio" package="0402-RES" value="100K" x="8.636" y="33.4518" rot="R90"/>
-<element name="U9" library="Pinoccio" package="QFN-20-SE2438T" value="SE2438T" x="12.9032" y="10.6172" locked="yes" rot="R270"/>
+<element name="R25" library="Pinoccio" package="0402-RES" value="68K" x="9.5758" y="33.4518" smashed="yes" rot="R270"/>
+<element name="R26" library="Pinoccio" package="0402-RES" value="100K" x="8.636" y="33.4518" smashed="yes" rot="R90"/>
+<element name="U9" library="Pinoccio" package="QFN-20-SE2438T" value="SE2438T" x="12.9032" y="10.6172" locked="yes" smashed="yes" rot="R270"/>
 <element name="U10" library="Pinoccio" package="MICROPAK" value="INVERTER-DUALPAK" x="19.0754" y="11.7856" rot="R270">
 <attribute name="MFG" value="NC7WV04L6X" x="19.0754" y="11.7856" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R1" library="Pinoccio" package="0402-RES" value="2K" x="17.78" y="12.2936" rot="R270"/>
-<element name="C25" library="Pinoccio" package="0402-CAP" value="10pF" x="16.0274" y="9.3726" rot="R180"/>
-<element name="C26" library="Pinoccio" package="0402-CAP" value="10pF" x="16.0274" y="11.7348"/>
-<element name="C27" library="Pinoccio" package="0402-CAP" value="0.1uF" x="16.0274" y="8.5598" rot="R180"/>
-<element name="R43" library="Pinoccio" package="0402-RES" value="1K" x="17.653" y="27.94" rot="R180"/>
-<element name="C28" library="Pinoccio" package="0402-CAP" value="0.1uF" x="21.59" y="12.2174"/>
-<element name="C29" library="Pinoccio" package="0402-CAP" value="20pF" x="17.9832" y="9.4488" rot="R180"/>
-<element name="C30" library="Pinoccio" package="0402-CAP" value="20pF" x="21.5646" y="10.287"/>
-<element name="R44" library="Pinoccio" package="0402-RES" value="10K" x="16.0528" y="41.0464" rot="R90"/>
-<element name="L4" library="Pinoccio" package="0402" value="3.6nH" x="16.0274" y="10.16" rot="R180"/>
-<element name="C32" library="Pinoccio" package="0402-CAP" value="0.1uF" x="16.0274" y="10.9728"/>
-<element name="C33" library="Pinoccio" package="0402-CAP" value="0.1uF" x="9.7282" y="10.7188" rot="R180"/>
-<element name="C34" library="Pinoccio" package="0402-CAP" value="10pF" x="9.7282" y="11.4808" rot="R180"/>
-<element name="R27" library="Pinoccio" package="0402-RES" value="100K" x="17.9832" y="10.2108" rot="R180"/>
-<element name="R28" library="Pinoccio" package="0402-RES" value="100K" x="9.2964" y="8.763" rot="R180"/>
-<element name="R29" library="Pinoccio" package="0402-RES" value="100K" x="21.6154" y="8.4328"/>
-<element name="R30" library="Pinoccio" package="0402-RES" value="100K" x="8.4582" y="10.9728" rot="R90"/>
-<element name="C31" library="Pinoccio" package="0402-CAP" value="0.1uF" x="7.1882" y="37.338" rot="R180"/>
-<element name="C35" library="Pinoccio" package="0402-CAP" value="DNI" x="6.731" y="9.4488" rot="R90"/>
-<element name="C36" library="Pinoccio" package="0402-CAP" value="20pF" x="5.5626" y="13.208" rot="R180"/>
+<element name="R1" library="Pinoccio" package="0402-RES" value="2K" x="17.78" y="12.2936" smashed="yes" rot="R270"/>
+<element name="C25" library="Pinoccio" package="0402-CAP" value="10pF" x="16.0274" y="9.3726" smashed="yes" rot="R180"/>
+<element name="C26" library="Pinoccio" package="0402-CAP" value="10pF" x="16.0274" y="11.7348" smashed="yes"/>
+<element name="C27" library="Pinoccio" package="0402-CAP" value="0.1uF" x="16.0274" y="8.5598" smashed="yes" rot="R180"/>
+<element name="R43" library="Pinoccio" package="0402-RES" value="1K" x="17.653" y="27.94" smashed="yes" rot="R180"/>
+<element name="C28" library="Pinoccio" package="0402-CAP" value="0.1uF" x="21.59" y="12.2174" smashed="yes"/>
+<element name="C29" library="Pinoccio" package="0402-CAP" value="20pF" x="17.9832" y="9.4488" smashed="yes" rot="R180"/>
+<element name="C30" library="Pinoccio" package="0402-CAP" value="20pF" x="21.5646" y="10.287" smashed="yes"/>
+<element name="R44" library="Pinoccio" package="0402-RES" value="10K" x="16.0528" y="41.0464" smashed="yes" rot="R90"/>
+<element name="L4" library="Pinoccio" package="0402" value="3.6nH" x="16.0274" y="10.16" smashed="yes" rot="R180"/>
+<element name="C32" library="Pinoccio" package="0402-CAP" value="0.1uF" x="16.0274" y="10.9728" smashed="yes"/>
+<element name="C33" library="Pinoccio" package="0402-CAP" value="0.1uF" x="9.7282" y="10.7188" smashed="yes" rot="R180"/>
+<element name="C34" library="Pinoccio" package="0402-CAP" value="10pF" x="9.7282" y="11.4808" smashed="yes" rot="R180"/>
+<element name="R27" library="Pinoccio" package="0402-RES" value="100K" x="17.9832" y="10.2108" smashed="yes" rot="R180"/>
+<element name="R28" library="Pinoccio" package="0402-RES" value="100K" x="9.3472" y="8.8646" smashed="yes" rot="R180"/>
+<element name="R29" library="Pinoccio" package="0402-RES" value="100K" x="21.6154" y="8.4328" smashed="yes"/>
+<element name="R30" library="Pinoccio" package="0402-RES" value="100K" x="8.4582" y="10.9728" smashed="yes" rot="R90"/>
+<element name="C31" library="Pinoccio" package="0402-CAP" value="0.1uF" x="7.1882" y="37.338" smashed="yes" rot="R180"/>
+<element name="C35" library="Pinoccio" package="0402-CAP" value="DNI" x="6.731" y="9.4488" smashed="yes" rot="R90"/>
+<element name="C36" library="Pinoccio" package="0402-CAP" value="20pF" x="5.5626" y="13.208" smashed="yes" rot="R180"/>
 </elements>
 <signals>
 <signal name="GND" class="5">
@@ -1387,7 +1239,8 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="C11" pad="2"/>
 <contactref element="C19" pad="2"/>
 <contactref element="C23" pad="2"/>
-<wire x1="8.2" y1="18.9618" x2="11.8244" y2="18.9618" width="0.254" layer="1"/>
+<wire x1="8.2" y1="18.9618" x2="11.5062" y2="18.9618" width="0.254" layer="1"/>
+<wire x1="11.5062" y1="18.9618" x2="11.8244" y2="18.9618" width="0.254" layer="1"/>
 <wire x1="11.8244" y1="18.9618" x2="11.9126" y2="19.05" width="0.254" layer="1"/>
 <wire x1="11.9126" y1="19.05" x2="11.9126" y2="19.0246" width="0.254" layer="1"/>
 <wire x1="11.9126" y1="19.0246" x2="11.9126" y2="18.9992" width="0.254" layer="1"/>
@@ -1414,7 +1267,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="15.45" y1="22.7118" x2="15.4178" y2="22.7118" width="0.2032" layer="1"/>
 <wire x1="15.4178" y1="22.7118" x2="15.3924" y2="22.86" width="0.2032" layer="1"/>
 <wire x1="15.3924" y1="22.86" x2="15.3992" y2="24.0272" width="0.2032" layer="1"/>
-<wire x1="15.3992" y1="24.0272" x2="15.9512" y2="24.5792" width="0.2032" layer="1"/>
 <wire x1="16.45" y1="22.7118" x2="16.455" y2="22.9404" width="0.2032" layer="1"/>
 <wire x1="16.455" y1="22.9404" x2="16.9672" y2="23.3934" width="0.2032" layer="1"/>
 <via x="16.9672" y="23.3934" extent="1-16" drill="0.3302"/>
@@ -1445,8 +1297,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="18.0404" y1="40.7988" x2="17.399" y2="40.1574" width="0.254" layer="1"/>
 <via x="5.4356" y="19.1008" extent="1-16" drill="0.3302"/>
 <wire x1="10.45" y1="22.7118" x2="10.45" y2="23.1034" width="0.2032" layer="1"/>
-<wire x1="10.45" y1="23.1034" x2="9.4488" y2="24.1046" width="0.2032" layer="1"/>
-<wire x1="9.4488" y1="24.1046" x2="9.2282" y2="24.1046" width="0.2032" layer="1"/>
 <contactref element="C31" pad="2"/>
 <wire x1="10.2" y1="39.358" x2="9.7416" y2="39.358" width="0.2032" layer="1"/>
 <wire x1="9.7416" y1="39.358" x2="9.144" y2="38.7604" width="0.2032" layer="1"/>
@@ -1513,22 +1363,18 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="8.8138" y1="16.1544" x2="8.8138" y2="17.4244" width="0.254" layer="1"/>
 <wire x1="8.8138" y1="17.4244" x2="9.1186" y2="17.7038" width="0.254" layer="1"/>
 <wire x1="5.0626" y1="14.097" x2="4.5466" y2="14.097" width="0.254" layer="1"/>
-<wire x1="4.5466" y1="14.097" x2="4.2418" y2="14.4018" width="0.2032" layer="1"/>
+<wire x1="4.5466" y1="14.097" x2="4.2418" y2="14.4018" width="0.254" layer="1"/>
 <via x="4.2418" y="14.4018" extent="1-16" drill="0.3302"/>
-<wire x1="6.3072" y1="19.0754" x2="5.461" y2="19.0754" width="0.254" layer="1"/>
-<wire x1="5.461" y1="19.0754" x2="5.4356" y2="19.1008" width="0.254" layer="1"/>
-<wire x1="3.289678125" y1="16.39061875" x2="3.289678125" y2="15.353921875" width="0.2032" layer="1"/>
-<wire x1="3.289678125" y1="15.353921875" x2="4.2418" y2="14.4018" width="0.2032" layer="1"/>
+<wire x1="3.289678125" y1="16.39061875" x2="3.289678125" y2="15.353921875" width="0.254" layer="1"/>
+<wire x1="3.289678125" y1="15.353921875" x2="4.2418" y2="14.4018" width="0.254" layer="1"/>
 <wire x1="3.274440625" y1="18.369278125" x2="3.274440625" y2="18.539840625" width="0.2032" layer="1"/>
-<wire x1="3.274440625" y1="18.539840625" x2="3.8354" y2="19.1008" width="0.2032" layer="1"/>
-<wire x1="3.8354" y1="19.1008" x2="5.4356" y2="19.1008" width="0.2032" layer="1"/>
-<wire x1="6.6882" y1="38.1762" x2="6.6882" y2="37.338" width="0.3048" layer="1"/>
+<wire x1="3.274440625" y1="18.539840625" x2="3.8354" y2="19.1008" width="0.254" layer="1"/>
+<wire x1="3.8354" y1="19.1008" x2="5.4356" y2="19.1008" width="0.254" layer="1"/>
 <wire x1="6.6882" y1="37.338" x2="6.6882" y2="36.7204" width="0.3048" layer="1"/>
 <wire x1="6.6882" y1="36.7204" x2="6.8834" y2="36.4744" width="0.3048" layer="1"/>
 <via x="6.8834" y="36.4744" extent="1-16" drill="0.3302"/>
 <wire x1="3.7418" y1="40.2844" x2="3.7418" y2="40.521" width="0.3048" layer="1"/>
 <wire x1="3.7418" y1="40.521" x2="4.2418" y2="41.021" width="0.3048" layer="1"/>
-<wire x1="5.1134" y1="41.0464" x2="4.2672" y2="41.0464" width="0.3048" layer="1"/>
 <wire x1="4.2672" y1="41.0464" x2="4.2418" y2="41.021" width="0.3048" layer="1"/>
 <wire x1="6.2992" y1="43.1212" x2="5.3784" y2="43.1212" width="0.3048" layer="1"/>
 <wire x1="5.3784" y1="43.1212" x2="5.2334" y2="42.9762" width="0.3048" layer="1"/>
@@ -1548,9 +1394,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="13.45" y1="12.966" x2="13.5128" y2="12.8778" width="0.2032" layer="1"/>
 <via x="13.5128" y="12.8778" extent="1-16" drill="0.3302"/>
 <via x="20.7772" y="17.5768" extent="1-16" drill="0.3302"/>
-<wire x1="20.347940625" y1="16.812259375" x2="19.931" y2="16.812259375" width="0.254" layer="1"/>
 <wire x1="19.931" y1="17.5768" x2="20.7772" y2="17.5768" width="0.254" layer="1"/>
-<wire x1="19.931" y1="16.0528" x2="20.447" y2="16.0528" width="0.254" layer="1"/>
 <wire x1="15.176" y1="29.242" x2="14.351" y2="28.417" width="0.2032" layer="16"/>
 <wire x1="14.351" y1="28.417" x2="14.351" y2="27.8384" width="0.2032" layer="16"/>
 <wire x1="8.636" y1="32.9518" x2="7.7136" y2="32.0294" width="0.254" layer="1"/>
@@ -1566,15 +1410,13 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="4.2418" y1="13.589" x2="4.2418" y2="14.4018" width="0.254" layer="1"/>
 <wire x1="16.7788" y1="15.9618" x2="16.383" y2="16.3576" width="0.254" layer="1"/>
 <via x="16.383" y="17.5768" extent="1-16" drill="0.3302"/>
-<wire x1="20.347940625" y1="16.812259375" x2="20.7772" y2="17.24151875" width="0.254" layer="1"/>
 <wire x1="20.7772" y1="17.24151875" x2="20.7772" y2="17.5768" width="0.254" layer="1"/>
-<wire x1="20.447" y1="16.0528" x2="20.7772" y2="16.383" width="0.254" layer="1"/>
-<wire x1="20.7772" y1="16.383" x2="20.7772" y2="17.5768" width="0.254" layer="1"/>
+<wire x1="20.7772" y1="16.383" x2="20.7772" y2="16.9418" width="0.254" layer="1"/>
+<wire x1="20.7772" y1="16.9418" x2="20.7772" y2="17.5768" width="0.254" layer="1"/>
 <wire x1="17.2" y1="15.9618" x2="16.7788" y2="15.9618" width="0.254" layer="1"/>
 <wire x1="8.6948" y1="24.6634" x2="8.6948" y2="24.7062" width="0.254" layer="1"/>
 <via x="8.0518" y="25.4508" extent="1-16" drill="0.3302"/>
-<wire x1="9.2282" y1="24.1046" x2="9.2282" y2="24.13" width="0.2032" layer="1"/>
-<wire x1="9.2282" y1="24.13" x2="8.6948" y2="24.6634" width="0.2032" layer="1"/>
+<wire x1="9.2536" y1="24.1046" x2="8.6948" y2="24.6634" width="0.2032" layer="1"/>
 <wire x1="8.0518" y1="25.4508" x2="8.0518" y2="25.3064" width="0.254" layer="1"/>
 <wire x1="8.0518" y1="25.3064" x2="8.6948" y2="24.6634" width="0.254" layer="1"/>
 <wire x1="17.399" y1="40.1574" x2="17.28" y2="40.1574" width="0.254" layer="1"/>
@@ -1595,7 +1437,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="20.145640625" y1="13.226159375" x2="20.975959375" y2="13.226159375" width="0.254" layer="1"/>
 <wire x1="20.975959375" y1="13.226159375" x2="22.0138" y2="14.264" width="0.254" layer="1"/>
 <wire x1="22.0138" y1="14.264" x2="22.09" y2="14.1878" width="0.254" layer="1"/>
-<wire x1="22.09" y1="14.1878" x2="22.09" y2="12.2174" width="0.254" layer="1"/>
 <wire x1="22.09" y1="12.2174" x2="22.0646" y2="12.192" width="0.254" layer="1"/>
 <wire x1="22.0646" y1="12.192" x2="22.0646" y2="10.287" width="0.254" layer="1"/>
 <wire x1="22.1154" y1="8.4328" x2="22.5552" y2="8.8726" width="0.254" layer="1"/>
@@ -1619,23 +1460,46 @@ Please make sure your boards conform to these design rules.</description>
 <via x="7.5946" y="10.795" extent="1-16" drill="0.3302"/>
 <wire x1="8.4582" y1="11.4728" x2="8.2724" y2="11.4728" width="0.254" layer="1"/>
 <wire x1="8.2724" y1="11.4728" x2="7.5946" y2="10.795" width="0.254" layer="1"/>
-<wire x1="8.7964" y1="8.763" x2="8.7964" y2="9.009" width="0.254" layer="1"/>
-<wire x1="8.7964" y1="9.009" x2="8.3058" y2="9.4996" width="0.254" layer="1"/>
-<via x="8.3058" y="9.4996" extent="1-16" drill="0.3302"/>
+<wire x1="8.8472" y1="8.8646" x2="8.7964" y2="9.009" width="0.254" layer="1"/>
+<via x="8.3058" y="9.6266" extent="1-16" drill="0.3302"/>
 <wire x1="7.5184" y1="9.9488" x2="6.731" y2="9.9488" width="0.254" layer="1"/>
 <wire x1="5.1562" y1="10.9648" x2="6.1802" y2="10.9648" width="0.254" layer="1"/>
 <wire x1="6.1802" y1="10.9648" x2="6.5278" y2="10.6172" width="0.254" layer="1"/>
 <wire x1="6.5278" y1="10.6172" x2="7.4168" y2="10.6172" width="0.254" layer="1"/>
 <wire x1="7.4168" y1="10.6172" x2="7.5946" y2="10.795" width="0.254" layer="1"/>
-<via x="8.763" y="49.3522" extent="1-16" drill="0.3302"/>
-<via x="11.5316" y="49.3776" extent="1-16" drill="0.3302"/>
-<via x="13.9446" y="49.3522" extent="1-16" drill="0.3302"/>
+<via x="8.7122" y="49.3522" extent="1-16" drill="0.3302"/>
+<via x="11.5062" y="49.3522" extent="1-16" drill="0.3302"/>
+<via x="13.9192" y="49.3522" extent="1-16" drill="0.3302"/>
 <via x="16.7132" y="49.3522" extent="1-16" drill="0.3302"/>
-<wire x1="18.423" y1="40.7988" x2="18.7818" y2="40.44" width="0" layer="19" extent="1-1"/>
-<wire x1="12.9032" y1="10.4394" x2="12.5032" y2="10.2172" width="0" layer="19" extent="1-1"/>
-<wire x1="13.95" y1="13.7118" x2="13.45" y2="13.7118" width="0" layer="19" extent="1-1"/>
-<wire x1="11.9126" y1="19.0246" x2="11.43" y2="19.4818" width="0" layer="19" extent="1-1"/>
-<wire x1="15.45" y1="22.7118" x2="16.45" y2="22.7118" width="0" layer="19" extent="1-1"/>
+<wire x1="8.7964" y1="9.009" x2="8.7964" y2="9.136" width="0.254" layer="1"/>
+<wire x1="8.7964" y1="9.136" x2="8.3058" y2="9.6266" width="0.254" layer="1"/>
+<wire x1="6.6882" y1="38.1762" x2="6.6882" y2="38.1936" width="0.254" layer="1"/>
+<wire x1="6.6882" y1="38.1936" x2="6.1976" y2="38.6842" width="0.254" layer="1"/>
+<wire x1="6.1976" y1="38.6842" x2="6.1976" y2="40.2336" width="0.254" layer="1"/>
+<via x="6.1976" y="40.2336" extent="1-16" drill="0.3302"/>
+<wire x1="5.1134" y1="41.0464" x2="5.9262" y2="40.2336" width="0.254" layer="1"/>
+<wire x1="5.9262" y1="40.2336" x2="6.1976" y2="40.2336" width="0.254" layer="1"/>
+<wire x1="6.3072" y1="19.0754" x2="6.2818" y2="19.1008" width="0.254" layer="1"/>
+<wire x1="6.2818" y1="19.1008" x2="5.4356" y2="19.1008" width="0.254" layer="1"/>
+<wire x1="22.09" y1="14.1878" x2="22.09" y2="15.5622" width="0.254" layer="1"/>
+<wire x1="22.09" y1="15.5622" x2="22.6314" y2="16.1036" width="0.254" layer="1"/>
+<via x="22.6314" y="16.1036" extent="1-16" drill="0.3302"/>
+<wire x1="13.45" y1="13.7118" x2="13.95" y2="13.7118" width="0.254" layer="1"/>
+<wire x1="12.5032" y1="10.2172" x2="12.9032" y2="10.6172" width="0.254" layer="1"/>
+<wire x1="19.931" y1="16.8148" x2="20.6502" y2="16.8148" width="0.254" layer="1"/>
+<wire x1="20.6502" y1="16.8148" x2="20.7772" y2="16.9418" width="0.254" layer="1"/>
+<wire x1="19.931" y1="16.0528" x2="20.447" y2="16.0528" width="0.254" layer="1"/>
+<wire x1="20.447" y1="16.0528" x2="20.7772" y2="16.383" width="0.254" layer="1"/>
+<wire x1="15.9512" y1="24.5792" x2="15.4766" y2="24.5792" width="0.254" layer="1"/>
+<wire x1="15.4766" y1="24.5792" x2="15.1638" y2="24.9174" width="0.254" layer="1"/>
+<via x="15.1638" y="24.9174" extent="1-16" drill="0.3302"/>
+<wire x1="15.3992" y1="24.0272" x2="15.3992" y2="24.682" width="0.2032" layer="1"/>
+<wire x1="15.3992" y1="24.682" x2="15.1638" y2="24.9174" width="0.2032" layer="1"/>
+<wire x1="10.45" y1="23.1034" x2="9.4488" y2="24.1046" width="0.2032" layer="1"/>
+<wire x1="9.4488" y1="24.1046" x2="9.2536" y2="24.1046" width="0.2032" layer="1"/>
+<wire x1="18.7818" y1="40.44" x2="18.423" y2="40.7988" width="0.3048" layer="1"/>
+<wire x1="11.43" y1="19.4818" x2="11.43" y2="19.038" width="0.3048" layer="1"/>
+<wire x1="11.43" y1="19.038" x2="11.5062" y2="18.9618" width="0.3048" layer="1"/>
 </signal>
 <signal name="VCC" class="1">
 <contactref element="J2" pad="2"/>
@@ -1688,7 +1552,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="13.45" y1="40.6026" x2="13.2842" y2="40.4368" width="0.2032" layer="1"/>
 <wire x1="13.2842" y1="40.4368" x2="11.105" y2="40.4368" width="0.2032" layer="1"/>
 <wire x1="11.4554" y1="41.1026" x2="11.45" y2="41.108" width="0.2032" layer="1"/>
-<wire x1="10.95" y1="41.108" x2="10.95" y2="40.5918" width="0.2032" layer="1"/>
+<wire x1="10.95" y1="41.108" x2="10.95" y2="40.5918" width="0.3048" layer="1"/>
 <wire x1="10.95" y1="40.5918" x2="10.8712" y2="40.513" width="0.2032" layer="1"/>
 <wire x1="10.8712" y1="40.513" x2="10.8712" y2="38.9636" width="0.2032" layer="1"/>
 <wire x1="10.8712" y1="38.9636" x2="10.7656" y2="38.858" width="0.2032" layer="1"/>
@@ -1740,7 +1604,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="7.747" y1="37.2792" x2="7.747" y2="36.4744" width="0.2032" layer="1"/>
 <wire x1="9.525" y1="38.1508" x2="8.7376" y2="37.3634" width="0.2032" layer="1"/>
 <wire x1="8.7376" y1="37.3634" x2="7.6454" y2="37.3634" width="0.2032" layer="1"/>
-<wire x1="9.6078" y1="37.3446" x2="8.6172" y2="37.3446" width="0.2032" layer="16"/>
+<wire x1="10.1346" y1="37.3446" x2="8.6172" y2="37.3446" width="0.2032" layer="16"/>
 <wire x1="8.6172" y1="37.3446" x2="7.747" y2="36.4744" width="0.2032" layer="16"/>
 <contactref element="J1" pad="2"/>
 <contactref element="U4" pad="59"/>
@@ -1814,7 +1678,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="11.3284" y1="12.0142" x2="10.795" y2="11.4808" width="0.2032" layer="1"/>
 <wire x1="11.5032" y1="11.4172" x2="10.8078" y2="11.4172" width="0.2032" layer="1"/>
 <wire x1="10.8078" y1="11.4172" x2="10.7442" y2="11.4808" width="0.2032" layer="1"/>
-<wire x1="9.6078" y1="37.3446" x2="10.16" y2="37.37" width="0" layer="19" extent="16-16"/>
+<wire x1="10.1346" y1="37.3446" x2="10.16" y2="37.37" width="0.2032" layer="16"/>
 </signal>
 <signal name="MOSI">
 <contactref element="J2" pad="4"/>
@@ -1824,13 +1688,13 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="2.319" y1="28.702" x2="1.651" y2="29.37" width="0.2032" layer="16"/>
 <wire x1="12.3444" y1="26.8986" x2="12.3444" y2="28.9184" width="0.2032" layer="16"/>
 <wire x1="12.3444" y1="28.9184" x2="12.668" y2="29.242" width="0.2032" layer="16"/>
-<wire x1="11.684" y1="26.2382" x2="12.3444" y2="26.8986" width="0.2032" layer="16"/>
+<wire x1="11.684" y1="26.2636" x2="12.3444" y2="26.8986" width="0.2032" layer="16"/>
 <wire x1="13.95" y1="22.7118" x2="13.95" y2="24.0992" width="0.2032" layer="1"/>
 <wire x1="13.95" y1="24.0992" x2="12.319" y2="25.7302" width="0.2032" layer="1"/>
 <wire x1="12.319" y1="25.7302" x2="12.319" y2="26.8732" width="0.2032" layer="1"/>
 <wire x1="12.319" y1="26.8732" x2="12.3444" y2="26.8986" width="0.2032" layer="1"/>
-<wire x1="11.684" y1="26.2382" x2="11.049" y2="26.2382" width="0.2032" layer="16"/>
-<wire x1="11.049" y1="26.2382" x2="8.5852" y2="28.702" width="0.2032" layer="16"/>
+<wire x1="11.684" y1="26.2636" x2="11.049" y2="26.2636" width="0.2032" layer="16"/>
+<wire x1="11.049" y1="26.2636" x2="8.5852" y2="28.702" width="0.2032" layer="16"/>
 <wire x1="8.5852" y1="28.702" x2="2.319" y2="28.702" width="0.2032" layer="16"/>
 </signal>
 <signal name="SCK">
@@ -1993,7 +1857,7 @@ Please make sure your boards conform to these design rules.</description>
 <via x="18.0594" y="25.9588" extent="1-16" drill="0.3302"/>
 <wire x1="18.3388" y1="25.7302" x2="18.0848" y2="25.9842" width="0.2032" layer="1"/>
 <wire x1="18.0848" y1="25.9842" x2="18.0594" y2="25.9588" width="0.2032" layer="1"/>
-<wire x1="17.6022" y1="25.5016" x2="18.0594" y2="25.9588" width="0.2032" layer="16"/>
+<wire x1="17.6022" y1="25.527" x2="18.0594" y2="25.9588" width="0.2032" layer="16"/>
 <wire x1="1.651" y1="9.37" x2="0.635" y2="10.386" width="0.2032" layer="16"/>
 <wire x1="0.635" y1="10.386" x2="0.635" y2="26.0096" width="0.2032" layer="16"/>
 <wire x1="0.635" y1="26.0096" x2="0.9652" y2="26.3398" width="0.2032" layer="16"/>
@@ -2002,8 +1866,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="2.7432" y1="26.67" x2="2.7432" y2="27.5844" width="0.2032" layer="16"/>
 <wire x1="2.7432" y1="27.5844" x2="3.0734" y2="27.9146" width="0.2032" layer="16"/>
 <wire x1="3.0734" y1="27.9146" x2="7.9502" y2="27.9146" width="0.2032" layer="16"/>
-<wire x1="7.9502" y1="27.9146" x2="10.3632" y2="25.5016" width="0.2032" layer="16"/>
-<wire x1="10.3632" y1="25.5016" x2="17.6022" y2="25.5016" width="0.2032" layer="16"/>
+<wire x1="7.9502" y1="27.9146" x2="10.3632" y2="25.527" width="0.2032" layer="16"/>
+<wire x1="10.3632" y1="25.527" x2="17.6022" y2="25.527" width="0.2032" layer="16"/>
 </signal>
 <signal name="D7">
 <contactref element="JP-L" pad="P$15"/>
@@ -2178,9 +2042,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="6.731" y1="8.9488" x2="5.969" y2="8.9488" width="0.3048" layer="1"/>
 <wire x1="12.9032" y1="9.2172" x2="12.9032" y2="8.6106" width="0.254" layer="1"/>
 <wire x1="12.9032" y1="8.6106" x2="12.9032" y2="8.5598" width="0.3048" layer="1"/>
-<wire x1="12.9032" y1="8.5598" x2="12.3952" y2="8.0518" width="0.3048" layer="1" curve="-90"/>
-<wire x1="12.3952" y1="8.0518" x2="8.4154" y2="8.0518" width="0.3048" layer="1"/>
-<wire x1="8.4154" y1="8.0518" x2="7.5184" y2="8.9488" width="0.3048" layer="1" curve="-90"/>
+<wire x1="12.9032" y1="8.5598" x2="12.3952" y2="7.9502" width="0.3048" layer="1" curve="-90"/>
+<wire x1="12.3952" y1="7.9502" x2="8.4154" y2="7.9502" width="0.3048" layer="1"/>
+<wire x1="8.4154" y1="7.9502" x2="7.5184" y2="8.9488" width="0.3048" layer="1" curve="-90"/>
 </signal>
 <signal name="X1_P">
 <contactref element="C12" pad="1"/>
@@ -2240,10 +2104,10 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="1.651" y1="27.37" x2="1.651" y2="27.5082" width="0.2032" layer="16"/>
 <wire x1="1.651" y1="27.5082" x2="2.4638" y2="28.321" width="0.2032" layer="16"/>
 <wire x1="2.4638" y1="28.321" x2="8.382" y2="28.321" width="0.2032" layer="16"/>
-<wire x1="8.382" y1="28.321" x2="10.8204" y2="25.8826" width="0.2032" layer="16"/>
-<wire x1="10.8204" y1="25.8826" x2="13.2588" y2="25.8826" width="0.2032" layer="16"/>
+<wire x1="8.382" y1="28.321" x2="10.8204" y2="25.908" width="0.2032" layer="16"/>
+<wire x1="10.8204" y1="25.908" x2="13.2588" y2="25.908" width="0.2032" layer="16"/>
 <wire x1="14.3256" y1="26.8986" x2="14.2748" y2="26.8986" width="0.2032" layer="16"/>
-<wire x1="14.2748" y1="26.8986" x2="13.2588" y2="25.8826" width="0.2032" layer="16"/>
+<wire x1="14.2748" y1="26.8986" x2="13.2588" y2="25.908" width="0.2032" layer="16"/>
 </signal>
 <signal name="SCL">
 <contactref element="U4" pad="25"/>
@@ -2344,16 +2208,11 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U4" pad="12"/>
 <via x="5.6388" y="34.3408" extent="1-16" drill="0.3302"/>
 <wire x1="5.588" y1="34.3662" x2="5.6388" y2="34.3408" width="0.2032" layer="1"/>
-<via x="9.7536" y="20.2946" extent="1-16" drill="0.3302"/>
+<via x="9.0678" y="21.8694" extent="1-16" drill="0.3302"/>
 <via x="7.3152" y="27.2288" extent="1-16" drill="0.3302"/>
 <wire x1="15.3162" y1="15.0876" x2="15.3162" y2="21.1328" width="0.2032" layer="1"/>
 <wire x1="15.3162" y1="21.1328" x2="15.1892" y2="21.2598" width="0.2032" layer="1"/>
-<wire x1="15.1892" y1="21.2598" x2="10.2362" y2="21.2598" width="0.2032" layer="1"/>
-<wire x1="10.2362" y1="21.2598" x2="10.0838" y2="21.1074" width="0.2032" layer="1"/>
-<wire x1="10.0838" y1="21.1074" x2="10.0838" y2="20.5994" width="0.2032" layer="1"/>
-<wire x1="9.7536" y1="20.2946" x2="7.3152" y2="22.733" width="0.2032" layer="16"/>
-<wire x1="10.0838" y1="20.5994" x2="9.779" y2="20.2946" width="0.2032" layer="1"/>
-<wire x1="9.779" y1="20.2946" x2="9.7536" y2="20.2946" width="0.2032" layer="1"/>
+<wire x1="15.1892" y1="21.2598" x2="9.6774" y2="21.2598" width="0.2032" layer="1"/>
 <wire x1="11.303" y1="33.4518" x2="11.6586" y2="33.0962" width="0.2032" layer="16"/>
 <wire x1="11.6586" y1="33.0962" x2="13.5636" y2="33.0962" width="0.2032" layer="16"/>
 <wire x1="13.5636" y1="33.0962" x2="14.9098" y2="31.75" width="0.2032" layer="16"/>
@@ -2376,9 +2235,11 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="7.9756" y1="30.6578" x2="7.366" y2="30.6578" width="0.2032" layer="16"/>
 <wire x1="7.366" y1="30.6578" x2="7.3406" y2="30.6832" width="0.2032" layer="16"/>
 <wire x1="7.3406" y1="30.6832" x2="7.2644" y2="30.607" width="0.2032" layer="1"/>
-<wire x1="7.3152" y1="22.733" x2="7.3152" y2="27.2288" width="0.2032" layer="16"/>
 <wire x1="7.2644" y1="30.607" x2="7.3152" y2="30.5562" width="0.2032" layer="1"/>
 <wire x1="7.3152" y1="30.5562" x2="7.3152" y2="27.2288" width="0.2032" layer="1"/>
+<wire x1="9.6774" y1="21.2598" x2="9.0678" y2="21.8694" width="0.2032" layer="1"/>
+<wire x1="7.3152" y1="27.2288" x2="7.3152" y2="23.622" width="0.2032" layer="16"/>
+<wire x1="7.3152" y1="23.622" x2="9.0678" y2="21.8694" width="0.2032" layer="16"/>
 </signal>
 <signal name="A0">
 <contactref element="U4" pad="63"/>
@@ -2985,20 +2846,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="7.2136" y1="14.4272" x2="6.4436" y2="14.4272" width="0.2032" layer="1"/>
 <wire x1="6.4436" y1="14.4272" x2="6.0626" y2="14.097" width="0.2032" layer="1"/>
 </signal>
-<signal name="DVDD">
-<contactref element="U4" pad="21"/>
-<contactref element="U4" pad="22"/>
-<contactref element="C1" pad="1"/>
-<contactref element="C8" pad="1"/>
-<wire x1="18.781459375" y1="16.9618" x2="18.781459375" y2="16.698659375" width="0.2032" layer="1"/>
-<wire x1="17.2" y1="16.9618" x2="18.781459375" y2="16.9618" width="0.2032" layer="1"/>
-<wire x1="18.781459375" y1="16.9618" x2="18.931" y2="16.812259375" width="0.2032" layer="1"/>
-<wire x1="18.931" y1="16.0528" x2="18.4912" y2="16.0528" width="0.2032" layer="1"/>
-<wire x1="18.4912" y1="16.0528" x2="18.0848" y2="16.4592" width="0.2032" layer="1"/>
-<wire x1="18.0848" y1="16.4592" x2="17.2026" y2="16.4592" width="0.2032" layer="1"/>
-<wire x1="17.2026" y1="16.4592" x2="17.2" y2="16.4618" width="0.2032" layer="1"/>
-<wire x1="17.2026" y1="16.4592" x2="17.2" y2="16.9618" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="VBUS-SENSE">
 <contactref element="R25" pad="2"/>
 <contactref element="U3" pad="6"/>
@@ -3046,23 +2893,21 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U9" pad="8"/>
 <contactref element="R30" pad="1"/>
 <via x="16.2052" y="12.9286" extent="1-16" drill="0.3302"/>
-<via x="9.271" y="9.525" extent="1-16" drill="0.3302"/>
+<via x="9.3218" y="9.8806" extent="1-16" drill="0.3302"/>
 <wire x1="15.95" y1="13.7118" x2="15.95" y2="13.1838" width="0.2032" layer="1"/>
 <wire x1="15.95" y1="13.1838" x2="16.2052" y2="12.9286" width="0.2032" layer="1"/>
 <wire x1="15.5194" y1="12.2428" x2="16.2052" y2="12.9286" width="0.2032" layer="16"/>
 <wire x1="11.5032" y1="10.6172" x2="11.0744" y2="10.6172" width="0.2032" layer="1"/>
-<wire x1="9.271" y1="9.6012" x2="9.271" y2="9.525" width="0.2032" layer="16"/>
-<wire x1="9.3218" y1="9.525" x2="9.271" y2="9.525" width="0.2032" layer="1"/>
 <wire x1="11.0744" y1="10.6172" x2="10.6172" y2="10.16" width="0.2032" layer="1"/>
-<wire x1="10.6172" y1="10.16" x2="10.3378" y2="10.16" width="0.2032" layer="1"/>
-<wire x1="10.3378" y1="10.16" x2="9.7028" y2="9.525" width="0.2032" layer="1"/>
-<wire x1="9.7028" y1="9.525" x2="9.271" y2="9.525" width="0.2032" layer="1"/>
-<wire x1="9.271" y1="9.6012" x2="10.3886" y2="10.7188" width="0.2032" layer="16"/>
-<wire x1="10.3886" y1="10.7188" x2="11.0744" y2="10.7188" width="0.2032" layer="16"/>
 <wire x1="11.0744" y1="10.7188" x2="12.5984" y2="12.2428" width="0.2032" layer="16"/>
 <wire x1="12.5984" y1="12.2428" x2="15.5194" y2="12.2428" width="0.2032" layer="16"/>
 <wire x1="8.4582" y1="10.4728" x2="8.4582" y2="10.3378" width="0.2032" layer="1"/>
-<wire x1="8.4582" y1="10.3378" x2="9.271" y2="9.525" width="0.2032" layer="1"/>
+<wire x1="9.3218" y1="9.8806" x2="9.0504" y2="9.8806" width="0.2032" layer="1"/>
+<wire x1="9.0504" y1="9.8806" x2="8.4582" y2="10.4728" width="0.2032" layer="1"/>
+<wire x1="10.6172" y1="10.16" x2="9.6012" y2="10.16" width="0.2032" layer="1"/>
+<wire x1="9.6012" y1="10.16" x2="9.3218" y2="9.8806" width="0.2032" layer="1"/>
+<wire x1="11.0744" y1="10.7188" x2="10.16" y2="10.7188" width="0.2032" layer="16"/>
+<wire x1="10.16" y1="10.7188" x2="9.3218" y2="9.8806" width="0.2032" layer="16"/>
 </signal>
 <signal name="CSD">
 <contactref element="U4" pad="16"/>
@@ -3085,17 +2930,16 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="12.7508" y1="11.8872" x2="16.1798" y2="11.8872" width="0.2032" layer="16"/>
 <wire x1="10.033" y1="9.2964" x2="10.6172" y2="8.7122" width="0.2032" layer="16"/>
 <wire x1="10.6172" y1="8.7122" x2="10.668" y2="8.7122" width="0.2032" layer="16"/>
-<wire x1="9.7964" y1="8.763" x2="9.8472" y2="8.7122" width="0.2032" layer="1"/>
-<wire x1="9.8472" y1="8.7122" x2="10.668" y2="8.7122" width="0.2032" layer="1"/>
 <wire x1="10.8966" y1="8.5598" x2="10.7442" y2="8.7122" width="0.2032" layer="1"/>
 <wire x1="10.7442" y1="8.7122" x2="10.668" y2="8.7122" width="0.2032" layer="1"/>
+<wire x1="9.8472" y1="8.7122" x2="10.668" y2="8.7122" width="0.2032" layer="1"/>
+<wire x1="9.8472" y1="8.7122" x2="9.8472" y2="8.8646" width="0.254" layer="1"/>
 </signal>
 <signal name="N$10">
 <contactref element="R1" pad="2"/>
 <contactref element="U10" pad="P$1"/>
-<wire x1="17.8388" y1="12.2254" x2="18.7456" y2="12.2254" width="0.2032" layer="1"/>
-<wire x1="18.7456" y1="12.2254" x2="19.3354" y2="11.6356" width="0.2032" layer="1"/>
-<wire x1="17.8388" y1="12.2254" x2="17.78" y2="11.7936" width="0" layer="19" extent="1-1"/>
+<wire x1="19.3354" y1="11.6356" x2="17.938" y2="11.6356" width="0.2032" layer="1"/>
+<wire x1="17.938" y1="11.6356" x2="17.78" y2="11.7936" width="0.2032" layer="1"/>
 </signal>
 <signal name="SEROPN">
 <contactref element="U4" pad="19"/>
@@ -3219,8 +3063,8 @@ Please make sure your boards conform to these design rules.</description>
 <via x="15.1892" y="41.0718" extent="1-16" drill="0.3302"/>
 <wire x1="15.1892" y1="39.8648" x2="15.1892" y2="41.0718" width="0.2032" layer="16"/>
 <wire x1="15.2" y1="40.358" x2="15.8644" y2="40.358" width="0.2032" layer="1"/>
-<wire x1="15.8644" y1="40.358" x2="16.0528" y2="40.5464" width="0" layer="19" extent="1-1"/>
-<wire x1="15.176" y1="39.878" x2="15.1892" y2="39.8648" width="0" layer="19" extent="16-16"/>
+<wire x1="15.8644" y1="40.358" x2="16.0528" y2="40.5464" width="0.2032" layer="1"/>
+<wire x1="15.1892" y1="39.8648" x2="15.176" y2="39.878" width="0.3048" layer="16"/>
 </signal>
 <signal name="16U2-MOSI">
 <contactref element="J1" pad="4"/>
@@ -3231,11 +3075,31 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="12.668" y1="37.37" x2="12.668" y2="37.1414" width="0.2032" layer="16"/>
 <wire x1="12.668" y1="37.1414" x2="14.9098" y2="34.8996" width="0.2032" layer="16"/>
 </signal>
+<signal name="DVDD$2">
+<contactref element="U4" pad="22"/>
+<contactref element="C1" pad="1"/>
+<wire x1="17.2" y1="16.9618" x2="18.7586" y2="16.9618" width="0.2032" layer="1"/>
+<wire x1="18.7586" y1="16.9618" x2="18.931" y2="16.8148" width="0.2032" layer="1"/>
+</signal>
+<signal name="DVDD$1">
+<contactref element="U4" pad="21"/>
+<contactref element="C8" pad="1"/>
+<wire x1="17.2" y1="16.4618" x2="17.9552" y2="16.4618" width="0.2032" layer="1"/>
+<wire x1="17.9552" y1="16.4618" x2="18.3642" y2="16.0528" width="0.2032" layer="1"/>
+<wire x1="18.3642" y1="16.0528" x2="18.931" y2="16.0528" width="0.2032" layer="1"/>
+</signal>
 </signals>
 <errors>
+<approved hash="19,1,3cca47fe460c3d38"/>
+<approved hash="19,1,b87438403a04ba30"/>
+<approved hash="19,1,bacadffede0abb3e"/>
 <approved hash="3,1,e41b8e658e17e469"/>
+<approved hash="19,1,3ccedffade0d3d39"/>
+<approved hash="19,1,baca7ffe7e06bb32"/>
 <approved hash="19,1,e0b55cffd2816265"/>
 <approved hash="5,1,06ea70fb78fb00b6"/>
+<approved hash="19,1,05c9d5fdd409043d"/>
+<approved hash="19,1,29ca29fe28152821"/>
 </errors>
 </board>
 </drawing>

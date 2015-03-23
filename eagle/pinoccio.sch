@@ -6844,7 +6844,7 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 </classes>
 <parts>
 <part name="FRAME1" library="Pinoccio" deviceset="FRAME-LETTER" device=""/>
-<part name="C2" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="2.2uF"/>
+<part name="C2" library="Pinoccio" deviceset="CAP" device="0402-CAP" value="1.0uF"/>
 <part name="J2" library="Pinoccio" deviceset="AVR_SPI_PRG_6" device="" value="AVR_SPI"/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
 <part name="P+4" library="SparkFun" deviceset="VCC" device=""/>
@@ -10592,18 +10592,6 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <label x="22.86" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="DVDD" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="DVDD@21"/>
-<wire x1="35.56" y1="137.16" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="U4" gate="G$1" pin="DVDD@22"/>
-<wire x1="33.02" y1="137.16" x2="22.86" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="134.62" x2="33.02" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="134.62" x2="33.02" y2="137.16" width="0.1524" layer="91"/>
-<junction x="33.02" y="137.16"/>
-<label x="22.86" y="137.16" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="GND" class="5">
 <segment>
 <pinref part="U4" gate="G$1" pin="CLKI"/>
@@ -10857,6 +10845,20 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <pinref part="U9" gate="G$1" pin="VCC2"/>
 <pinref part="L4" gate="G$1" pin="P$2"/>
 <wire x1="200.66" y1="137.16" x2="213.36" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DVDD$2" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="DVDD@22"/>
+<wire x1="35.56" y1="134.62" x2="22.86" y2="134.62" width="0.1524" layer="91"/>
+<label x="22.86" y="134.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DVDD$1" class="0">
+<segment>
+<pinref part="U4" gate="G$1" pin="DVDD@21"/>
+<wire x1="35.56" y1="137.16" x2="22.86" y2="137.16" width="0.1524" layer="91"/>
+<label x="22.86" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -11515,16 +11517,11 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <junction x="223.52" y="45.72"/>
 </segment>
 </net>
-<net name="DVDD" class="0">
+<net name="DVDD$1" class="0">
 <segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="35.56" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="35.56" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="40.64" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
-<label x="40.64" y="40.64" size="1.778" layer="95"/>
-<junction x="38.1" y="40.64"/>
-<wire x1="38.1" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
+<label x="35.56" y="40.64" size="1.778" layer="95"/>
+<wire x1="35.56" y1="40.64" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="AVDD" class="0">
@@ -11537,6 +11534,13 @@ Various standard crystals. Proven footprints. Spark Fun Electronics SKU : COM-00
 <pinref part="C36" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="58.42" x2="27.94" y2="58.42" width="0.1524" layer="91"/>
 <junction x="38.1" y="63.5"/>
+</segment>
+</net>
+<net name="DVDD$2" class="0">
+<segment>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="35.56" x2="45.72" y2="35.56" width="0.1524" layer="91"/>
+<label x="35.56" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
